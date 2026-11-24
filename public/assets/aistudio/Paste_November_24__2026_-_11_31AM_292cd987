@@ -1,0 +1,1901 @@
+# CYBERSURAKSHA — COMPLETE AUTONOMOUS HACKATHON BUILD, TEST, REPAIR & DEPLOYMENT PROMPT
+
+## PROJECT IDENTITY
+
+**Project Name:** CyberSuraksha  
+**Tagline:** See the trap before you tap.  
+**Category:** Universal Scam, Phishing & Fake Offer Intelligence Platform  
+**Target Audience:** Indian smartphone users, students, families and everyday digital payment users  
+**Project Type:** Functional hackathon prototype
+
+Build a complete, polished, reliable and fully functional cybersecurity web application called **CyberSuraksha**.
+
+Act as a senior full-stack developer, cybersecurity researcher, rule-based detection engineer, product designer, QA engineer, test engineer and hackathon mentor.
+
+I am a beginner with limited coding knowledge.
+
+Take ownership of the entire project. Work autonomously, create files, implement features, connect logic, run tests, identify errors, fix bugs, retest, and prepare deployment.
+
+Do not unnecessarily ask me to manually create files, write code, install packages, configure backend systems or use a terminal.
+
+If an unavoidable manual step is required, explain it in very simple language and give me the exact action to perform.
+
+**Do not stop at generating a beautiful UI. Deliver a functioning application.**
+
+---
+
+# 1. PROBLEM STATEMENT
+
+People in India receive scam messages through SMS, WhatsApp, emails, social media, job platforms, phone calls and digital payment channels.
+
+Common scams include:
+
+- Fake KYC and account-blocking messages.
+- OTP theft.
+- UPI fraud.
+- PIN, password and CVV theft.
+- Fake internship and job offers requiring fees.
+- Lottery and reward scams.
+- Phishing links.
+- Fake courier and parcel messages.
+- Electricity disconnection scams.
+- Fake police and government impersonation.
+- Digital arrest threats.
+- Fake investment schemes and guaranteed returns.
+- Fake customer-care numbers.
+- Remote-access app scams.
+- Malicious APK installations.
+- SIM-related fraud.
+- Fake loan offers.
+- Money mule recruitment.
+- Social-media impersonation.
+- Emergency money scams.
+- QR-code fraud.
+
+People often do not understand why a message is suspicious, which exact words are dangerous, or what they should do after identifying a potential scam.
+
+## OUR SOLUTION
+
+CyberSuraksha is a privacy-first, explainable scam-awareness platform that analyzes suspicious messages and URLs using a deterministic, locally executed rule-based intelligence engine.
+
+It must help users:
+
+1. Identify suspicious indicators.
+2. Understand exact evidence.
+3. See how multiple signals combine.
+4. Understand a risk score.
+5. Know what cannot be verified.
+6. Receive practical safety recommendations.
+7. Generate scam-specific awareness messages.
+8. Share simple warnings with family and friends.
+9. Learn to recognize scams through an interactive quiz.
+10. See how the detection system performs against genuine and suspicious examples.
+
+The application must be easy enough for a non-technical user to understand but technically inspectable by hackathon judges.
+
+Do not claim CyberSuraksha detects every scam or guarantees safety.
+
+---
+
+# 2. TECHNOLOGY STACK
+
+Use:
+
+- React.
+- Vite.
+- TypeScript.
+- Tailwind CSS.
+- Lucide icons.
+- tldts or an equivalent Public Suffix List-aware domain parser.
+- Local JSON-based detection rules.
+- Vitest.
+- GitHub.
+- Vercel.
+
+Build a lightweight static web application.
+
+## Backend decision
+
+For this hackathon MVP, do NOT create a backend server.
+
+The rule engine and detection logic should execute locally in the browser using modular TypeScript functions and JSON data.
+
+Architecture should be clean enough that a real backend or external intelligence service could be added later without rewriting the complete application.
+
+Do not pretend a backend, database or live threat-intelligence API exists when it does not.
+
+---
+
+# 3. SECURITY AND PRIVACY RESTRICTIONS
+
+The application must:
+
+- Never open a submitted URL.
+- Never fetch a submitted website.
+- Never follow redirects.
+- Never perform DNS lookups.
+- Never make reputation API requests.
+- Never use VirusTotal.
+- Never send submitted messages to an AI API.
+- Never use LLM inference for analysis.
+- Never require a Gemini API key.
+- Never store submitted messages.
+- Never use localStorage.
+- Never use sessionStorage.
+- Never use analytics or tracking.
+- Never log user-submitted text to the console.
+- Never render user input through unsafe HTML.
+
+All message and URL analysis must execute locally in the user's browser.
+
+Official reference links may open only when deliberately clicked.
+
+Display this privacy notice:
+
+"Your text is analyzed in this browser and is not saved by CyberSuraksha."
+
+Clear submitted text, analysis and associated state when Clear is clicked.
+
+Do not compromise these privacy rules to make features work.
+
+---
+
+# 4. UNIVERSAL MESSAGE ANALYZER
+
+Build the main analyzer as the primary feature.
+
+It must accept:
+
+- SMS.
+- WhatsApp messages.
+- Emails.
+- Bank notifications.
+- UPI messages.
+- Job/internship offers.
+- Courier messages.
+- Electricity messages.
+- Government messages.
+- Investments.
+- Social-media messages.
+- Any suspicious text.
+
+Support English, Hindi and Hinglish.
+
+Automatically handle:
+
+- Text-only messages.
+- URLs.
+- Multiple URLs.
+- Text and URLs together.
+- Obfuscated URLs.
+- Messages with unusual formatting.
+
+## Input interface
+
+Provide:
+
+- Large text input area.
+- Analyze button.
+- Clear button.
+- Input length counter.
+- Six or more example messages.
+- Privacy notice.
+- Language selector.
+- Safety bulletin.
+
+The analyzer must process the actual submitted content through the implemented engine.
+
+## Results interface
+
+Display:
+
+- Risk score 0–100.
+- Severity indicator.
+- Verdict.
+- Scam category.
+- Original message.
+- Highlighted suspicious phrases.
+- Evidence cards.
+- Cross-Signal Intelligence explanation.
+- URL analysis if present.
+- Extracted entities.
+- What cannot be verified.
+- Recommended next steps.
+- Official safety/reporting resources.
+- Scam-specific Spread Awareness generator.
+
+No hardcoded results. No fake analysis.
+
+---
+
+# 5. RULE-BASED DETECTION ENGINE
+
+Build a deterministic, contextual, explainable rule engine.
+
+Do not use simple keyword counting as the complete detection system.
+
+Each rule must include:
+
+- Unique rule ID.
+- Rule name.
+- Category.
+- Language.
+- Pattern or contextual conditions.
+- Weight.
+- Maximum contribution.
+- Group.
+- Required context.
+- Exclusions.
+- English explanation.
+- Hindi explanation.
+- Hinglish explanation.
+- Recommended action.
+- Source ID.
+- Source verification status.
+
+Implement at least 25 carefully curated contextual detection rules covering:
+
+- Fake KYC.
+- Bank account blocking.
+- OTP theft.
+- PIN theft.
+- Password theft.
+- CVV requests.
+- Phishing.
+- UPI collect fraud.
+- QR fraud.
+- Fake cashback.
+- Lottery.
+- Prize claims.
+- Job/internship registration fees.
+- Fake loans.
+- Investment scams.
+- Ponzi schemes.
+- Guaranteed returns.
+- Digital arrest.
+- Police impersonation.
+- Government impersonation.
+- Fake courier.
+- Parcel scams.
+- SIM/telecom scams.
+- Electricity disconnection scams.
+- Remote-access apps.
+- Malicious APKs.
+- Fake customer care.
+- Social impersonation.
+- Emergency money requests.
+- Money mule recruitment.
+- Fake charity.
+- Mistaken transfer manipulation.
+- Fake task-earning schemes.
+- Unknown app installation.
+- Fake bank/e-wallet offers.
+- Legal-threat payment scams.
+
+Rules must use contextual patterns, combinations and exclusions.
+
+A single word like "bank", "OTP", "job", "payment", "police" or "KYC" must not automatically classify a message as fraudulent.
+
+Unsupported rules must be clearly labeled:
+
+"Prototype pattern — not directly specified in cited official reference."
+
+---
+
+# 6. RISK SCORING SYSTEM
+
+Implement a deterministic risk score from 0 to 100.
+
+This is a prototype heuristic severity score, NOT fraud probability and NOT an official RBI score.
+
+Initial suggested weights:
+
+- Active request for OTP/PIN/password/CVV: 28.
+- UPI PIN or QR requested to receive money: 28.
+- Suspicious upfront payment demand: 22.
+- Unknown app/remote-access request: 22.
+- Fake KYC/account-blocking + sensitive credential request: 25.
+- Job/internship upfront fee: 20.
+- Lottery/prize processing fee: 20.
+- Digital arrest + payment demand: 25.
+- Suspicious domain/brand mismatch: 15.
+- Misleading URL/unusual hostname: 10.
+- Shortener/obscured destination: 5.
+- Urgency/threat language alone: 5.
+- Unrealistic guaranteed returns: 12.
+- Unverified impersonation signals: 8.
+
+Tune the weights to prevent duplicate counting and over-scoring.
+
+## Scoring rules
+
+- Score capped at 100.
+- Repeated phrases must not repeatedly increase scores.
+- Implement category caps.
+- Avoid double-counting related signals.
+- Cross-signal bonuses must be controlled.
+- Urgency alone cannot create a critical verdict.
+- Phone numbers alone must not score.
+- UPI IDs alone must not score.
+- Amounts alone must not score.
+- Gmail addresses alone must not score.
+- HTTP alone does not establish fraud.
+- Suspicious TLD alone does not establish fraud.
+- HTTPS must not lower risk.
+- Absence of suspicious signals must not prove safety.
+
+## Severity levels
+
+- 0–19: Low indicators.
+- 20–39: Caution.
+- 40–69: High risk.
+- 70–100: Critical.
+
+## Verdict types
+
+- Suspicious indicators detected.
+- No strong indicators detected.
+- Insufficient evidence.
+
+Never display "100% safe", "guaranteed scam", "definitely genuine" or a fraud probability without real verification.
+
+---
+
+# 7. CROSS-SIGNAL INTELLIGENCE — CORE DIFFERENTIATOR
+
+Create a separate Cross-Signal Intelligence engine.
+
+Correlate independent signals instead of relying only on isolated keywords.
+
+Implement combinations:
+
+### Fake KYC + Account Threat + OTP
+
+Fake KYC + account-blocking threat + credential request.
+
+### Job + Upfront Fee
+
+Job/internship offer + registration/payment fee.
+
+### Lottery + Payment
+
+Prize claim + processing fee.
+
+### UPI + PIN
+
+Payment request + PIN requested to receive money.
+
+### Government/Police + Arrest Threat + Payment
+
+Impersonation + arrest threat + payment demand.
+
+### Unknown App + Remote Access
+
+Unknown app installation + remote-access request.
+
+### Courier/Utility + Threat + Suspicious Link
+
+Service threat + payment urgency + suspicious URL.
+
+### Investment + Guaranteed Returns + Recruitment
+
+Unrealistic returns + investment request + recruitment/payment.
+
+Display:
+
+- Combination detected.
+- Signals involved.
+- Why the combination matters.
+- Risk contribution.
+- Recommended action.
+
+Prevent duplicate scoring.
+
+---
+
+# 8. NEGATIVE CONTEXT AND FALSE-POSITIVE PROTECTION
+
+Mandatory.
+
+Distinguish between scam messages and genuine awareness messages.
+
+Examples:
+
+- "Never share your OTP with anyone."
+- "Your bank will never ask you to disclose your UPI PIN."
+- "Do not click unknown phishing links."
+- "Learn to recognize fake KYC messages."
+- "Your account statement is available in the official bank application."
+- "Your parcel is scheduled for delivery tomorrow."
+- "Your interview is scheduled for Monday. There is no registration fee."
+
+Implement:
+
+- Negation detection.
+- Warning/advice context.
+- Credential request vs credential warning.
+- Receiving-payment vs authorizing-payment context.
+- Official channel references.
+- Genuine job context.
+- Benign notifications.
+- Context-aware suppression.
+
+Do not use simplistic negative scoring.
+
+Awareness messages must not be flagged solely because they mention scam-related words.
+
+---
+
+# 9. MESSAGE NORMALIZER
+
+Support:
+
+- Lowercase normalization.
+- Unicode.
+- Whitespace normalization.
+- Repeated punctuation.
+- Spaced letters such as F R E E.
+- Dotted OTP such as O.T.P.
+- Common obfuscation.
+- Spelling variations.
+- Hindi.
+- Roman Hindi.
+- Hinglish.
+- Common transliterations.
+
+Examples:
+
+- paisa.
+- paise.
+- turant.
+- jaldi.
+- bank khata.
+- KYC karwao.
+- PIN bhejo.
+- account band.
+- inaam.
+- naukri.
+- registration fee.
+- OTP batao.
+
+Use token-scoped leetspeak transformations.
+
+Do not globally replace @, 0, 1, $, or 3.
+
+Preserve original-position mapping for evidence highlighting.
+
+---
+
+# 10. URL ANALYZER
+
+Static-string-only. Never open, fetch, visit or resolve submitted URLs.
+
+Analyze:
+
+- Protocol.
+- Hostname.
+- Registrable domain.
+- Subdomains.
+- Path.
+- Query parameters.
+- Encoding.
+- Punycode.
+- IP-based hostname.
+- Excessive subdomains.
+- @ tricks.
+- Brand impersonation.
+- Lookalike domains.
+- Shortened links.
+- Hidden destinations.
+- Suspicious paths.
+- Unusual hostname structures.
+
+Use a Public Suffix List-aware parser such as tldts.
+
+Do not use simplistic last-two-dot parsing.
+
+## URL safety logic
+
+- HTTP alone does not establish fraud.
+- HTTPS does not prove legitimacy.
+- Shortened links hide destinations; they are not automatically malicious.
+- Suspicious domain is an indicator, not proof.
+- Brand names in subdomains do not establish ownership.
+
+## URL Deception Visualizer
+
+Example:
+
+https://paypal.com.security-check.example/login
+
+Show:
+
+- Protocol: HTTPS.
+- Subdomain: paypal.com.security-check.
+- Registered domain: example.com.
+- Path: /login.
+
+Highlight the real domain boundary visually.
+
+Explain:
+
+"paypal.com appears in the subdomain, but the registrable domain is example.com. This may be misleading. The URL has not been verified as malicious."
+
+Make the breakdown interactive and visually impressive.
+
+---
+
+# 11. ENTITY EXTRACTION
+
+Extract:
+
+- Phone numbers.
+- URLs.
+- UPI IDs.
+- Currency amounts.
+- Payment terms.
+- Credential-related terms.
+- App installation requests.
+- Remote-access requests.
+- Bank names.
+- Brand names.
+
+Entities alone are not malicious.
+
+Provide contextual explanations only when relevant.
+
+---
+
+# 12. TRUST BOUNDARIES
+
+Every analysis must distinguish:
+
+## What was detected
+
+Actual evidence and signals found.
+
+## What cannot be verified
+
+- Sender identity.
+- Real-world reputation.
+- Account ownership.
+- Redirect destination.
+- Whether the website is live or malicious.
+- Whether a company issued the offer.
+- Whether a phone number belongs to the claimed organization.
+
+## What the user should do
+
+Actionable advice based on detected signals.
+
+Avoid unsupported accusations.
+
+---
+
+# 13. RED-TEAM VALIDATION LAB
+
+Create a dedicated interactive page:
+
+**Red-Team Validation Lab**
+
+Create 20–30 curated test cases including:
+
+- Scams.
+- Genuine messages.
+- Genuine bank warnings.
+- Jobs.
+- Courier notifications.
+- Awareness messages.
+- Obfuscated text.
+- Hindi.
+- Hinglish.
+- Fake KYC.
+- OTP.
+- UPI PIN.
+- Lottery.
+- Internship fees.
+- Digital arrest.
+- Remote access.
+- URLs.
+- Brand lookalikes.
+- Shortened links.
+- Negation.
+- Multiple URLs.
+- Long messages.
+
+Use the exact same production engine.
+
+## Features
+
+- Run all tests.
+- Run individual tests.
+- Expected verdict.
+- Actual verdict.
+- Expected category.
+- Actual category.
+- Score.
+- Pass/fail.
+- Expandable rule trace.
+- Triggered rules.
+- Suppressed rules.
+- Explanation.
+
+## Metrics
+
+Calculate:
+
+- TP.
+- TN.
+- FP.
+- FN.
+- Accuracy.
+- Precision.
+- Recall.
+- F1, when mathematically defined.
+
+Label:
+
+"Performance on bundled prototype test set — not real-world detection accuracy."
+
+Never fabricate metrics.
+
+---
+
+# 14. SCAM AWARENESS QUIZ
+
+Build a fully functional 10-question quiz.
+
+Topics:
+
+- OTP.
+- UPI PIN.
+- KYC.
+- Job registration fees.
+- Lottery.
+- Remote-access apps.
+- Phishing.
+- Digital arrest.
+- Fake courier.
+- Genuine messages.
+
+Include at least three legitimate-message examples.
+
+Features:
+
+- One question at a time.
+- Multiple-choice answers.
+- Immediate feedback.
+- Explanation.
+- Evidence highlighting.
+- Safety lesson.
+- Score.
+- Progress indicator.
+- Final result.
+- Review incorrect answers.
+- Restart.
+
+---
+
+# 15. LANGUAGE SELECTOR
+
+Provide:
+
+- English.
+- Hindi.
+- Hinglish.
+
+Change the complete interface:
+
+- Buttons.
+- Labels.
+- Verdicts.
+- Risk explanations.
+- Evidence.
+- Advice.
+- Quiz.
+- Navigation.
+- Empty states.
+- Help text.
+- Awareness generator.
+
+Detection and scoring must remain unchanged when the language changes.
+
+Support common Hindi and Hinglish patterns without claiming perfect NLP.
+
+## Hindi writing style
+
+Use natural everyday Indian Hindi, not overly pure, formal, Sanskrit-heavy or difficult Hindi.
+
+Prefer:
+
+"अपना OTP किसी को मत बताना, चाहे वो बैंक से होने का दावा करे।"
+
+Avoid:
+
+"कृपया अपनी गोपनीय प्रमाणीकरण सूचना किसी अनधिकृत व्यक्ति के साथ साझा न करें।"
+
+Use commonly understood words:
+
+OTP, UPI PIN, लिंक, अकाउंट, बैंक, ठगी, जाँच, पैसे, पेमेंट, रजिस्ट्रेशन फीस.
+
+All Hindi messages should sound like something an ordinary Indian would naturally send on WhatsApp.
+
+---
+
+# 16. RBI / CYBER SAFETY BULLETIN
+
+Add a subtle safety bulletin/ticker.
+
+Tips:
+
+- Never share OTP.
+- Never disclose UPI PIN to receive money.
+- Verify KYC through official bank channels.
+- Avoid unknown apps.
+- Never grant remote access to strangers.
+- Do not click suspicious links.
+- Independently verify customer-care numbers.
+- Be cautious of job registration fees.
+
+Features:
+
+- Pause/resume.
+- Reduced-motion support.
+- Readable text.
+- Official source links.
+- Paraphrased safety tips.
+
+Do not let it distract from the analyzer.
+
+---
+
+# 17. INDIAN CYBER SAFETY RESOURCES
+
+Include:
+
+### Financial cyber fraud
+
+Helpline: 1930  
+https://cybercrime.gov.in/
+
+### Suspicious calls, SMS and WhatsApp
+
+Sanchar Saathi / Chakshu  
+https://sancharsaathi.gov.in/
+
+### Report suspect
+
+https://cybercrime.gov.in/Webform/cyber_suspect.aspx
+
+Explain when each resource should be used.
+
+Do not claim government affiliation.
+
+Do not submit reports on behalf of users.
+
+If money has been lost, prioritize immediate bank contact and 1930.
+
+---
+
+# 18. OFFICIAL SOURCE REGISTRY
+
+Create a Sources/About page and local source registry.
+
+Use official references:
+
+### RBI
+
+RBI KYC Advisory — February 2, 2024  
+https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=57244
+
+RBI Cyber Threats & Digital Fraud Advisory — January 28, 2022  
+https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=53185
+
+RBI Cautions  
+https://www.rbi.org.in/Scripts/RBICautions.aspx
+
+RBI BE(A)WARE booklet  
+https://rbi.org.in/commonman/Upload/english/Content/PDFs/English%20BEAWARE.pdf
+
+### CERT-In
+
+CIAD-2024-0050 — October 24, 2024  
+https://www.cert-in.org.in/s2cMainServlet?VLCODE=CIAD-2024-0050&pageid=PUBVLNOTES02
+
+### NPCI
+
+Fraud Awareness  
+https://www.npci.org.in/fraud-awareness
+
+UPI FAQs  
+https://www.npci.org.in/what-we-do/upi/faqs
+
+### I4C
+
+National Cyber Crime Portal  
+https://cybercrime.gov.in/
+
+Report Suspect  
+https://cybercrime.gov.in/Webform/cyber_suspect.aspx
+
+MHA Cyber & Information Security Division  
+https://www.mha.gov.in/cyber-information-security-division
+
+### DoT
+
+Sanchar Saathi / Chakshu  
+https://sancharsaathi.gov.in/
+
+Each source must include:
+
+- ID.
+- Organization.
+- Title.
+- URL.
+- Date if available.
+- Brief explanation.
+
+Rules must reference source IDs.
+
+Distinguish officially supported patterns, prototype heuristics and assumptions.
+
+Do not fabricate source verification.
+
+---
+
+# 19. SMART AWARENESS MESSAGE GENERATOR — MAJOR FEATURE
+
+CyberSuraksha must not stop after detecting a scam.
+
+After a suspicious message is detected, provide:
+
+## "Spread Awareness — Help others avoid this scam"
+
+Generate a shareable awareness message based on the actual detected category and signals.
+
+This feature must be deterministic and rule-based. No external AI API required.
+
+## Language options
+
+- Hindi.
+- English.
+- Both languages.
+
+Hindi must use natural, everyday Indian Hindi.
+
+Avoid difficult, Sanskrit-heavy or robotic translations.
+
+## Audience and tone options
+
+### Family Alert
+
+For parents, relatives and non-technical users.
+
+Tone:
+- Caring.
+- Simple.
+- Direct.
+- Non-technical.
+
+### Friends Alert
+
+Short WhatsApp-forward style.
+
+Tone:
+- Concise.
+- Natural.
+- Casual.
+- Shareable.
+
+### Detailed Awareness
+
+Explain:
+
+- What the scam pattern is.
+- What the scammer may be attempting.
+- What to avoid.
+- How to verify.
+
+Tone:
+- Informative.
+- Simple.
+- Non-alarmist.
+
+## Scam-specific templates
+
+### OTP Scam
+
+Hindi:
+
+"⚠️ सावधान! कोई भी बैंक या अनजान व्यक्ति आपसे OTP माँगे, तो उसे बिल्कुल न बताएं। OTP शेयर करने से आपके अकाउंट से पैसे निकल सकते हैं। पहले सही जगह से जाँच करें और इस जानकारी को अपने परिवार के साथ भी शेयर करें।"
+
+English:
+
+"⚠️ Stay alert! Never share your OTP with anyone claiming to be from your bank or another service. Sharing it could put your account at risk. Verify through official channels and share this warning with your family."
+
+### UPI / PIN Scam
+
+Hindi:
+
+"⚠️ UPI से पैसे लेने के लिए PIN डालने की जरूरत नहीं होती। अगर कोई पैसे भेजने के नाम पर आपसे PIN डालने या QR स्कैन करने को कहे, तो पहले अच्छी तरह जाँच लें। जल्दबाजी में पेमेंट न करें।"
+
+English:
+
+"⚠️ You do not need to enter your UPI PIN to receive money. Be careful if someone asks you to scan a QR code or enter your PIN to receive a payment. Verify before taking any action."
+
+### Fake Job / Internship Fee
+
+Hindi:
+
+"⚠️ Fake job और internship के नाम पर registration fees माँगने वाले मैसेज से सावधान रहें। नौकरी पक्की करने के नाम पर पैसे माँगे जाएँ, तो बिना कंपनी की सही जानकारी जाँचे पेमेंट न करें। इसे अपने दोस्तों के साथ शेयर करें।"
+
+English:
+
+"⚠️ Be careful of fake job and internship offers asking for registration fees or upfront payments. Verify the company and offer independently before paying. Share this warning with friends."
+
+### Fake KYC / Bank Scam
+
+Hindi:
+
+"⚠️ बैंक KYC अपडेट के नाम पर आने वाले अनजान लिंक से सावधान रहें। अपना OTP, PIN या बैंक की जानकारी किसी लिंक पर न डालें। बैंक की जानकारी हमेशा उसके official app, website या branch से जाँचें।"
+
+English:
+
+"⚠️ Beware of unknown links claiming your bank KYC needs an urgent update. Never enter your OTP, PIN or banking details through suspicious links. Verify through your bank's official app, website or branch."
+
+### Lottery / Reward Scam
+
+Hindi:
+
+"⚠️ अगर कोई इनाम या लॉटरी मिलने के नाम पर पहले पैसे माँगे, तो सावधान रहें। बिना जाँच किए processing fee या कोई पेमेंट न करें। ऐसे मैसेज दूसरों को भी दिखाएँ ताकि वे ठगी से बच सकें।"
+
+English:
+
+"⚠️ Be careful of messages claiming you won a prize but asking for a processing fee first. Don't pay without verifying the offer. Share this warning to help others avoid reward scams."
+
+### Digital Arrest / Police Impersonation
+
+Hindi:
+
+"⚠️ फोन या वीडियो कॉल पर पुलिस या किसी अधिकारी के नाम से डराकर पैसे माँगे जाएँ, तो घबराएँ नहीं। किसी को पैसे ट्रांसफर न करें और उनकी बातों पर भरोसा करने से पहले संबंधित विभाग से खुद संपर्क करके जाँच करें।"
+
+English:
+
+"⚠️ Be alert if someone claiming to be police or an official threatens you over a call or video call and demands money. Don't panic or transfer money. Verify independently using official contact details."
+
+### Remote Access / Unknown App
+
+Hindi:
+
+"⚠️ किसी अनजान व्यक्ति के कहने पर remote access या screen-sharing ऐप डाउनलोड न करें। इससे वो आपके फोन की स्क्रीन देख सकता है या आपको गलत पेमेंट करने के लिए फँसा सकता है। पहले सही तरीके से जाँच लें।"
+
+English:
+
+"⚠️ Never install remote-access or screen-sharing apps because an unknown person asks you to. They may gain visibility into your device or manipulate you into making payments. Verify first."
+
+### Phishing / Suspicious Link
+
+Hindi:
+
+"⚠️ अनजान मैसेज में आए लिंक पर क्लिक करने से बचें। लिंक किसी असली वेबसाइट जैसा दिख सकता है, लेकिन आपको नकली पेज पर ले जा सकता है। वेबसाइट खुद official तरीके से खोलकर जाँच करें।"
+
+English:
+
+"⚠️ Avoid clicking unknown links in messages. A link may look like a genuine website but lead to a fake page. Open the official website yourself to verify."
+
+### Courier / Parcel Scam
+
+Hindi:
+
+"⚠️ पार्सल डिलीवरी या कस्टम के नाम पर पैसे या जानकारी माँगने वाले अनजान मैसेज से सावधान रहें। किसी लिंक से पेमेंट करने के बजाय courier की official website या app से जाँचें।"
+
+English:
+
+"⚠️ Be careful of unknown messages asking for money or personal information for parcel delivery or customs. Verify directly through the courier's official website or app before paying."
+
+### Electricity / Utility Scam
+
+Hindi:
+
+"⚠️ बिजली कनेक्शन काटने की धमकी देकर तुरंत पेमेंट माँगने वाले मैसेज से सावधान रहें। किसी अनजान लिंक या नंबर पर पेमेंट न करें। अपने बिजली विभाग के official माध्यम से बिल जाँचें।"
+
+English:
+
+"⚠️ Be cautious of messages threatening immediate electricity disconnection and demanding payment. Don't pay through unknown links or numbers. Verify your bill using your electricity provider's official channels."
+
+### Investment / Guaranteed Return Scam
+
+Hindi:
+
+"⚠️ कम समय में बहुत ज्यादा या guaranteed मुनाफे का वादा करने वाली schemes से सावधान रहें। पैसे लगाने से पहले पूरी जानकारी और जोखिम समझें। सिर्फ किसी के कहने पर निवेश न करें।"
+
+English:
+
+"⚠️ Be careful of investment schemes promising unusually high or guaranteed returns. Understand the risks and verify the company before investing. Don't invest just because someone pressures you."
+
+### Generic / Mixed Scam
+
+Hindi:
+
+"⚠️ इस मैसेज में धोखाधड़ी के कुछ संकेत मिले हैं। किसी अनजान लिंक पर क्लिक न करें, OTP या बैंक की जानकारी शेयर न करें और पैसे भेजने से पहले सही जगह से जाँच लें। इस चेतावनी को अपने परिवार और दोस्तों के साथ शेयर करें।"
+
+English:
+
+"⚠️ This message contains some suspicious indicators. Avoid clicking unknown links, sharing OTPs or banking details, or sending money without verification. Share this warning with friends and family."
+
+## Generator logic
+
+- Generate based on detected categories and signals.
+- Prioritize the most dangerous relevant category.
+- Combine multiple categories when needed without making the message too long.
+- Use generic fallback when category confidence is low.
+- Never invent scam details.
+- Never accuse a sender of confirmed fraud.
+- Do not automatically include the original submitted text.
+- Generate standalone awareness messages.
+- If no strong scam indicators exist, generate neutral safety advice rather than a frightening alert.
+
+Neutral Hindi:
+
+"इस मैसेज में कोई मजबूत ठगी का संकेत नहीं मिला, लेकिन इसका मतलब यह नहीं कि यह पूरी तरह सुरक्षित है। किसी भी लिंक या पेमेंट को लेकर सावधानी रखें।"
+
+Neutral English:
+
+"No strong scam indicators were detected in this message, but that does not guarantee it is safe. Always verify links and payment requests independently."
+
+## Generator UI
+
+Below analysis results display:
+
+- Section title: Spread Awareness.
+- Subtitle: Help others avoid similar scams.
+- Audience selector: Family / Friends / Detailed.
+- Language selector: Hindi / English / Both.
+- Editable preview.
+- Copy Hindi.
+- Copy English.
+- Copy Both.
+- Share.
+- Success feedback.
+- Reset message.
+
+Allow the user to edit text before copying or sharing.
+
+Share using native browser/device sharing when supported. Provide copy fallback when unavailable.
+
+All actions must require deliberate user interaction.
+
+Do not auto-copy, auto-share, or send content without permission.
+
+## Privacy
+
+Generated alerts must not contain original user input automatically.
+
+Do not upload any messages to an external server.
+
+## Design
+
+Make the awareness generator a compact, attractive, friendly community-awareness card.
+
+Include:
+
+- Alert icon.
+- Audience selection.
+- Language selection.
+- Preview.
+- Copy/share actions.
+- Success feedback.
+
+Avoid clutter.
+
+Demo flow:
+
+**Detect scam → Explain evidence → Generate warning → Share awareness**
+
+---
+
+# 20. WARN MY FAMILY
+
+Retain Warn My Family as part of Spread Awareness.
+
+Provide a simple one-click way to generate a family-friendly warning based on actual detection.
+
+Support Hindi, English and both languages.
+
+Copy the complete warning in one action.
+
+---
+
+# 21. UI / UX DESIGN
+
+Create a premium, clean cybersecurity interface.
+
+## Colors
+
+- Navy.
+- White.
+- Light grey.
+- Muted teal.
+- Charcoal.
+- Amber for caution.
+- Red for critical.
+- Subtle green for low risk.
+
+Avoid:
+
+- Neon.
+- Excessive gradients.
+- Clutter.
+- Excessive shadows.
+- Complex animations.
+- Fake dashboards.
+- Tiny text.
+
+Use:
+
+- Modern typography such as Inter or Poppins.
+- Clean spacing.
+- Rounded cards.
+- Simple line icons.
+- Subtle micro-interactions.
+- Responsive layout.
+- Good accessibility.
+- Keyboard support.
+- Good contrast.
+
+## Navigation
+
+- Analyze.
+- Red-Team Lab.
+- Scam Awareness Quiz.
+- Sources / Safety.
+
+The analyzer must remain the primary focus.
+
+## Analyzer screen
+
+- CyberSuraksha branding.
+- Tagline.
+- Input.
+- Analyze.
+- Clear.
+- Sample messages.
+- Language selector.
+- Privacy notice.
+- Safety bulletin.
+
+## Results
+
+- Risk meter.
+- Verdict.
+- Category.
+- Evidence cards.
+- Original message highlights.
+- Cross-Signal Intelligence.
+- URL Visualizer.
+- Entity extraction.
+- Trust boundaries.
+- Safety actions.
+- Spread Awareness generator.
+
+Do not hide critical information behind excessive clicks.
+
+---
+
+# 22. SAMPLE MESSAGES
+
+Include selectable sample inputs that run through the real detection engine.
+
+### Fake Bank KYC
+
+"Dear customer, your bank account will be blocked today. Complete KYC immediately and share your OTP."
+
+### Job Scam
+
+"Work from home internship. Earn ₹30,000 monthly. Pay ₹799 registration fee to confirm your slot."
+
+### Lottery Scam
+
+"Congratulations! You won ₹50,000. Pay ₹499 processing fee to claim your reward."
+
+### Digital Arrest
+
+"Your Aadhaar is linked to illegal activity. Police action is pending. Pay immediately to avoid arrest."
+
+### UPI Scam
+
+"To receive ₹5,000 cashback, scan this QR and enter your UPI PIN."
+
+### Genuine Awareness
+
+"Never share your OTP or UPI PIN with anyone. Your bank will never ask you to disclose it."
+
+### Genuine Courier
+
+"Your parcel is scheduled for delivery tomorrow. Please check the official courier application for updates."
+
+### URL Deception
+
+https://paypal.com.security-check.example/login
+
+All samples must execute through the actual analyzer.
+
+---
+
+# 23. PROJECT STRUCTURE
+
+Keep code modular.
+
+src/
+  components/
+    Header.tsx
+    Navigation.tsx
+    MessageInput.tsx
+    RiskMeter.tsx
+    EvidenceCard.tsx
+    VerdictBadge.tsx
+    UrlVisualizer.tsx
+    CrossSignalPanel.tsx
+    SafetyActions.tsx
+    SafetyTicker.tsx
+    EntityPanel.tsx
+    AwarenessGenerator.tsx
+    FamilyWarning.tsx
+
+  engine/
+    normalizer.ts
+    rulesEngine.ts
+    scoringEngine.ts
+    entityExtractor.ts
+    crossSignalEngine.ts
+    urlAnalyzer.ts
+    classifier.ts
+    contextAnalyzer.ts
+    advice.ts
+    awarenessGenerator.ts
+
+  data/
+    rules.json
+    crossSignals.json
+    brands.json
+    sources.json
+    safetyTips.json
+    quizQuestions.json
+    testCases.json
+    awarenessTemplates.json
+
+  pages/
+    AnalyzePage.tsx
+    RedTeamPage.tsx
+    QuizPage.tsx
+    SourcesPage.tsx
+
+  App.tsx
+  main.tsx
+
+tests/
+  normalizer.test.ts
+  scoring.test.ts
+  urlAnalyzer.test.ts
+  context.test.ts
+  rulesEngine.test.ts
+  crossSignal.test.ts
+  testCases.test.ts
+  awarenessGenerator.test.ts
+
+Also create:
+
+- package.json.
+- tsconfig.json.
+- vite.config.ts.
+- vercel.json, if needed.
+- README.md.
+- .gitignore.
+
+Adjust structure if necessary but preserve modular architecture.
+
+---
+
+# 24. AUTOMATED TESTING
+
+Create real automated tests for:
+
+- Rule matching.
+- Scoring.
+- Score caps.
+- Duplicate detection.
+- Cross-signal combinations.
+- Negation.
+- Context suppression.
+- Genuine messages.
+- Hindi patterns.
+- Hinglish patterns.
+- Spaced letters.
+- Dotted OTP.
+- URL parsing.
+- Domain extraction.
+- Punycode.
+- IP-based URLs.
+- Shorteners.
+- Brand mismatch.
+- Deceptive subdomains.
+- Multiple URLs.
+- Empty input.
+- Long input.
+- Malformed input.
+- Awareness generator.
+- Hindi alert quality.
+- English alert generation.
+- Family alert.
+- Friends alert.
+- Detailed alert.
+- Combined-language output.
+- Generic fallback.
+- Genuine-message neutral fallback.
+- Unsupported accusation prevention.
+
+Run tests.
+
+Fix failures.
+
+Run the tests again.
+
+Run the production build.
+
+Do not claim success without actual execution.
+
+---
+
+# 25. AUTONOMOUS FEATURE VERIFICATION, QA AND SELF-REPAIR — MANDATORY
+
+This section is extremely important.
+
+Do not consider CyberSuraksha complete merely because the code has been generated or the interface looks finished.
+
+You are responsible for verifying that EVERY feature in this project specification actually works according to the original idea, expected behavior and requirements.
+
+## A. Complete feature audit
+
+Create an internal checklist of the entire project specification.
+
+Audit every feature, including:
+
+- Analyzer.
+- Analyze button.
+- Clear button.
+- Example inputs.
+- Rule engine.
+- Scoring.
+- Severity.
+- Three-state verdict.
+- Negative-context protection.
+- English detection.
+- Hindi detection.
+- Hinglish detection.
+- Normalizer.
+- Obfuscation.
+- Evidence highlighting.
+- Cross-Signal Intelligence.
+- Duplicate score prevention.
+- URL analyzer.
+- URL visualizer.
+- Domain extraction.
+- Brand lookalike detection.
+- Entity extraction.
+- Trust boundaries.
+- Safety actions.
+- Language selector.
+- Safety ticker.
+- Official sources.
+- Reporting guidance.
+- Red-Team Lab.
+- Individual test execution.
+- Run All Tests.
+- TP/TN/FP/FN.
+- Accuracy/precision/recall/F1.
+- Quiz.
+- Quiz score.
+- Quiz explanations.
+- Warn My Family.
+- Scam-specific awareness generator.
+- Family/Friends/Detailed modes.
+- Hindi/English/Both modes.
+- Editable message preview.
+- Copy Hindi.
+- Copy English.
+- Copy Both.
+- Share functionality.
+- Copy success feedback.
+- Responsive UI.
+- Navigation.
+- Privacy.
+- Error handling.
+
+Do not skip features because they appear visually present.
+
+## B. Functional testing, not visual inspection
+
+For each feature:
+
+1. Inspect the implementation.
+2. Identify expected behavior from the specification.
+3. Execute or simulate actual interactions.
+4. Verify output.
+5. Test edge cases.
+6. Check console errors and runtime exceptions.
+7. Fix failures.
+8. Repeat the test after fixing.
+
+Buttons must perform their advertised actions.
+
+Navigation must work.
+
+Language selector must actually change the relevant content.
+
+Copy buttons must copy the correct message.
+
+Share must work where supported and provide a fallback.
+
+Analyze must invoke the real engine.
+
+Clear must clear input, results, highlights, score, URL results and related state.
+
+Example buttons must load correct messages and allow actual analysis.
+
+## C. End-to-end testing
+
+### Journey A — Fake KYC scam
+
+Paste a fake KYC message.
+
+Verify:
+
+- Analysis executes.
+- Relevant signals are detected.
+- Score is calculated.
+- Verdict is correct.
+- Evidence is highlighted.
+- Cross-signal combination is shown when applicable.
+- Safety advice is correct.
+- Hindi awareness message works.
+- English awareness message works.
+- Copy works.
+- Combined message works.
+
+### Journey B — UPI PIN scam
+
+Paste a message asking for UPI PIN to receive money.
+
+Verify:
+
+- UPI pattern is detected.
+- Receiving-money context is distinguished from normal payment.
+- Score is not duplicated.
+- Correct safety guidance appears.
+- Scam-specific alert is generated.
+
+### Journey C — Fake internship scam
+
+Paste an internship offer requiring registration fees.
+
+Verify:
+
+- Job/internship context is detected.
+- Payment demand is correlated.
+- Score is correct.
+- Family/friends alert contains internship-specific advice.
+
+### Journey D — Genuine awareness message
+
+Paste:
+
+"Never share your OTP or UPI PIN with anyone. Your bank will never ask you to disclose it."
+
+Verify:
+
+- It is not classified as credential theft.
+- Context protection works.
+- No unnecessary high-risk verdict appears.
+- No frightening scam warning is generated.
+- Neutral safety messaging is used if appropriate.
+
+### Journey E — Deceptive URL
+
+Analyze:
+
+https://paypal.com.security-check.example/login
+
+Verify:
+
+- URL is not opened.
+- Registrable domain is correct.
+- Subdomain is correct.
+- Visualizer works.
+- Explanation matches parsing.
+- Score is correct.
+- No fake live reputation is displayed.
+
+### Journey F — Red-Team Lab
+
+Run all bundled tests.
+
+Verify:
+
+- Every case executes.
+- Expected vs actual results are compared.
+- Pass/fail is correct.
+- Metrics are mathematically correct.
+- Traces come from the real engine.
+- No tests are artificially marked passed.
+
+### Journey G — Awareness generator
+
+For each supported category, test messages.
+
+Verify:
+
+- Hindi is natural, everyday language.
+- Hindi is not overly formal.
+- English is understandable.
+- Family alert is friendly.
+- Friends alert is concise.
+- Detailed alert explains the scam.
+- Text is editable.
+- Copy Hindi works.
+- Copy English works.
+- Copy Both works.
+- Share works if supported.
+- Fallback works if share is unavailable.
+- Original pasted content is not automatically included.
+- No unsupported claims are generated.
+
+### Journey H — Language switching
+
+Switch English, Hindi and Hinglish.
+
+Verify:
+
+- Navigation changes.
+- Buttons change.
+- Verdicts change.
+- Evidence changes.
+- Safety advice changes.
+- Quiz changes.
+- Awareness generator interface changes.
+- Scoring remains unchanged.
+
+### Journey I — Reset and privacy
+
+Analyze a message, then click Clear.
+
+Verify:
+
+- Input clears.
+- Analysis clears.
+- Evidence clears.
+- Score clears.
+- URL results clear.
+- Awareness preview resets.
+- No message exists in localStorage/sessionStorage.
+- Submitted text is not logged.
+
+## D. Automated browser testing
+
+If browser testing, preview interaction or computer-use capabilities are available, use them to test the actual application.
+
+Do not limit testing to reading source code.
+
+Test:
+
+- Buttons.
+- Navigation.
+- Form submissions.
+- Input changes.
+- Dropdowns.
+- Copy.
+- Quiz progression.
+- Red-Team Lab.
+- Responsive layout.
+- Empty states.
+- Error states.
+
+If browser testing is unavailable, use the strongest alternative:
+
+- Unit tests.
+- Integration tests.
+- Production build.
+- Manual testing checklist.
+
+Clearly disclose which tests were actually executed.
+
+Never claim browser testing was performed if it was not.
+
+## E. Autonomous bug identification and repair
+
+If a feature is:
+
+- Missing.
+- Incomplete.
+- Nonfunctional.
+- Fake.
+- Hardcoded.
+- Broken.
+- Incorrectly connected.
+- Producing incorrect output.
+- Not following the specification.
+
+You must fix it autonomously.
+
+Do not merely report bugs to me.
+
+Do not ask me to fix code you can repair.
+
+Do not replace a required feature with a static mockup.
+
+Do not remove a feature to hide a failure.
+
+Do not weaken detection logic just to make tests pass.
+
+Preserve the original product idea.
+
+After fixing:
+
+1. Rerun failing test.
+2. Retest the related feature.
+3. Check for regressions.
+4. Rerun full tests where appropriate.
+5. Rerun production build.
+
+Continue the fix-and-test cycle until issues are fixed or a genuine limitation prevents further work.
+
+## F. Requirement compliance check
+
+Compare the final implementation with the complete original specification.
+
+Classify each requirement:
+
+- PASS — Implemented and verified.
+- FAIL — Not working or incorrect.
+- PARTIAL — Implemented but incomplete.
+- NOT TESTED — Could not be verified.
+
+Do not mark PASS just because code or UI exists.
+
+PASS requires evidence of working behavior.
+
+If FAIL or PARTIAL:
+
+- Attempt repair.
+- Retest.
+- Update status honestly.
+
+## G. Self-repair loop
+
+Follow:
+
+BUILD → RUN → TEST → FIND BUGS → FIX → RETEST → REGRESSION TEST → BUILD AGAIN
+
+Repeat instead of stopping at the first successful build.
+
+Prioritize:
+
+1. Application crashes.
+2. Core analyzer failure.
+3. Incorrect classification.
+4. False positives on genuine messages.
+5. Incorrect scores.
+6. URL parsing errors.
+7. Cross-signal errors.
+8. Awareness generator errors.
+9. Broken buttons/navigation.
+10. Quiz and Red-Team Lab issues.
+11. UI/responsiveness.
+
+Do not polish animations while core features are broken.
+
+## H. Final QA report
+
+Before declaring completion, report:
+
+### Feature verification
+
+List major features with PASS, PARTIAL, FAIL or NOT TESTED.
+
+### Test results
+
+- Tests executed.
+- Tests passed.
+- Tests failed.
+- Bugs found.
+- Bugs fixed.
+- Bugs remaining.
+
+### Functional verification
+
+Report whether:
+
+- Analyze works.
+- Clear works.
+- Examples work.
+- Scoring works.
+- Context protection works.
+- Cross-Signal works.
+- URL analysis works.
+- URL visualizer works.
+- Red-Team Lab works.
+- Quiz works.
+- Language switching works.
+- Awareness generator works.
+- Copy actions work.
+- Sharing or fallback works.
+- Responsive layout was checked.
+
+### Build verification
+
+Report actual production build result.
+
+### Remaining limitations
+
+List genuine limitations and features that could not be verified.
+
+### Completion decision
+
+Only declare the application complete if core requirements have been implemented and verified.
+
+If features remain broken or untested, disclose them explicitly.
+
+Your goal is not just to generate CyberSuraksha.
+
+Your goal is to deliver the working application described by the original idea, verify it, identify defects, repair them autonomously and leave me with the most complete reliable prototype possible.
+
+I am a beginner. Take ownership of the build-and-verify process. Do not stop at the first build. Test, fix and retest before handing the project back.
+
+---
+
+# 26. PERFORMANCE AND ERROR HANDLING
+
+- Ordinary message analysis should take under approximately one second.
+- Handle empty input.
+- Handle multiple URLs.
+- Handle long input.
+- Handle malformed input.
+- No infinite loops.
+- No unsafe rendering.
+- No unexpected network requests.
+- No application crashes.
+- Responsive on low-to-mid-range Intel i5 laptops with 16 GB RAM.
+
+Avoid unnecessary heavy dependencies.
+
+---
+
+# 27. FINAL PRIORITIES
+
+## P0 — Core must work
+
+- Analyzer.
+- Rule engine.
+- Normalizer.
+- Scoring.
+- Negative-context protection.
+- Evidence.
+- URL analysis.
+- Verdict.
+- Safety resources.
+
+## P1 — Main differentiators
+
+- Cross-Signal Intelligence.
+- URL Deception Visualizer.
+- Entity extraction.
+- Rule trace.
+
+## P2 — Demo and polish
+
+- Red-Team Lab.
+- Quiz.
+- English/Hindi/Hinglish.
+- Safety ticker.
+- Warn My Family.
+- Scam-specific Spread Awareness.
+- Copy and native sharing.
+- UI polish.
+
+Complete P0 and P1 before spending time on decorative effects.
+
+---
+
+# 28. GITHUB AND VERCEL DEPLOYMENT
+
+Prepare the project for GitHub.
+
+Repository name:
+
+cybersuraksha
+
+README must include:
+
+- Project overview.
+- Problem statement.
+- Features.
+- Technology stack.
+- Architecture.
+- Privacy model.
+- Detection methodology.
+- Limitations.
+- Testing.
+- Deployment instructions.
+
+Do not include secrets or credentials.
+
+If GitHub integration is available, help me connect and sync the project.
+
+Do not claim it was pushed if it was not.
+
+## Vercel
+
+Prepare:
+
+- Vite framework.
+- Build command: npm run build.
+- Output directory: dist.
+- No environment variables required.
+- SPA routing configured.
+- Static deployment compatible.
+
+If integration is available, use it.
+
+Otherwise provide beginner-friendly click-by-click instructions for GitHub import and deployment.
+
+---
+
+# 29. FINAL DELIVERY REPORT
+
+After finishing, provide:
+
+1. What was built.
+2. Working features.
+3. Differentiators.
+4. Rule engine explanation.
+5. Scoring explanation.
+6. Cross-Signal explanation.
+7. URL analyzer explanation.
+8. Awareness generator explanation.
+9. Tests actually executed.
+10. Actual test results.
+11. Build status.
+12. Remaining bugs.
+13. Incomplete features.
+14. GitHub status.
+15. Deployment status.
+16. Exact remaining actions for me.
+
+Keep the report simple and beginner-friendly.
+
+---
+
+# 30. FINAL PRODUCT PRINCIPLE
+
+CyberSuraksha must be:
+
+- Explainable.
+- Privacy-first.
+- Lightweight.
+- Honest.
+- Context-aware.
+- Multilingual.
+- Practical.
+- Easy for ordinary users.
+- Technically inspectable by judges.
+
+The complete product journey:
+
+**Paste → Detect → Understand → Verify → Act → Spread Awareness**
+
+It should help users recognize suspicious signals, understand the evidence, verify independently, avoid unsafe actions and warn their community.
+
+A beautiful UI alone is not enough.
+
+Deliver a functional application with real detection logic, transparent evidence, false-positive protection, scam-specific awareness messages, a tested Red-Team Lab, honest metrics, autonomous bug repair and reliable deployment readiness.
+
+Start building now. Work autonomously. Complete the highest-priority features first. Then audit, test, repair, retest and verify the entire application before declaring it finished.

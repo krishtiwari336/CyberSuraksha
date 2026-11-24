@@ -1,0 +1,222 @@
+[
+  {
+    "id": "quiz-1",
+    "topic": "OTP",
+    "message": "Dear customer, your SBI reward points worth ₹4,500 are expiring tonight. Share the 6-digit OTP just sent to your phone to redeem.",
+    "isScam": true,
+    "options": [
+      { "id": "scam", "label": { "en": "Suspicious / Likely Scam", "hi": "संदिग्ध / ठगी की संभावना", "hinglish": "Suspicious / Likely Scam" } },
+      { "id": "safe", "label": { "en": "Likely Genuine", "hi": "संभवतः सही संदेश", "hinglish": "Likely Genuine" } }
+    ],
+    "correctOptionId": "scam",
+    "highlightPhrases": ["Share the 6-digit OTP", "expiring tonight"],
+    "explanation": {
+      "en": "Asking you to share an OTP to 'redeem' reward points is a classic credential-theft trap. That OTP can authorize a real debit from your account.",
+      "hi": "रिवार्ड पॉइंट पाने के नाम पर OTP माँगना ठगी का तरीका है। उस OTP से आपके खाते से असली पैसे निकाले जा सकते हैं।",
+      "hinglish": "Reward points redeem karne ke naam par OTP maangna credential theft trap hai. Us OTP se aapke paise kat sakte hain."
+    },
+    "safetyLesson": {
+      "en": "Never share an OTP with anyone, even for rewards or refunds.",
+      "hi": "रिवार्ड या रिफंड के नाम पर भी कभी किसी को OTP न बताएं।",
+      "hinglish": "Rewards ya refund ke naam par bhi kabhi OTP share na karein."
+    }
+  },
+  {
+    "id": "quiz-2",
+    "topic": "UPI PIN",
+    "message": "Hi! I am buying your OLX table for ₹5,000. Please scan this QR code and enter your UPI PIN to receive the advance payment.",
+    "isScam": true,
+    "options": [
+      { "id": "scam", "label": { "en": "Suspicious / Likely Scam", "hi": "संदिग्ध / ठगी की संभावना", "hinglish": "Suspicious / Likely Scam" } },
+      { "id": "safe", "label": { "en": "Likely Genuine", "hi": "संभवतः सही संदेश", "hinglish": "Likely Genuine" } }
+    ],
+    "correctOptionId": "scam",
+    "highlightPhrases": ["scan this QR code", "enter your UPI PIN to receive"],
+    "explanation": {
+      "en": "You never enter a UPI PIN or scan a payment QR code to receive money. Entering your PIN sends money out of your account.",
+      "hi": "पैसे लेने के लिए कभी UPI PIN नहीं डालना होता और न QR स्कैन करना होता है। PIN डालने से पैसे आपके खाते से कटते हैं।",
+      "hinglish": "Paise receive karne ke liye kabhi UPI PIN ya QR scan nahi lagta. PIN daalne se aapke account se paise katte hain."
+    },
+    "safetyLesson": {
+      "en": "UPI PIN is only for sending money—never for receiving funds.",
+      "hi": "UPI PIN केवल पैसे भेजने के लिए होता है, पैसे पाने के लिए नहीं।",
+      "hinglish": "UPI PIN sirf paise bhejne ke liye hota hai, receive karne ke liye nahi."
+    }
+  },
+  {
+    "id": "quiz-3",
+    "topic": "Genuine Bank Warning",
+    "message": "Your bank will never ask you to disclose your OTP, ATM PIN, CVV, or UPI PIN. Your monthly account statement is available in the official bank application.",
+    "isScam": false,
+    "options": [
+      { "id": "scam", "label": { "en": "Suspicious / Likely Scam", "hi": "संदिग्ध / ठगी की संभावना", "hinglish": "Suspicious / Likely Scam" } },
+      { "id": "safe", "label": { "en": "Genuine Awareness / Notice", "hi": "सही जागरूकता / बैंक सूचना", "hinglish": "Genuine Awareness / Notice" } }
+    ],
+    "correctOptionId": "safe",
+    "highlightPhrases": ["never ask you to disclose", "official bank application"],
+    "explanation": {
+      "en": "Although it mentions OTP, PIN, and CVV, the message warns you NEVER to share them and points you to the official bank app—not an external link.",
+      "hi": "भले ही इसमें OTP और PIN लिखा है, लेकिन यह उन्हें न बताने की चेतावनी दे रहा है और सिर्फ बैंक के official ऐप की बात कर रहा है।",
+      "hinglish": "Ismein OTP aur PIN words hain, par yeh unhe share NA karne ki warning de raha hai aur official bank app refer kar raha hai."
+    },
+    "safetyLesson": {
+      "en": "Always read the surrounding context—official advisories warn against sharing credentials.",
+      "hi": "हमेशा पूरे संदेश का संदर्भ पढ़ें—असली बैंक संदेश OTP न बताने की सलाह देते हैं।",
+      "hinglish": "Hamesha context dekhein—real bank messages OTP/PIN share na karne ki salah dete hain."
+    }
+  },
+  {
+    "id": "quiz-4",
+    "topic": "Fake KYC",
+    "message": "URGENT: Your bank account will be blocked today because KYC is pending. Complete e-KYC immediately at http://sbi-kyc-update.example/login",
+    "isScam": true,
+    "options": [
+      { "id": "scam", "label": { "en": "Suspicious / Likely Scam", "hi": "संदिग्ध / ठगी की संभावना", "hinglish": "Suspicious / Likely Scam" } },
+      { "id": "safe", "label": { "en": "Likely Genuine", "hi": "संभवतः सही संदेश", "hinglish": "Likely Genuine" } }
+    ],
+    "correctOptionId": "scam",
+    "highlightPhrases": ["account will be blocked today", "Complete e-KYC immediately", "sbi-kyc-update.example"],
+    "explanation": {
+      "en": "Urgent account-blocking threats paired with an unofficial lookalike link are classic fake KYC phishing attempts.",
+      "hi": "आज ही खाता बंद होने की धमकी और एक अनजान नकली वेबसाइट लिंक देना फर्जी KYC ठगी का साफ संकेत है।",
+      "hinglish": "Account block ki urgent dhamki aur unofficial lookalike domain link fake KYC phishing ka clear sign hai."
+    },
+    "safetyLesson": {
+      "en": "Check KYC status only inside your bank's official app or at your branch.",
+      "hi": "KYC की स्थिति सिर्फ बैंक के आधिकारिक ऐप या ब्रांच में जाकर ही जाँचें।",
+      "hinglish": "KYC status sirf official bank app ya branch mein check karein."
+    }
+  },
+  {
+    "id": "quiz-5",
+    "topic": "Job Registration Fee",
+    "message": "Congratulations! You are selected for a Work-From-Home internship paying ₹25,000/month. Pay ₹799 registration fee to confirm your slot today.",
+    "isScam": true,
+    "options": [
+      { "id": "scam", "label": { "en": "Suspicious / Likely Scam", "hi": "संदिग्ध / ठगी की संभावना", "hinglish": "Suspicious / Likely Scam" } },
+      { "id": "safe", "label": { "en": "Likely Genuine", "hi": "संभवतः सही संदेश", "hinglish": "Likely Genuine" } }
+    ],
+    "correctOptionId": "scam",
+    "highlightPhrases": ["Pay ₹799 registration fee", "confirm your slot"],
+    "explanation": {
+      "en": "Demanding an upfront registration fee to confirm a job or internship slot is a major indicator of fake recruitment scams.",
+      "hi": "नौकरी या इंटर्नशिप का स्लॉट पक्का करने के लिए पहले रजिस्ट्रेशन फीस माँगना नकली जॉब ठगी की पहचान है।",
+      "hinglish": "Job ya internship slot confirm karne ke liye upfront registration fee maangna fake job scam ka sign hai."
+    },
+    "safetyLesson": {
+      "en": "Legitimate employers do not charge upfront registration fees for internships.",
+      "hi": "सही कंपनियाँ इंटर्नशिप या नौकरी देने से पहले रजिस्ट्रेशन फीस नहीं लेतीं।",
+      "hinglish": "Genuine companies internship ya job ke liye pehle registration fee nahi leti."
+    }
+  },
+  {
+    "id": "quiz-6",
+    "topic": "Genuine Job Interview",
+    "message": "Hello Priya, your interview for the Software Intern role is scheduled for Monday at 11:00 AM via Google Meet. There is no registration or training fee.",
+    "isScam": false,
+    "options": [
+      { "id": "scam", "label": { "en": "Suspicious / Likely Scam", "hi": "संदिग्ध / ठगी की संभावना", "hinglish": "Suspicious / Likely Scam" } },
+      { "id": "safe", "label": { "en": "Likely Genuine", "hi": "संभवतः सही संदेश", "hinglish": "Likely Genuine" } }
+    ],
+    "correctOptionId": "safe",
+    "highlightPhrases": ["interview", "no registration or training fee"],
+    "explanation": {
+      "en": "This schedules a normal interview and explicitly states there is no fee—no money, OTP, or suspicious link is demanded.",
+      "hi": "यह एक सामान्य इंटरव्यू की सूचना है और स्पष्ट रूप से कहती है कि कोई फीस नहीं है। इसमें कोई पैसे या OTP नहीं माँगा गया।",
+      "hinglish": "Yeh normal interview schedule kar raha hai aur clear likha hai ki koi fee nahi hai—koi payment ya OTP demand nahi hai."
+    },
+    "safetyLesson": {
+      "en": "Presence of words like 'intern' or 'registration fee' with 'no fee' is benign—context matters.",
+      "hi": "'इंटरव्यू' या 'कोई फीस नहीं' जैसे शब्द होने मात्र से कोई संदेश ठगी नहीं बन जाता—संदर्भ समझना जरूरी है।",
+      "hinglish": "'Intern' ya 'no registration fee' jaise words se message scam nahi banta—context zaroori hai."
+    }
+  },
+  {
+    "id": "quiz-7",
+    "topic": "Lottery",
+    "message": "KBC Lucky Draw Alert! Your mobile number won ₹25,00,000. Deposit ₹2,500 processing fee immediately to release your prize cheque.",
+    "isScam": true,
+    "options": [
+      { "id": "scam", "label": { "en": "Suspicious / Likely Scam", "hi": "संदिग्ध / ठगी की संभावना", "hinglish": "Suspicious / Likely Scam" } },
+      { "id": "safe", "label": { "en": "Likely Genuine", "hi": "संभवतः सही संदेश", "hinglish": "Likely Genuine" } }
+    ],
+    "correctOptionId": "scam",
+    "highlightPhrases": ["won ₹25,00,000", "Deposit ₹2,500 processing fee"],
+    "explanation": {
+      "en": "Unsolicited lottery wins demanding an upfront processing fee or tax are classic advance-fee frauds.",
+      "hi": "बिना भाग लिए लाखों की लॉटरी निकलने का दावा करना और पहले प्रोसेसिंग फीस माँगना पक्की ठगी का तरीका है।",
+      "hinglish": "Unsolicited lottery win aur pehle processing fee maangna classic advance-fee scam hai."
+    },
+    "safetyLesson": {
+      "en": "Never pay a fee to claim an unexpected prize or lottery.",
+      "hi": "अनजान इनाम या लॉटरी पाने के लिए कभी कोई अग्रिम फीस न दें।",
+      "hinglish": "Unexpected prize ya lottery claim karne ke liye kabhi advance fee mat dein."
+    }
+  },
+  {
+    "id": "quiz-8",
+    "topic": "Remote-Access App",
+    "message": "To resolve your stuck UPI refund, please install AnyDesk from the link below and share the 9-digit session code with our support executive.",
+    "isScam": true,
+    "options": [
+      { "id": "scam", "label": { "en": "Suspicious / Likely Scam", "hi": "संदिग्ध / ठगी की संभावना", "hinglish": "Suspicious / Likely Scam" } },
+      { "id": "safe", "label": { "en": "Likely Genuine", "hi": "संभवतः सही संदेश", "hinglish": "Likely Genuine" } }
+    ],
+    "correctOptionId": "scam",
+    "highlightPhrases": ["install AnyDesk", "share the 9-digit session code"],
+    "explanation": {
+      "en": "Remote-access apps like AnyDesk allow callers to watch your phone screen, read OTPs, and trick you into transferring money.",
+      "hi": "AnyDesk जैसे ऐप का कोड शेयर करने से सामने वाला आपके फोन की स्क्रीन और OTP देख सकता है।",
+      "hinglish": "AnyDesk jaise remote-access app ka session code share karne se samne wala aapki screen aur OTPs dekh sakta hai."
+    },
+    "safetyLesson": {
+      "en": "Never install screen-sharing apps on an unknown caller's request.",
+      "hi": "किसी अनजान कॉलर के कहने पर कभी screen-sharing ऐप इंस्टॉल न करें।",
+      "hinglish": "Kisi unknown caller ke kehne par kabhi screen-sharing app install na karein."
+    }
+  },
+  {
+    "id": "quiz-9",
+    "topic": "Digital Arrest & Phishing",
+    "message": "Your Aadhaar is linked to an illegal drugs parcel seized by Customs. Police arrest warrant is issued. Transfer ₹45,000 immediately to avoid arrest.",
+    "isScam": true,
+    "options": [
+      { "id": "scam", "label": { "en": "Suspicious / Likely Scam", "hi": "संदिग्ध / ठगी की संभावना", "hinglish": "Suspicious / Likely Scam" } },
+      { "id": "safe", "label": { "en": "Likely Genuine", "hi": "संभवतः सही संदेश", "hinglish": "Likely Genuine" } }
+    ],
+    "correctOptionId": "scam",
+    "highlightPhrases": ["illegal drugs parcel", "arrest warrant", "Transfer ₹45,000 immediately to avoid arrest"],
+    "explanation": {
+      "en": "CERT-In warns that scammers impersonate police or customs over calls/messages, fabricating illegal parcel cases to extort urgent transfers.",
+      "hi": "CERT-In की चेतावनी के अनुसार, पुलिस या कस्टम अधिकारी बनकर अवैध पार्सल और गिरफ्तारी का डर दिखाकर पैसे माँगना 'डिजिटल अरेस्ट' ठगी है।",
+      "hinglish": "CERT-In advisory ke mutabik, police ya customs bankar illegal parcel aur arrest ka dar dikhakar paise maangna Digital Arrest scam hai."
+    },
+    "safetyLesson": {
+      "en": "Police never demand online transfers to avoid arrest. Hang up and call 1930.",
+      "hi": "पुलिस कभी गिरफ्तारी से बचने के लिए ऑनलाइन पैसे नहीं माँगती। फोन काटें और 1930 पर कॉल करें।",
+      "hinglish": "Police kabhi arrest se bachne ke liye online transfer nahi maangti. Call disconnect karein aur 1930 par report karein."
+    }
+  },
+  {
+    "id": "quiz-10",
+    "topic": "Genuine Courier Notification",
+    "message": "Your parcel AWB 849201 is out for delivery tomorrow between 10 AM and 6 PM. Please check the official courier application for live updates.",
+    "isScam": false,
+    "options": [
+      { "id": "scam", "label": { "en": "Suspicious / Likely Scam", "hi": "संदिग्ध / ठगी की संभावना", "hinglish": "Suspicious / Likely Scam" } },
+      { "id": "safe", "label": { "en": "Likely Genuine", "hi": "संभवतः सही संदेश", "hinglish": "Likely Genuine" } }
+    ],
+    "correctOptionId": "safe",
+    "highlightPhrases": ["delivery tomorrow", "official courier application"],
+    "explanation": {
+      "en": "This is a standard delivery update that asks for no fees, no OTP, and no suspicious external link—it directs you to the official courier app.",
+      "hi": "यह एक सामान्य डिलीवरी अपडेट है जिसमें न कोई फीस माँगी गई है, न OTP, और न ही कोई अनजान लिंक दिया गया है।",
+      "hinglish": "Yeh normal delivery update hai jisme koi fee, OTP ya unknown link nahi hai—sirf official courier app check karne ko kaha hai."
+    },
+    "safetyLesson": {
+      "en": "Genuine courier alerts don't demand emergency customs fees via random SMS links.",
+      "hi": "असली कूरियर अपडेट अनजान लिंक से अचानक पैसे या कार्ड की जानकारी नहीं माँगते।",
+      "hinglish": "Genuine courier updates random SMS links se urgent payment ya card details nahi maangte."
+    }
+  }
+]

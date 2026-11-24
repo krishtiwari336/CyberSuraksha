@@ -1,0 +1,1236 @@
+# CYBERSURAKSHA — COMPLETE MASTER UPGRADE PROMPT
+## Immersive UI + Official Logo + Advanced Scam Detection + Animated Red-Team Lab + Rulebook Explorer + Emerging Scam Intelligence
+
+You are a senior full-stack engineer, cybersecurity product designer, UI/UX specialist, rule-engine architect, QA engineer, and hackathon product builder.
+
+Your task is to **upgrade, redesign, polish, test, and improve my existing CyberSuraksha project** into a premium, immersive, highly interactive, hackathon-ready cybersecurity awareness and scam detection platform.
+
+Do not just give me suggestions, plans, or sample code. **Work directly inside the existing project, implement the changes, test them, fix issues, and verify the final production build.**
+
+I am a beginner coder. Do not unnecessarily ask me to perform technical tasks that you can do yourself.
+
+---
+
+# 1. PRODUCT IDENTITY
+
+**Product name:** CyberSuraksha
+
+**Tagline:** See the trap before you tap.
+
+**Product category:** Universal Scam, Phishing & Fake Offer Intelligence Platform.
+
+**Target users:** Indian students, everyday smartphone users, families, and people who may receive suspicious messages through SMS, WhatsApp, email, websites, social media, job offers, banking messages, courier messages, and other digital channels.
+
+The product should feel like a real cybersecurity consumer product — not a basic college form, generic dashboard, or static demo.
+
+The core user journey:
+
+**Paste → Detect → Understand → Verify → Act → Spread Awareness**
+
+---
+
+# 2. FIRST — INSPECT THE EXISTING PROJECT
+
+Before making changes:
+
+- Inspect the existing project structure.
+- Understand the current analyzer and scoring engine.
+- Inspect the existing rules and their actual count.
+- Understand the current Red-Team Lab and its tests.
+- Inspect the language selector, quiz, source pages, URL analyzer, awareness generator, and all existing functionality.
+- Identify what's already working and what needs improvement.
+- Do not blindly replace the working project.
+- Do not remove existing features just to simplify development.
+- Preserve working functionality and improve it.
+
+Make changes incrementally and keep the project runnable.
+
+---
+
+# 3. OFFICIAL USER-PROVIDED CYBERSURAKSHA LOGO
+
+I will provide an image that must be used as the official logo of CyberSuraksha.
+
+## Logo rules
+
+- Use my uploaded image as the primary official CyberSuraksha logo.
+- Do not create a different logo to replace it.
+- Do not redraw, reinterpret, redesign, distort, recolor, stretch, or crop important parts of it.
+- Preserve its original proportions and appearance.
+- If the image contains a transparent background, preserve transparency.
+- Use appropriate CSS sizing and padding so the logo looks properly aligned.
+- If the logo is too large, resize it proportionally.
+- Do not use an external URL for the logo.
+- Store it inside the project assets folder, such as `src/assets/`, using its actual file extension.
+- Import it properly in the code and verify it renders.
+
+## Where the logo should appear
+
+1. Main navbar/header
+2. Landing/hero section
+3. Footer or product identity area
+4. About/identity section if one exists
+
+Do not unnecessarily repeat the logo in every card, test result, or Red-Team Lab panel.
+
+The Red-Team Lab should use its own cybersecurity visual language — shields, radar, scanner, targets, test signals — while remaining visually consistent with the official branding.
+
+**If the image is uploaded, use that actual image asset. Do not silently substitute another logo or icon. If the asset is not available, prepare the import structure and clearly report that the actual logo could not yet be integrated.**
+
+---
+
+# 4. COMPLETE VISUAL REDESIGN — MAKE THE WEBSITE LESS BORING
+
+The current experience must feel significantly more engaging, premium, alive, and memorable.
+
+Do not make it look like a basic template dashboard.
+
+## Visual direction
+
+Create a polished cybersecurity interface combining:
+
+- Deep navy / charcoal elements
+- White and light-grey surfaces
+- Muted teal / cyan accents
+- Controlled amber and red risk colors
+- Tasteful gradients
+- Subtle glass / layered effects where appropriate
+- Clean typography
+- Strong hierarchy
+- Crisp icons
+- Good spacing
+- Responsive layouts
+- Premium data visualization
+
+Avoid:
+
+- Generic SaaS template styling
+- Too many plain rectangular cards
+- Excessive text on the first screen
+- Neon overload
+- Too many random colors
+- Excessive shadows
+- Excessive motion
+- Clutter
+- Tiny text
+- Fake-looking dashboards
+
+Create a cohesive visual identity across all pages.
+
+---
+
+# 5. ADD MEANINGFUL ANIMATIONS AND MICRO-INTERACTIONS
+
+Keep the actual functionality unchanged wherever it is already working, but make interactions feel much more polished.
+
+Implement tasteful animations such as:
+
+- Smooth page transitions
+- Animated navigation selection
+- Scroll reveal
+- Hover elevation
+- Soft glow on active states
+- Animated shield icon
+- Scan beam
+- Radar sweep
+- Particle effects used sparingly
+- Loading-state transitions
+- Animated progress indicators
+- Score count-up
+- Risk gauge animation
+- Evidence reveal animation
+- Cross-signal connection animation
+- Smooth accordion transitions
+- Toast notifications
+- Animated test progress
+- Animated chart transitions
+- Button press feedback
+- Smooth result appearance
+- Background depth / subtle movement
+
+Animations must be functional and purposeful, not just decorative.
+
+Respect `prefers-reduced-motion`.
+
+Ensure animations do not overload my laptop (Intel i5-120U, 16GB RAM). Prefer CSS and lightweight effects. Avoid unnecessary heavy 3D rendering or GPU-intensive effects.
+
+---
+
+# 6. MAIN SCAM ANALYZER — PRESERVE AND POLISH
+
+Do not break or remove the existing analyzer.
+
+It should continue supporting pasted messages such as:
+
+- SMS
+- WhatsApp
+- Emails
+- Bank alerts
+- Courier notifications
+- Job offers
+- Government messages
+- Investment messages
+- Social media messages
+- UPI/payment messages
+- Hinglish
+- Hindi
+- English
+- Messages with multiple links
+
+## Input interface
+
+Maintain:
+
+- Large message input area
+- Analyze button
+- Clear button
+- Example messages
+- Character count
+- Privacy notice
+- Language selector
+- Responsive layout
+
+Make it easier and more engaging to use.
+
+## Analysis results
+
+Maintain or improve:
+
+- Risk score from 0–100
+- Verdict
+- Severity
+- Risk categories
+- Triggered indicators
+- Highlighted suspicious phrases
+- Explanation of why each phrase matters
+- Cross-signal analysis
+- URL breakdown
+- Entity extraction
+- Trust boundaries
+- Recommended actions
+- Official verification resources
+- Awareness message generator
+
+The result should explain the reasoning rather than simply displaying a red score.
+
+---
+
+# 7. RULE-BASED SCORING ENGINE
+
+The scoring system must remain deterministic, transparent, and explainable.
+
+It must not pretend to be an AI classifier or probability model.
+
+## Example signals and weights
+
+Use the existing system where possible. Review and improve rather than unnecessarily replacing it.
+
+Possible signal weights:
+
+- Credential request: +28
+- UPI PIN/QR manipulation: +28
+- Upfront payment demand: +22
+- Unknown APK or remote-access app: +22
+- Fake KYC + account blocking + credentials: +25
+- Job fee: +20
+- Lottery fee: +20
+- Digital arrest + payment threat: +25
+- Brand mismatch: +15
+- Suspicious URL structure: +10
+- URL shortener: +5
+- Urgency alone: +5
+- Guaranteed returns: +12
+- Impersonation: +8
+
+These are illustrative scoring examples. Reconcile with the actual current rulebook and existing engine. Do not blindly duplicate or inflate weights.
+
+## Scoring bands
+
+- 0–19: Low indicators
+- 20–39: Caution
+- 40–69: High Risk
+- 70–100: Critical
+
+Cap the score at 100.
+
+Use accurate verdict wording such as:
+
+- Suspicious indicators detected
+- No strong indicators detected
+- Insufficient evidence
+
+Never state that a message is 100% safe.
+
+Never call a score a probability of fraud.
+
+## Scoring safeguards
+
+- Avoid double-counting overlapping rules.
+- Use category caps.
+- Use contextual requirements.
+- Apply a bounded cross-signal bonus.
+- Negation and awareness messages must be suppressed correctly.
+- Receiving money must not be confused with sending or authorizing money.
+- A phone number, UPI ID, amount, or Gmail address alone must not cause a high-risk verdict.
+- HTTPS alone must not lower a risk score.
+- HTTP or unusual TLD alone must not make a message a scam.
+- A genuine message with no strong signals must not be artificially penalized.
+
+---
+
+# 8. CROSS-SIGNAL INTELLIGENCE
+
+Improve the ability to identify combinations of signals rather than relying only on isolated keywords.
+
+Examples:
+
+- Fake KYC + account blocking + OTP request
+- Job offer + registration fee
+- Lottery + processing fee
+- UPI payment + PIN required to receive money
+- Government/police + arrest threat + payment demand
+- Unknown app + remote access
+- Courier/utility message + urgency + suspicious link
+- Investment + guaranteed returns + recruitment
+- Loan approval + release fee
+- Refund + payment authorization
+
+For each detected combination, explain:
+
+- Which signals were detected
+- Why the combination is concerning
+- Which individual rules contributed
+- What the user should do next
+
+Avoid double-counting the same underlying behavior.
+
+---
+
+# 9. FALSE-POSITIVE PROTECTION
+
+This is a major priority.
+
+The system must correctly understand context, negation, awareness messages, and genuine communications.
+
+Messages like:
+
+- "Never share your OTP."
+- "Bank staff will never ask for your UPI PIN."
+- "Do not click phishing links."
+- "I am warning my friend about a fake job scam."
+- "The courier is arriving tomorrow."
+- "Your bank statement is ready."
+- "Never install unknown APKs."
+
+Must not be incorrectly marked as scams merely because scam-related words appear.
+
+Improve:
+
+- Negation detection
+- Awareness/context detection
+- Educational content suppression
+- Genuine notification suppression
+- Payment-direction understanding
+- False urgency handling
+- Rule exclusions
+- Context windows
+
+Do not suppress a genuinely suspicious message merely because it contains one benign phrase.
+
+---
+
+# 10. NORMALIZATION ENGINE
+
+Improve the existing message normalization while preserving original text and correct highlights.
+
+Handle:
+
+- Lowercase normalization
+- Unicode variations
+- Repeated whitespace
+- Spaced letters
+- Dotted OTP patterns
+- Obfuscated phrases
+- Token-scoped leetspeak
+- English
+- Hindi
+- Roman Hindi
+- Hinglish
+- Index mapping for accurate original-text highlights
+
+Examples of evasion patterns to test:
+
+- O T P
+- o.t.p.
+- o8p
+- K Y C
+- a c c o u n t
+- P@ssword
+- paise wapas lene ke liye pin daalo
+
+Do not aggressively normalize ordinary words into unrelated suspicious keywords.
+
+---
+
+# 11. URL DECEPTION VISUALIZER
+
+Keep the URL analyzer completely static and safe.
+
+Never open or fetch URLs submitted by the user.
+
+For each URL, display a visual breakdown of:
+
+- Protocol
+- Hostname
+- Subdomain
+- Registrable domain
+- Path
+- Query parameters
+- Encoded characters
+- IP address usage
+- Punycode
+- Excessive subdomains
+- @ tricks
+- Shorteners
+- Brand lookalikes
+- Brand mismatch
+- Deceptive domain placement
+
+Use a proper Public Suffix List-aware domain parser such as `tldts` rather than simplistic splitting.
+
+## Example
+
+Given:
+
+`https://paypal.com.security-check.example/login`
+
+Explain visually:
+
+- Protocol: HTTPS
+- Deceptive subdomain text: `paypal.com.security-check`
+- Actual registrable domain: `example.com`
+- The presence of `paypal.com` within a subdomain does not prove ownership or affiliation.
+
+HTTPS does not prove legitimacy.
+
+Shorteners are suspicious contextually, but not inherently malicious.
+
+No browsing, redirects, DNS, reputation lookup, or external URL verification.
+
+---
+
+# 12. RED-TEAM LAB — MAJOR UPGRADE
+
+Red-Team Lab should become one of the most impressive sections of the website.
+
+Do not make it a boring static table of green PASS badges.
+
+It must execute the actual production analyzer against bundled test messages.
+
+## Lab objectives
+
+- Validate detection quality.
+- Discover missed scams.
+- Discover false positives.
+- Show genuine weaknesses.
+- Test new scam wording.
+- Demonstrate transparency.
+- Help explain how the system evolves.
+
+## Test suite
+
+Expand and diversify test cases to approximately 25–40 cases, depending on the quality of existing tests and runtime.
+
+Include:
+
+- Fake KYC
+- Account blocking
+- OTP requests
+- Fake bank rewards
+- Card upgrades
+- Cashback
+- QR payment reversal
+- UPI collect request
+- Fake customer-care callbacks
+- Screen-sharing scams
+- Remote-support scams
+- Refund/recovery scams
+- Fake APK parcel tracking
+- Fake e-challan
+- FASTag/toll
+- Electricity disconnection
+- Gas bills
+- Government benefits
+- Scholarship document fees
+- Exam/recruitment fees
+- Fake internship fees
+- Task earning
+- Telegram earning schemes
+- Investment withdrawal fees
+- Crypto recovery
+- Loan release fees
+- Insurance claim fees
+- IPO schemes
+- Digital arrest
+- Police verification scams
+- Courier customs fees
+- SIM disconnection
+- Social account recovery
+- Emergency money from relatives
+- QR cashback
+- Fake payment proof + refund demand
+- Partnership deposits
+- Charity scams
+- Money mule requests
+- Merchant verification scams
+- Malicious app installation
+- Genuine banking alerts
+- Genuine courier messages
+- Genuine awareness messages
+- Safe educational messages
+- Benign job messages
+- Legitimate payment confirmations
+
+Not every example needs to be included if it overlaps heavily with another. Prioritize diversity and realistic language.
+
+---
+
+# 13. IMPORTANT — RED-TEAM FAILURES MUST BE REAL
+
+Do not force all tests to pass.
+
+Do not manipulate the expected results.
+
+Do not manipulate the actual analyzer output.
+
+Do not artificially increase success rates.
+
+Do not make the lab pass simply because a test is bundled.
+
+Expected outcomes must be independently defined.
+
+Run each test against the actual production analyzer.
+
+If a test genuinely fails:
+
+- Mark it as FAIL.
+- Show the expected result.
+- Show the actual result.
+- Explain the mismatch.
+- Identify missing signals or incorrect triggered rules.
+- Explain the potential impact.
+- Provide a candidate improvement where appropriate.
+
+If the analyzer detects something but produces the wrong severity, show it as a severity mismatch.
+
+If a genuine message is flagged suspiciously, show it as a false positive.
+
+The lab must not hide failures.
+
+## Test visualization
+
+Build an animated testing experience featuring:
+
+- Scanner/radar animation
+- Scan beam
+- Test case progression
+- Currently running test
+- Animated test pipeline
+- Detection signal visualization
+- PASS/FAIL reveal
+- Score and severity comparison
+- Live progress bar
+- Live counts
+- Test trace
+- Diagnostic explanation
+- Failure analysis
+- Final summary
+
+Use real test execution results for all displayed statistics.
+
+Do not fabricate numbers.
+
+Do not use artificial delays just to make the lab appear to be doing more work. Animation may be timed for smooth presentation, but execution status, counts, results, and failures must reflect actual test computation.
+
+## Metrics
+
+Calculate from actual test cases:
+
+- Total test cases
+- Passed
+- Failed
+- True positives
+- True negatives
+- False positives
+- False negatives
+- Accuracy
+- Precision
+- Recall
+- F1 score
+
+Clearly label the metrics:
+
+**"Performance on bundled prototype test set — not real-world detection accuracy."**
+
+If a metric cannot be calculated, show N/A instead of fabricating it.
+
+## Lab filters
+
+Allow the user to:
+
+- View all
+- View passed
+- View failed
+- View scam scenarios
+- View genuine scenarios
+- Search test cases
+- Expand a test
+- Inspect rule trace
+- Inspect expected vs actual
+- Re-run tests
+
+Add a clear run-all/re-run button.
+
+---
+
+# 14. RULEBOOK EXPLORER — SHOW THE ACTUAL RULES
+
+Create a dedicated Detection Rulebook section.
+
+It must show all actual existing production rules. Inspect the current implementation to establish the real count. If there are approximately 32 rules, display the real 32 — do not invent additional rules to reach a number.
+
+Make it searchable and filterable.
+
+## Each rule should include:
+
+- Rule ID
+- Rule name
+- Category
+- Short description
+- What it detects
+- Why it matters
+- A realistic trigger example
+- Context that strengthens it
+- Context that suppresses it
+- Score contribution
+- Score cap/group if applicable
+- Recommended action
+- Source attribution
+- Supported languages
+- Current status (active/inactive)
+
+## UI
+
+Create:
+
+- Search box
+- Category filters
+- Risk/category badges
+- Expandable details
+- Rule score visualization
+- Trigger examples
+- Clear explanation of the detection logic
+
+Use the real engine definitions as the source of truth.
+
+Do not make a separate fabricated rulebook.
+
+Rulebook descriptions must remain synchronized with the actual production engine.
+
+---
+
+# 15. NEW & EMERGING SCAM PATTERNS — SEPARATE SECTION
+
+Create a new section in the Detection Rulebook area called:
+
+**New & Emerging Patterns**
+
+This must be separate from the active production rules.
+
+It should help users understand newly observed scam wording and detection gaps.
+
+For every pattern, show:
+
+- Pattern name
+- Scam category
+- Example wording
+- What the scammer is trying to accomplish
+- Signals involved
+- Why the current engine may miss it
+- Related active rules
+- Suggested improvement
+- Status
+
+Use clear status labels:
+
+- Newly Added Test Pattern
+- Covered by Existing Rule
+- Partially Covered
+- Uncovered
+- Candidate Rule
+- Under Validation
+
+These labels must be based on actual evaluation and coverage — not decorative badges.
+
+## New patterns to investigate
+
+Include diverse emerging wording and tactics, for example:
+
+- Bank reward redemption/card upgrade
+- UPI collect request disguised as receiving money
+- QR code cashback/reversal
+- Fake customer care callback
+- Screen sharing/remote support
+- Refund recovery and payment reversal
+- APK parcel tracking
+- Fake e-challan
+- FASTag toll
+- Electricity/gas disconnection
+- Government benefit verification
+- Scholarship processing fees
+- Exam/recruitment document fees
+- Task-based earnings
+- Telegram work schemes
+- Investment withdrawal fees
+- Loan release/unlock fees
+- Insurance claim processing fees
+- IPO/crypto opportunity
+- Crypto recovery scam
+- Digital arrest
+- Police verification
+- Courier customs charges
+- SIM disconnection
+- Social media account recovery
+- Emergency relative impersonation
+- Fake payment screenshots
+- Refund requests after fake payments
+- Partnership deposits
+- Fake charity collection
+- Money mule requests
+- Merchant verification
+- Malicious app installation
+- Other genuinely distinct patterns found during your own test review
+
+Use realistic Indian English, Hindi, and Hinglish.
+
+Avoid repeating the same scam with different brand names.
+
+Use indirect, realistic language instead of obvious keyword combinations.
+
+---
+
+# 16. RULE IMPROVEMENT WORKFLOW — TRANSPARENT AND SAFE
+
+Create an improvement workflow:
+
+**New Pattern → Test Case → Failure Analysis → Candidate Rule → Validation → Review → Versioned Update**
+
+## Requirements
+
+- Newly discovered patterns must first become test cases.
+- Analyze whether existing rules already cover them.
+- Only create candidate improvements if there is a real gap.
+- Candidate rules must not automatically become active production rules.
+- Validate candidates against both scam and genuine messages.
+- Show before/after results.
+- Report improvements and regressions.
+- Prevent overfitting to one test.
+- Preserve the original production rulebook.
+- Version candidate and approved rule changes.
+- Do not claim a rule is active unless it is actually integrated into the production engine.
+- Do not automatically promote a rule because one test passed.
+
+Build a transparent candidate-rule review interface if feasible, using local data only.
+
+---
+
+# 17. COMMUNITY THREAT INTELLIGENCE LOOP — FUTURE-READY, HONEST
+
+Prepare the interface/architecture for a future Community Threat Intelligence Loop, but do not falsely claim that community data is currently collected or shared.
+
+Conceptual workflow:
+
+1. Analyzer identifies a message as uncertain or insufficient evidence.
+2. User receives a cautious explanation.
+3. User may optionally provide outcome feedback: Legit, Scam, or Unsure.
+4. Explain consent and privacy.
+5. Sanitization would remove unnecessary personal information.
+6. Similar reports could be grouped into patterns.
+7. Patterns become candidate rules.
+8. Candidates are validated against scam and genuine examples.
+9. Human review is required.
+10. Approved rules are versioned.
+
+For this browser-only MVP:
+
+- No backend
+- No centralized reports
+- No persistent community database
+- No automatic rule learning
+- No automatic rule promotion
+- No fake live community statistics
+
+If you include a future-feature visualization, clearly label it:
+
+**"Planned Community Intelligence — Not active in this prototype."**
+
+Do not create a fake simulation that looks like real community data.
+
+---
+
+# 18. AUTHENTIC BANK AND OFFICIAL INSTITUTION BRANDING
+
+Where appropriate, use authentic institutional logos in educational cards, official verification guidance, and source areas.
+
+Potential institutions:
+
+- RBI
+- SBI
+- HDFC Bank
+- ICICI Bank
+- Axis Bank
+- Punjab National Bank
+- NPCI
+- UPI
+- CERT-In
+- India Post
+- I4C
+- MHA
+
+## Important
+
+- Prefer legally permitted, locally stored assets.
+- Do not fetch logos at runtime.
+- Do not falsely imply affiliation, partnership, sponsorship, or endorsement.
+- Do not use logos as decorative spam.
+- If authentic logo assets are unavailable or permissions are unclear, use clean text institution names and appropriate generic icons instead.
+- Do not invent institutional logos.
+- Institution logos must not imply a message is verified or safe.
+
+---
+
+# 19. AWARENESS MESSAGE GENERATOR — PRESERVE AND IMPROVE
+
+Keep the scam-specific awareness message generator functional.
+
+It should generate messages based on the detected scam category.
+
+Include:
+
+- Family/friends version
+- Detailed version
+- Short warning
+- Editable preview
+- Hindi
+- English
+- Both languages
+- Copy button
+- Share fallback where supported
+- Success notification
+- Reset option
+
+Do not use AI or pretend the message was AI-generated.
+
+Do not automatically include the original suspicious message.
+
+Avoid adding unsupported facts.
+
+For genuine messages or cases with no strong indicators, use neutral digital safety awareness instead of falsely labeling the message as a scam.
+
+---
+
+# 20. AWARENESS TICKER / CYBER BULLETIN
+
+Keep and improve the cyber-awareness ticker.
+
+Include useful short safety tips.
+
+Requirements:
+
+- Pause/resume
+- Smooth motion
+- Reduced-motion support
+- Readable text
+- No overwhelming scrolling
+- Source attribution where applicable
+
+Use paraphrased awareness tips rather than reproducing long official passages.
+
+---
+
+# 21. AWARENESS QUIZ
+
+Preserve the quiz functionality and improve its design.
+
+Include:
+
+- 10 questions
+- Progress indicator
+- Immediate feedback
+- Explanation after answering
+- Final score
+- Review mistakes
+- Restart
+- English/Hindi/Hinglish
+
+The quiz must teach practical cybersecurity awareness.
+
+Use genuine educational content.
+
+Do not make quiz scoring or questions dependent on the scam detector's results.
+
+---
+
+# 22. LANGUAGE SYSTEM — FULLY FUNCTIONAL
+
+The language selector must change the complete user interface.
+
+Supported:
+
+- English
+- Hindi
+- Hinglish
+
+Translate:
+
+- Navigation
+- Buttons
+- Labels
+- Analyzer instructions
+- Results
+- Risk explanations
+- Rulebook
+- Emerging patterns
+- Red-Team Lab
+- Quiz
+- Awareness generator
+- Sources
+- Empty states
+- Errors
+- Toasts
+
+Hindi must sound natural and easy for everyday users.
+
+Avoid overly formal or Sanskrit-heavy Hindi.
+
+Hinglish should sound like normal Indian conversational language.
+
+Language switching must not change scoring results.
+
+Do not implement a fake selector that only changes one or two labels.
+
+---
+
+# 23. OFFICIAL SOURCES & VERIFICATION PAGE
+
+Maintain a transparent sources and safety section with links to official resources.
+
+Include and verify these resources:
+
+### RBI KYC advisory
+https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=57244
+
+### RBI cyber threats advisory
+https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=53185
+
+### RBI cautions
+https://www.rbi.org.in/Scripts/RBICautions.aspx
+
+### RBI BE(A)WARE booklet
+https://rbi.org.in/commonman/Upload/english/Content/PDFs/English%20BEAWARE.pdf
+
+### CERT-In advisory
+https://www.cert-in.org.in/s2cMainServlet?VLCODE=CIAD-2024-0050&pageid=PUBVLNOTES02
+
+### NPCI Fraud Awareness
+https://www.npci.org.in/fraud-awareness
+
+### NPCI UPI FAQs
+https://www.npci.org.in/what-we-do/upi/faqs
+
+### Indian Cyber Crime Portal
+https://cybercrime.gov.in/
+
+### Report Suspect — I4C
+https://cybercrime.gov.in/Webform/cyber_suspect.aspx
+
+### MHA Cyber Information Security Division
+https://www.mha.gov.in/cyber-information-security-division
+
+### Sanchar Saathi
+https://sancharsaathi.gov.in/
+
+Maintain attribution to the relevant source where rules are based on official guidance.
+
+Do not claim that the analyzer has live verification from RBI, NPCI, CERT-In, banks, or the police.
+
+---
+
+# 24. PRIVACY AND SAFETY — NON-NEGOTIABLE
+
+This prototype must remain privacy-first and browser-only.
+
+Do not introduce:
+
+- Backend server
+- API calls
+- AI inference
+- Runtime network requests for message analysis
+- DNS lookup
+- URL fetching
+- URL opening
+- Redirect following
+- Reputation API
+- Analytics
+- Telemetry
+- Message upload
+- Message persistence
+- LocalStorage
+- SessionStorage
+
+Analyze only the content provided in the current session.
+
+Clearly explain:
+
+- Detection is heuristic/rule-based.
+- The system cannot verify sender identity.
+- The system cannot verify live website reputation.
+- The system cannot confirm that a bank or organization truly sent the message.
+- A low score does not guarantee safety.
+- Users should verify independently through official channels.
+
+Do not create fake verification checkmarks or fake reputation results.
+
+---
+
+# 25. NAVIGATION AND INFORMATION ARCHITECTURE
+
+Organize the app clearly.
+
+Recommended main navigation:
+
+1. **Analyze**
+2. **Red-Team Lab**
+3. **Detection Rulebook**
+   - Existing Rules
+   - New & Emerging Patterns
+   - Candidate Improvements
+4. **Awareness Quiz**
+5. **Sources & Safety**
+
+If there is a landing page or overview, make it concise and interactive.
+
+Avoid overcrowding the main analyzer.
+
+Ensure all navigation routes or tabs work properly.
+
+Ensure browser back navigation behaves sensibly if routing is implemented.
+
+---
+
+# 26. PERFORMANCE AND RESPONSIVENESS
+
+My laptop:
+
+**ASUS Vivobook 15 — Intel i5-120U, 16GB RAM**
+
+Keep the app lightweight.
+
+- No unnecessary heavy libraries.
+- Avoid GPU-intensive animations.
+- Avoid large unnecessary assets.
+- Use efficient rendering.
+- Avoid infinite expensive computations.
+- Use lazy loading where helpful.
+- Keep bundle size reasonable.
+- Avoid animations that interfere with typing.
+- Make the app usable on smaller screens.
+- Optimize for mobile and desktop.
+- Avoid layout shifts.
+
+---
+
+# 27. TECHNOLOGY AND CODE QUALITY
+
+Work with the existing project stack.
+
+If the current stack is:
+
+- React
+- Vite
+- TypeScript
+- Tailwind
+- Lucide
+- Local JSON/rules data
+- Vitest
+
+Preserve it unless a real technical reason requires change.
+
+Use:
+
+- Reusable components
+- Clean structure
+- Proper TypeScript types
+- Readable code
+- Maintainable logic
+- Accessible labels
+- Keyboard support
+- Error boundaries or sensible error handling
+- Clean separation between analyzer, rules, UI, tests, and data
+
+Do not unnecessarily rewrite the entire application from scratch.
+
+---
+
+# 28. AUTONOMOUS IMPLEMENTATION AND TESTING
+
+Do not stop after generating UI.
+
+Follow this process:
+
+### Phase 1 — Inspect
+Inspect the project and understand the existing implementation.
+
+### Phase 2 — Plan
+Create a concise internal implementation plan and prioritize functionality preservation.
+
+### Phase 3 — Implement
+Implement the redesign, logo integration, animations, Red-Team Lab, rulebook, new patterns, candidate workflow, quiz, awareness generator, sources, and translations.
+
+### Phase 4 — Test
+Run the existing test suite.
+
+Add tests for:
+
+- New scam patterns
+- Genuine messages
+- False-positive suppression
+- Rule behavior
+- Scoring
+- Cross-signals
+- URL analysis
+- English/Hindi/Hinglish
+- Rule candidate validation
+- Red-Team expected vs actual behavior
+
+### Phase 5 — Analyze failures
+Do not hide failing tests.
+
+Investigate:
+
+- False positives
+- False negatives
+- Severity mismatches
+- Context misses
+- Overlapping rules
+- Scoring regressions
+
+### Phase 6 — Fix
+Fix actual issues discovered.
+
+Do not manipulate test expectations to hide defects.
+
+### Phase 7 — Re-test
+Run the full test suite again after fixes.
+
+### Phase 8 — Build
+Run the production build.
+
+Resolve build errors, lint/type errors, broken imports, missing assets, and obvious runtime errors.
+
+### Phase 9 — Final review
+Check:
+
+- Navigation
+- Analyzer
+- Scoring
+- URL breakdown
+- Rulebook
+- Emerging patterns
+- Red-Team Lab
+- Candidate workflow
+- Quiz
+- Awareness generator
+- Sources
+- Language selector
+- Responsive behavior
+- Logo
+- Animations
+- Privacy boundaries
+- Performance
+
+If browser preview/testing tools are available, use them to inspect the actual UI. Do not claim you inspected the browser if you did not.
+
+---
+
+# 29. FINAL REPORT — BE HONEST
+
+At the end, provide a short report:
+
+- What was redesigned
+- What functionality was preserved
+- What new features were implemented
+- Logo integration status
+- Number of active production rules (actual count)
+- Number of Red-Team tests
+- Actual pass/fail count
+- False positives
+- False negatives
+- Metrics calculated from actual execution
+- Candidate rules created
+- Rules actually promoted (if any)
+- Tests run
+- Whether tests passed
+- Whether production build succeeded
+- Any unresolved problems
+
+Do not claim success for tasks that were not actually performed.
+
+Do not fabricate metrics.
+
+Do not pretend the application has real-world scam detection accuracy.
+
+---
+
+# 30. FINAL EXPERIENCE GOAL
+
+The final CyberSuraksha experience should feel like a real product:
+
+**A user pastes a suspicious message.**
+
+The system scans it with a compelling but lightweight visual animation.
+
+It then reveals:
+
+- A risk score
+- A clear verdict
+- The suspicious phrases
+- The reasons behind the score
+- Cross-signal relationships
+- URL deception analysis
+- What the system can and cannot verify
+- Recommended actions
+- Official verification resources
+
+The user can then:
+
+- Explore the rules
+- See where detection can fail
+- Run Red-Team tests
+- Discover emerging scam patterns
+- Understand proposed rule improvements
+- Learn through the quiz
+- Generate an awareness message
+- Help spread awareness
+
+The Red-Team Lab must openly show weaknesses and real test failures.
+
+The Rulebook must explain the system's actual logic.
+
+The Emerging Patterns section must show what the engine currently covers, partially covers, or misses.
+
+The design must be visually memorable, animated, premium, accessible, and smooth without sacrificing performance.
+
+**Make the project stand out through transparency, real testing, clear reasoning, privacy, and a polished interactive experience — not fake accuracy, fake AI, fake statistics, or superficial animations.**
+
+Now inspect the existing project and begin implementation. Do not stop at a plan. Complete the work, test it, fix issues, and provide the honest final report.

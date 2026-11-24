@@ -1,0 +1,186 @@
+{
+  "categories": {
+    "otp_scam": {
+      "family": {
+        "hi": "⚠️ सावधान! कोई भी बैंक या अनजान व्यक्ति आपसे OTP माँगे, तो उसे बिल्कुल न बताएं। OTP शेयर करने से आपके अकाउंट से पैसे निकल सकते हैं। पहले सही जगह से जाँच करें और इस जानकारी को अपने परिवार के साथ भी शेयर करें।",
+        "en": "⚠️ Stay alert! Never share your OTP with anyone claiming to be from your bank or another service. Sharing it could put your account at risk. Verify through official channels and share this warning with your family."
+      },
+      "friends": {
+        "hi": "⚠️ दोस्तो, अगर कोई कॉल या मैसेज पर OTP माँगे—चाहे बैंक या डिलीवरी के नाम पर—तो बिल्कुल न बताएं। पहले official ऐप से जाँच करें।",
+        "en": "⚠️ Quick heads-up: Never share an OTP with anyone over call, SMS, or WhatsApp—even if they claim to be from a bank or delivery service. Always verify via the official app."
+      },
+      "detailed": {
+        "hi": "⚠️ OTP ठगी की चेतावनी: इस पैटर्न में ठग बैंक, कस्टमर केयर या किसी सेवा के नाम पर आपसे वन-टाइम पासवर्ड (OTP) माँग सकते हैं। OTP शेयर करने से आपके बैंक खाते या वॉलेट से पैसे निकाले जा सकते हैं। किसी भी व्यक्ति को OTP न बताएं और सहायता के लिए हमेशा बैंक की आधिकारिक ऐप या ब्रांच से संपर्क करें।",
+        "en": "⚠️ OTP Scam Awareness: Messages following this pattern attempt to trick users into revealing a One-Time Password (OTP) by impersonating a trusted service. Sharing an OTP can authorize unauthorized transactions or account takeover. Never disclose OTPs to anyone, and verify all alerts directly through the official app or branch."
+      }
+    },
+    "upi_pin_scam": {
+      "family": {
+        "hi": "⚠️ UPI से पैसे लेने के लिए PIN डालने की जरूरत नहीं होती। अगर कोई पैसे भेजने के नाम पर आपसे PIN डालने या QR स्कैन करने को कहे, तो पहले अच्छी तरह जाँच लें। जल्दबाजी में पेमेंट न करें।",
+        "en": "⚠️ You do not need to enter your UPI PIN to receive money. Be careful if someone asks you to scan a QR code or enter your PIN to receive a payment. Verify before taking any action."
+      },
+      "friends": {
+        "hi": "⚠️ याद रखें: UPI से पैसे लेने के लिए कभी PIN या QR स्कैन नहीं करना होता। कैशबैक या पेमेंट लेने के नाम पर PIN माँगा जाए तो रुक जाएं!",
+        "en": "⚠️ Reminder: You never need to enter a UPI PIN or scan a QR code to receive money or cashback. If someone asks you to do that to 'claim' funds, stop and verify."
+      },
+      "detailed": {
+        "hi": "⚠️ UPI / QR ठगी की चेतावनी: UPI में PIN केवल पैसे भेजने के लिए होता है, पैसे पाने के लिए कभी नहीं। ठग अक्सर कैशबैक, रिफंड या एडवांस पेमेंट भेजने का बहाना बनाकर QR कोड स्कैन कराते हैं या Collect Request पर PIN डलवाते हैं। पैसे मिलने के नाम पर कभी भी PIN न डालें और हमेशा ऐप में रकम की पुष्टि करें।",
+        "en": "⚠️ UPI / QR Scam Awareness: In UPI, entering your PIN always authorizes money leaving your account—never money coming in. Scammers often use fake cashback, refund, or buyer-payment pretexts to get you to scan a QR code or approve a collect request. Never enter your PIN to receive funds."
+      }
+    },
+    "fake_job_internship": {
+      "family": {
+        "hi": "⚠️ Fake job और internship के नाम पर registration fees माँगने वाले मैसेज से सावधान रहें। नौकरी पक्की करने के नाम पर पैसे माँगे जाएँ, तो बिना कंपनी की सही जानकारी जाँचे पेमेंट न करें। इसे अपने दोस्तों के साथ शेयर करें।",
+        "en": "⚠️ Be careful of fake job and internship offers asking for registration fees or upfront payments. Verify the company and offer independently before paying. Share this warning with friends."
+      },
+      "friends": {
+        "hi": "⚠️ नौकरी या work-from-home internship के नाम पर पहले ₹500–₹1000 रजिस्ट्रेशन या टास्क फीस माँगी जाए तो सावधान रहें। असली कंपनी जॉइनिंग के लिए पैसे नहीं माँगती।",
+        "en": "⚠️ Watch out for job or internship messages asking for upfront registration, ID, or task fees. Always verify the company independently before paying anything."
+      },
+      "detailed": {
+        "hi": "⚠️ नकली नौकरी / इंटर्नशिप ठगी की चेतावनी: इस तरह के मैसेज में घर बैठे ज्यादा कमाई या पक्की नौकरी का लालच देकर पहले रजिस्ट्रेशन फीस, ट्रेनिंग चार्ज या सिक्योरिटी डिपॉजिट माँगा जाता है। किसी भी ऑफर पर भरोसा करने से पहले कंपनी की आधिकारिक वेबसाइट पर जाँच करें और नौकरी पाने के लिए पहले पैसे न दें।",
+        "en": "⚠️ Fake Job / Internship Awareness: This pattern attracts applicants with high pay or remote work promises and then demands an upfront registration, training, or deposit fee. Legitimate hiring processes should be verified directly on the company's official career portal before making any payment."
+      }
+    },
+    "fake_kyc_bank": {
+      "family": {
+        "hi": "⚠️ बैंक KYC अपडेट के नाम पर आने वाले अनजान लिंक से सावधान रहें। अपना OTP, PIN या बैंक की जानकारी किसी लिंक पर न डालें। बैंक की जानकारी हमेशा उसके official app, website या branch से जाँचें।",
+        "en": "⚠️ Beware of unknown links claiming your bank KYC needs an urgent update. Never enter your OTP, PIN or banking details through suspicious links. Verify through your bank's official app, website or branch."
+      },
+      "friends": {
+        "hi": "⚠️ अगर 'बैंक खाता आज बंद हो जाएगा, तुरंत KYC करें' वाला मैसेज आए, तो लिंक पर क्लिक न करें। सीधे बैंक की official ऐप में जाकर चेक करें।",
+        "en": "⚠️ If you get an urgent 'bank account will be blocked today, update KYC' SMS or WhatsApp, don't tap the link—check directly inside your official banking app."
+      },
+      "detailed": {
+        "hi": "⚠️ नकली KYC / बैंक अलर्ट चेतावनी: इस पैटर्न में खाता बंद होने का डर दिखाकर अनजान लिंक पर क्लिक करने या OTP/PIN डालने के लिए दबाव बनाया जाता है। इससे आपकी बैंकिंग जानकारी गलत हाथों में जा सकती है। किसी भी लिंक से KYC न करें और हमेशा बैंक की आधिकारिक ऐप या नजदीकी ब्रांच से पुष्टि करें।",
+        "en": "⚠️ Fake KYC / Bank Alert Awareness: Scammers create urgency by threatening immediate account suspension unless KYC is completed via an unverified link. This can expose your login credentials and OTPs. Always ignore such links and check your KYC status directly in your bank's official app or branch."
+      }
+    },
+    "lottery_reward": {
+      "family": {
+        "hi": "⚠️ अगर कोई इनाम या लॉटरी मिलने के नाम पर पहले पैसे माँगे, तो सावधान रहें। बिना जाँच किए processing fee या कोई पेमेंट न करें। ऐसे मैसेज दूसरों को भी दिखाएँ ताकि वे ठगी से बच सकें।",
+        "en": "⚠️ Be careful of messages claiming you won a prize but asking for a processing fee first. Don't pay without verifying the offer. Share this warning to help others avoid reward scams."
+      },
+      "friends": {
+        "hi": "⚠️ बिना खेले कोई लॉटरी या बड़ा इनाम नहीं निकलता! अगर इनाम लेने के लिए पहले processing fee या टैक्स माँगा जाए, तो पैसे बिल्कुल न भेजें।",
+        "en": "⚠️ Careful—messages saying you won a big prize or lottery and asking for a 'processing fee' first are a common trap. Never pay upfront fees to claim a reward."
+      },
+      "detailed": {
+        "hi": "⚠️ लॉटरी / इनाम ठगी की चेतावनी: ऐसे संदेशों में बड़ा नकद इनाम या उपहार जीतने का दावा किया जाता है और उसे पाने के लिए पहले प्रोसेसिंग फीस, GST या कूरियर चार्ज भेजने को कहा जाता है। बिना स्वतंत्र पुष्टि के कोई भी फीस न चुकाएं और अनजान लिंक पर अपनी जानकारी न भरें।",
+        "en": "⚠️ Lottery / Reward Scam Awareness: These messages claim you have won a large cash prize or gift and demand an upfront processing fee or tax to release it. Never pay fees to claim unsolicited prizes, and verify any contest directly through official brand channels."
+      }
+    },
+    "digital_arrest_police": {
+      "family": {
+        "hi": "⚠️ फोन या वीडियो कॉल पर पुलिस या किसी अधिकारी के नाम से डराकर पैसे माँगे जाएँ, तो घबराएँ नहीं। किसी को पैसे ट्रांसफर न करें और उनकी बातों पर भरोसा करने से पहले संबंधित विभाग से खुद संपर्क करके जाँच करें।",
+        "en": "⚠️ Be alert if someone claiming to be police or an official threatens you over a call or video call and demands money. Don't panic or transfer money. Verify independently using official contact details."
+      },
+      "friends": {
+        "hi": "⚠️ कोई पुलिस, CBI या कस्टम अधिकारी बनकर आधार या पार्सल के नाम पर 'डिजिटल अरेस्ट' की धमकी दे और पैसे माँगे, तो डरें नहीं—फोन काटें और 1930 पर जाँच करें।",
+        "en": "⚠️ Heads-up: Police or agencies never do 'digital arrest' over video calls or demand urgent UPI transfers to settle cases. Stay calm, hang up, and verify independently."
+      },
+      "detailed": {
+        "hi": "⚠️ डिजिटल अरेस्ट / नकली अधिकारी चेतावनी: इस पैटर्न में ठग पुलिस, साइबर सेल, कस्टम या कोर्ट के अधिकारी बनकर अवैध पार्सल या आधार से जुड़े मामले में गिरफ्तारी का डर दिखाते हैं और तुरंत पैसे ट्रांसफर करने का दबाव डालते हैं। कोई भी सरकारी एजेंसी वीडियो कॉल पर गिरफ्तारी या ऑनलाइन सेटलमेंट के लिए पैसे नहीं माँगती। घबराएं नहीं, कॉल काटें और आधिकारिक नंबर से जाँच करें।",
+        "en": "⚠️ Digital Arrest / Impersonation Awareness: Fraudsters pose as police, customs, or government officials, alleging serious legal trouble (such as illegal parcels or Aadhaar misuse) and demanding immediate payment to avoid arrest. Real law enforcement does not conduct 'digital arrests' or settle cases via online transfers. Stay calm and verify independently."
+      }
+    },
+    "remote_access_app": {
+      "family": {
+        "hi": "⚠️ किसी अनजान व्यक्ति के कहने पर remote access या screen-sharing ऐप डाउनलोड न करें। इससे वो आपके फोन की स्क्रीन देख सकता है या आपको गलत पेमेंट करने के लिए फँसा सकता है। पहले सही तरीके से जाँच लें।",
+        "en": "⚠️ Never install remote-access or screen-sharing apps because an unknown person asks you to. They may gain visibility into your device or manipulate you into making payments. Verify first."
+      },
+      "friends": {
+        "hi": "⚠️ किसी अनजान कॉलर के कहने पर AnyDesk, TeamViewer या कोई .apk ऐप बिल्कुल इंस्टॉल न करें—वो आपके फोन की स्क्रीन और OTP देख सकता है!",
+        "en": "⚠️ Never install screen-sharing apps like AnyDesk/TeamViewer or unknown .apk files on a caller's instructions—they can watch your screen and capture OTPs."
+      },
+      "detailed": {
+        "hi": "⚠️ Remote Access / अनजान ऐप की चेतावनी: कस्टमर केयर या KYC मदद के बहाने ठग फोन में screen-sharing ऐप (जैसे AnyDesk, QuickSupport) या अनजान APK फाइल डाउनलोड करवाते हैं। इससे वे आपके फोन की स्क्रीन देख सकते हैं और OTP या बैंकिंग जानकारी का गलत इस्तेमाल कर सकते हैं। किसी अनजान के कहने पर कोई ऐप इंस्टॉल न करें।",
+        "en": "⚠️ Remote Access / Unknown App Awareness: Under the guise of customer support or KYC help, scammers ask targets to install screen-sharing tools or unknown APK files. This exposes your screen, notifications, and OTPs. Never install apps or grant remote access based on an unsolicited message or call."
+      }
+    },
+    "phishing_link": {
+      "family": {
+        "hi": "⚠️ अनजान मैसेज में आए लिंक पर क्लिक करने से बचें। लिंक किसी असली वेबसाइट जैसा दिख सकता है, लेकिन आपको नकली पेज पर ले जा सकता है। वेबसाइट खुद official तरीके से खोलकर जाँच करें।",
+        "en": "⚠️ Avoid clicking unknown links in messages. A link may look like a genuine website but lead to a fake page. Open the official website yourself to verify."
+      },
+      "friends": {
+        "hi": "⚠️ मैसेज में आए किसी भी संदिग्ध लिंक पर टैप न करें—लिंक का नाम असली जैसा दिख सकता है पर अंदर नकली पेज हो सकता है। हमेशा खुद official वेबसाइट खोलें।",
+        "en": "⚠️ Don't tap suspicious links in texts—even if a familiar brand name appears in the URL, the actual domain could belong to someone else. Always open the official site yourself."
+      },
+      "detailed": {
+        "hi": "⚠️ संदिग्ध लिंक (Phishing) की चेतावनी: कुछ लिंक असली बैंक या कंपनी के नाम को वेब पते के शुरुआती हिस्से (subdomain) में दिखाकर भ्रम पैदा करते हैं, जबकि असली डोमेन कुछ और होता है। ऐसे लिंक पर लॉगिन, OTP या कार्ड की जानकारी न डालें। हमेशा खुद ब्राउजर में आधिकारिक वेबसाइट खोलें।",
+        "en": "⚠️ Suspicious Link / Phishing Awareness: Deceptive links sometimes place a trusted brand name in a subdomain or lookalike address while pointing to an unrelated domain. Entering credentials or payment details on such pages risks account compromise. Always navigate to the official website or app directly."
+      }
+    },
+    "courier_parcel": {
+      "family": {
+        "hi": "⚠️ पार्सल डिलीवरी या कस्टम के नाम पर पैसे या जानकारी माँगने वाले अनजान मैसेज से सावधान रहें। किसी लिंक से पेमेंट करने के बजाय courier की official website या app से जाँचें।",
+        "en": "⚠️ Be careful of unknown messages asking for money or personal information for parcel delivery or customs. Verify directly through the courier's official website or app before paying."
+      },
+      "friends": {
+        "hi": "⚠️ अगर 'पार्सल रुका है, पता अपडेट करें या ₹20-₹50 फीस दें' वाला अनजान लिंक आए, तो उस पर कार्ड डिटेल न डालें। सीधे official कूरियर ऐप चेक करें।",
+        "en": "⚠️ Watch out for 'parcel held / update address / pay small fee' links. Always track your shipment directly on the official courier app or website instead of tapping message links."
+      },
+      "detailed": {
+        "hi": "⚠️ नकली कूरियर / पार्सल चेतावनी: इन संदेशों में दावा किया जाता है कि आपका पार्सल पता न होने या कस्टम शुल्क की वजह से रुका है, और छोटे भुगतान या कार्ड विवरण के लिए एक लिंक भेजा जाता है। अनजान लिंक से पेमेंट न करें और सीधे आधिकारिक कूरियर कंपनी की वेबसाइट या ऐप पर ट्रैकिंग नंबर जाँचें।",
+        "en": "⚠️ Fake Courier / Parcel Awareness: These messages claim a delivery is stuck due to an incomplete address or unpaid fee, urging you to pay via a link. Avoid tapping embedded links and check tracking status directly on the courier's official app or website."
+      }
+    },
+    "electricity_utility": {
+      "family": {
+        "hi": "⚠️ बिजली कनेक्शन काटने की धमकी देकर तुरंत पेमेंट माँगने वाले मैसेज से सावधान रहें। किसी अनजान लिंक या नंबर पर पेमेंट न करें। अपने बिजली विभाग के official माध्यम से बिल जाँचें।",
+        "en": "⚠️ Be cautious of messages threatening immediate electricity disconnection and demanding payment. Don't pay through unknown links or numbers. Verify your bill using your electricity provider's official channels."
+      },
+      "friends": {
+        "hi": "⚠️ 'आज रात बिजली कट जाएगी, इस नंबर पर कॉल या पेमेंट करें' वाले मैसेज से सावधान रहें—बिल हमेशा official बिजली ऐप या पोर्टल से ही चेक करें।",
+        "en": "⚠️ Careful with texts saying 'electricity will be disconnected tonight, call this number or pay now.' Always verify your bill through your provider's official app or portal."
+      },
+      "detailed": {
+        "hi": "⚠️ बिजली / यूटिलिटी कनेक्शन कटने की धमकी: ठग अक्सर शाम या रात को बिजली कटने का डर दिखाकर तुरंत दिए गए पर्सनल मोबाइल नंबर पर कॉल करने या अनजान लिंक से पेमेंट करने को कहते हैं। किसी अनजान नंबर पर कॉल या पेमेंट न करें—अपने बिजली विभाग के आधिकारिक ऐप या बिल पोर्टल पर ही बकाया जाँचें।",
+        "en": "⚠️ Utility Disconnection Scam Awareness: Fraudsters send urgent warnings that power or gas will be disconnected within hours unless you call a personal number or pay via an external link. Always verify your account status directly through your utility provider's official website or payment app."
+      }
+    },
+    "investment_return": {
+      "family": {
+        "hi": "⚠️ कम समय में बहुत ज्यादा या guaranteed मुनाफे का वादा करने वाली schemes से सावधान रहें। पैसे लगाने से पहले पूरी जानकारी और जोखिम समझें। सिर्फ किसी के कहने पर निवेश न करें।",
+        "en": "⚠️ Be careful of investment schemes promising unusually high or guaranteed returns. Understand the risks and verify the company before investing. Don't invest just because someone pressures you."
+      },
+      "friends": {
+        "hi": "⚠️ 'पैसा डबल' या 'रोज पक्का मुनाफा' देने वाले व्हाट्सएप/टेलीग्राम ग्रुप से दूर रहें। बिना जाँच किए पैसे न लगाएं!",
+        "en": "⚠️ Be careful of WhatsApp or Telegram groups promising 'guaranteed daily profits' or quick money doubling. Always verify regulatory registration and risks before investing."
+      },
+      "detailed": {
+        "hi": "⚠️ नकली निवेश / पक्का मुनाफा चेतावनी: अनजान ग्रुप या मैसेज में कम समय में पैसे दोगुना करने या बिना जोखिम के पक्के मुनाफे का लालच दिया जाता है। कई बार शुरुआत में छोटा मुनाफा दिखाकर बाद में बड़ी रकम फँसा ली जाती है। किसी भी निवेश से पहले प्लेटफॉर्म की आधिकारिक रजिस्ट्रेशन और विश्वसनीयता जाँचें।",
+        "en": "⚠️ Investment / Guaranteed Return Awareness: Messages promising abnormally high, risk-free, or guaranteed daily returns—especially alongside recruitment incentives—are major warning signs. Independently verify whether any platform is legitimately registered before transferring funds."
+      }
+    },
+    "generic_mixed": {
+      "family": {
+        "hi": "⚠️ इस मैसेज में धोखाधड़ी के कुछ संकेत मिले हैं। किसी अनजान लिंक पर क्लिक न करें, OTP या बैंक की जानकारी शेयर न करें और पैसे भेजने से पहले सही जगह से जाँच लें। इस चेतावनी को अपने परिवार और दोस्तों के साथ शेयर करें।",
+        "en": "⚠️ This message contains some suspicious indicators. Avoid clicking unknown links, sharing OTPs or banking details, or sending money without verification. Share this warning with friends and family."
+      },
+      "friends": {
+        "hi": "⚠️ ऐसे अनजान मैसेज में संदिग्ध संकेत मिल सकते हैं। बिना जाँच किए लिंक न खोलें, OTP/PIN न बताएं और जल्दबाजी में पैसे न भेजें।",
+        "en": "⚠️ Stay cautious with unexpected messages asking for urgent action, links, or payments. Always double-check through official channels before tapping or paying."
+      },
+      "detailed": {
+        "hi": "⚠️ सामान्य ठगी चेतावनी: इस प्रकार के संदेश में जल्दबाजी, अनजान लिंक, या संवेदनशील जानकारी व पैसे की माँग जैसे संदिग्ध संकेत हो सकते हैं। किसी भी निर्णय से पहले संबंधित बैंक, कंपनी या विभाग के आधिकारिक माध्यम से स्वतंत्र रूप से जाँच करें और अपना OTP या PIN किसी से साझा न करें।",
+        "en": "⚠️ General Scam Awareness: Messages with urgency, unverified links, or unexpected requests for credentials or money warrant caution. Do not respond under pressure—verify independently through official channels and never share OTPs or PINs."
+      }
+    }
+  },
+  "neutralFallback": {
+    "family": {
+      "hi": "इस मैसेज में कोई मजबूत ठगी का संकेत नहीं मिला, लेकिन इसका मतलब यह नहीं कि यह पूरी तरह सुरक्षित है। किसी भी लिंक या पेमेंट को लेकर सावधानी रखें।",
+      "en": "No strong scam indicators were detected in this message, but that does not guarantee it is safe. Always verify links and payment requests independently."
+    },
+    "friends": {
+      "hi": "इस मैसेज में कोई मजबूत ठगी का संकेत नहीं मिला, फिर भी अनजान लिंक या पैसे के लेन-देन से पहले खुद से जाँच करना हमेशा बेहतर रहता है।",
+      "en": "No strong scam indicators were detected here, though it's always smart to verify unexpected links or payment requests independently."
+    },
+    "detailed": {
+      "hi": "सुरक्षा सलाह: इस मैसेज में कोई मजबूत ठगी का संकेत नहीं मिला, लेकिन इसका मतलब यह नहीं कि यह पूरी तरह सुरक्षित है। प्रेषक की पहचान की पुष्टि किए बिना कोई संवेदनशील जानकारी, OTP, PIN या पेमेंट साझा न करें।",
+      "en": "Safety Note: No strong scam indicators were detected in this message, but automated checks cannot guarantee safety or verify the sender's real-world identity. Always verify links and payment requests through official channels."
+    }
+  }
+}

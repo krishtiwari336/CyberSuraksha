@@ -1,0 +1,126 @@
+[
+  {
+    "id": "rbi-kyc-2024",
+    "organization": "Reserve Bank of India (RBI)",
+    "title": "RBI Press Release on KYC Updation & Fraud Prevention",
+    "url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=57244",
+    "date": "February 2, 2024",
+    "summary": {
+      "en": "Cautions customers against fake KYC update links, calls, and requests for confidential banking credentials or OTPs.",
+      "hi": "ग्राहकों को नकली KYC अपडेट लिंक, कॉल और OTP या गुप्त बैंकिंग जानकारी माँगने वाली ठगी से सावधान रहने की सलाह।",
+      "hinglish": "Customers ko fake KYC update links, calls aur OTP ya banking details maangne wale scams se savdhan rehne ki advisory."
+    }
+  },
+  {
+    "id": "rbi-cyber-2022",
+    "organization": "Reserve Bank of India (RBI)",
+    "title": "RBI Cyber Threats & Digital Fraud Advisory",
+    "url": "https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=53185",
+    "date": "January 28, 2022",
+    "summary": {
+      "en": "Advises the public against sharing OTPs, PINs, passwords, or installing unknown screen-sharing/remote-access apps.",
+      "hi": "लोगों को OTP, PIN, पासवर्ड शेयर न करने और अनजान screen-sharing या remote-access ऐप इंस्टॉल न करने की चेतावनी।",
+      "hinglish": "Public ko OTP, PIN, password share na karne aur unknown screen-sharing/remote-access apps install na karne ki advisory."
+    }
+  },
+  {
+    "id": "rbi-cautions",
+    "organization": "Reserve Bank of India (RBI)",
+    "title": "RBI Cautions & Public Advisories",
+    "url": "https://www.rbi.org.in/Scripts/RBICautions.aspx",
+    "summary": {
+      "en": "Official portal listing public alerts on unauthorized entities, fake offers, lottery scams, and impersonation.",
+      "hi": "फर्जी संस्थाओं, लॉटरी ठगी और नकली सरकारी/बैंक पहचान के खिलाफ RBI की आधिकारिक चेतावनी सूची।",
+      "hinglish": "Unauthorized entities, fake offers, lottery scams aur impersonation ke khilaf RBI ki official alerts list."
+    }
+  },
+  {
+    "id": "rbi-beaware",
+    "organization": "Reserve Bank of India (RBI)",
+    "title": "RBI BE(A)WARE Booklet on Modus Operandi of Financial Frauds",
+    "url": "https://rbi.org.in/commonman/Upload/english/Content/PDFs/English%20BEAWARE.pdf",
+    "summary": {
+      "en": "Comprehensive RBI handbook detailing common financial fraud techniques including UPI, QR, KYC, phishing, and remote-access scams.",
+      "hi": "UPI, QR, KYC, phishing और remote-access जैसी वित्तीय ठगी के तरीकों और बचाव पर RBI की विस्तृत मार्गदर्शिका।",
+      "hinglish": "UPI, QR, KYC, phishing aur remote-access financial frauds ke tarikon aur safety tips par RBI ki handbook."
+    }
+  },
+  {
+    "id": "certin-2024-0050",
+    "organization": "CERT-In (Indian Computer Emergency Response Team)",
+    "title": "CIAD-2024-0050 Advisory on Digital Arrest & Cyber Fraud",
+    "url": "https://www.cert-in.org.in/s2cMainServlet?VLCODE=CIAD-2024-0050&pageid=PUBVLNOTES02",
+    "date": "October 24, 2024",
+    "summary": {
+      "en": "Advisory detailing online scams including digital arrest threats, law-enforcement impersonation, fake job/task scams, and investment traps.",
+      "hi": "डिजिटल अरेस्ट की धमकी, पुलिस impersonation, नकली नौकरी/टास्क और निवेश ठगी पर CERT-In की आधिकारिक चेतावनी।",
+      "hinglish": "Digital arrest threats, police impersonation, fake job/task scams aur investment traps par CERT-In ki official advisory."
+    }
+  },
+  {
+    "id": "npci-fraud",
+    "organization": "National Payments Corporation of India (NPCI)",
+    "title": "NPCI Fraud Awareness",
+    "url": "https://www.npci.org.in/fraud-awareness",
+    "summary": {
+      "en": "Explains UPI PIN safety, collect-request traps, QR scan frauds, and why a PIN is never required to receive money.",
+      "hi": "UPI PIN सुरक्षा, collect request और QR स्कैन ठगी की जानकारी—पैसे लेने के लिए कभी PIN की जरूरत नहीं होती।",
+      "hinglish": "UPI PIN safety, collect-request traps aur QR scan fraud awareness—paise receive karne ke liye kabhi PIN nahi daalna hota."
+    }
+  },
+  {
+    "id": "npci-upi-faqs",
+    "organization": "National Payments Corporation of India (NPCI)",
+    "title": "NPCI UPI Frequently Asked Questions",
+    "url": "https://www.npci.org.in/what-we-do/upi/faqs",
+    "summary": {
+      "en": "Clarifies how UPI authorization works: PIN entry authorizes outgoing payments only and is never needed for incoming funds.",
+      "hi": "स्पष्ट करता है कि UPI PIN सिर्फ पैसे भेजने की अनुमति देता है, पैसे पाने के लिए नहीं।",
+      "hinglish": "Clear karta hai ki UPI PIN sirf paise bhejne ke liye hota hai, paise receive karne ke liye kabhi nahi."
+    }
+  },
+  {
+    "id": "i4c-portal",
+    "organization": "Indian Cyber Crime Coordination Centre (I4C)",
+    "title": "National Cyber Crime Reporting Portal (1930)",
+    "url": "https://cybercrime.gov.in/",
+    "summary": {
+      "en": "Government of India portal and 1930 helpline for reporting financial cyber frauds and cybercrime incidents promptly.",
+      "hi": "वित्तीय साइबर ठगी और ऑनलाइन अपराध की तुरंत रिपोर्ट करने के लिए भारत सरकार का पोर्टल और 1930 हेल्पलाइन।",
+      "hinglish": "Financial cyber fraud aur online crime ko turant report karne ke liye Government portal aur 1930 helpline."
+    }
+  },
+  {
+    "id": "i4c-suspect",
+    "organization": "Indian Cyber Crime Coordination Centre (I4C)",
+    "title": "Report & Check Suspect Portal",
+    "url": "https://cybercrime.gov.in/Webform/cyber_suspect.aspx",
+    "summary": {
+      "en": "Allows citizens to report suspicious mobile numbers, URLs, UPI IDs, and social handles linked to cyber fraud.",
+      "hi": "ठगी से जुड़े संदिग्ध मोबाइल नंबर, वेबसाइट लिंक, UPI ID और अकाउंट रिपोर्ट करने का आधिकारिक वेबपेज।",
+      "hinglish": "Fraud se jude suspicious phone numbers, URLs, UPI IDs aur handles report karne ka official webform."
+    }
+  },
+  {
+    "id": "mha-cis",
+    "organization": "Ministry of Home Affairs (MHA)",
+    "title": "Cyber & Information Security Division",
+    "url": "https://www.mha.gov.in/cyber-information-security-division",
+    "summary": {
+      "en": "Official division coordinating national cybercrime awareness, victim support initiatives, and cyber safety advisories.",
+      "hi": "राष्ट्रीय साइबर सुरक्षा जागरूकता और साइबर अपराध रोकथाम से जुड़े आधिकारिक दिशानिर्देश।",
+      "hinglish": "National cybercrime awareness aur cyber safety initiatives ko coordinate karne wala official MHA division."
+    }
+  },
+  {
+    "id": "dot-chakshu",
+    "organization": "Department of Telecommunications (DoT)",
+    "title": "Sanchar Saathi / Chakshu Portal",
+    "url": "https://sancharsaathi.gov.in/",
+    "summary": {
+      "en": "Citizen portal to report suspected fraud calls, SMS, and WhatsApp communications before financial loss occurs.",
+      "hi": "पैसे कटने से पहले संदिग्ध फ्रॉड कॉल, SMS और व्हाट्सएप मैसेज रिपोर्ट करने का सरकारी पोर्टल (Chakshu)।",
+      "hinglish": "Paise katne se pehle suspicious fraud calls, SMS aur WhatsApp messages report karne ka official portal (Chakshu)."
+    }
+  }
+]

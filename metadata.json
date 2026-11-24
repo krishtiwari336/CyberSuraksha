@@ -1,0 +1,6 @@
+{
+  "name": "CyberSuraksha",
+  "description": "See the trap before you tap. Privacy-first, explainable scam, phishing and fake offer analyzer for India.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

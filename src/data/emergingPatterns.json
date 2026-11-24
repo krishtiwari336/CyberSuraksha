@@ -1,0 +1,341 @@
+[
+  {
+    "id": "EMG-REWARD-REDEEM",
+    "name": {
+      "en": "Bank Reward Point Expiry & Voucher Redemption",
+      "hi": "बैंक रिवार्ड पॉइंट एक्सपायर और वाउचर रिडीम झांसा",
+      "hinglish": "Bank Reward Point Expiry Redemption"
+    },
+    "category": "lottery_reward",
+    "exampleWording": "Bank alert: 8,420 credit card reward points expire at 6 PM tonight. Redeem voucher worth ₹4,210 on our portal before midnight.",
+    "scammerGoal": {
+      "en": "Lure cardholders onto a lookalike redemption portal to harvest card numbers, CVV, and OTP.",
+      "hi": "कार्डधारकों को नकली रिडीम पोर्टल पर ले जाकर कार्ड नंबर, CVV और OTP चुराना।",
+      "hinglish": "Cardholders ko fake redeem portal par le jakar card number, CVV aur OTP chori karna."
+    },
+    "signalsInvolved": ["Artificial midnight expiry", "Large point-to-cash value", "External portal redemption"],
+    "whyEngineMayMiss": {
+      "en": "Word order puts point balance before ₹ amount and avoids 'KYC' or 'OTP' directly in the SMS.",
+      "hi": "संदेश में पहले पॉइंट्स की संख्या आती है और सीधे 'KYC' या 'OTP' शब्द का उपयोग नहीं होता।",
+      "hinglish": "Message mein points pehle aate hain aur seedhe 'KYC' ya 'OTP' shabd use nahi hota."
+    },
+    "relatedActiveRuleIds": ["RULE-CASHBACK-FAKE-11", "RULE-URGENCY-29"],
+    "suggestedImprovement": {
+      "en": "Add contextual rule matching credit/loyalty reward point expiry paired with urgent voucher redemption.",
+      "hi": "रिवार्ड पॉइंट एक्सपायर होने और तुरंत वाउचर रिडीम करने वाले संदेशों के लिए संदर्भ नियम जोड़ें।",
+      "hinglish": "Reward point expiry + urgent voucher redemption detect karne ke liye contextual rule add karein."
+    },
+    "linkedTestCaseId": "TC-33",
+    "linkedCandidateRuleId": "CAND-REWARD-EXPIRE-01"
+  },
+  {
+    "id": "EMG-FASTAG-BLACKLIST",
+    "name": {
+      "en": "FASTag Blacklist & Double-Toll Penalty Alert",
+      "hi": "FASTag ब्लैकलिस्ट और दोगुना टोल जुर्माना धमकी",
+      "hinglish": "FASTag Blacklist Toll Penalty"
+    },
+    "category": "electricity_utility",
+    "exampleWording": "NHAI FASTag Notice: Vehicle tag blacklisted due to pending toll ₹199. Clear within 3 hours to avoid double toll penalty via toll-portal.top",
+    "scammerGoal": {
+      "en": "Exploit highway travel fear to collect small UPI payments or card credentials on spoofed toll portals.",
+      "hi": "टोल पर फंसने या जुर्माने का डर दिखाकर नकली पोर्टल पर पेमेंट या कार्ड जानकारी लेना।",
+      "hinglish": "Double toll penalty ka dar dikhakar fake portal par UPI ya card details lena."
+    },
+    "signalsInvolved": ["Highway/FASTag authority impersonation", "Blacklisting threat", "Short countdown window"],
+    "whyEngineMayMiss": {
+      "en": "Utility rules currently focus on electricity, power, gas, and water rather than FASTag or toll penalties.",
+      "hi": "मौजूदा यूटिलिटी नियम बिजली, गैस और पानी तक सीमित हैं—FASTag या टोल जुर्माना शामिल नहीं है।",
+      "hinglish": "Existing utility rules electricity/gas/water par focus karte hain, FASTag ya toll penalty par nahi."
+    },
+    "relatedActiveRuleIds": ["RULE-ELECTRICITY-UTILITY-17", "RULE-URGENCY-29"],
+    "suggestedImprovement": {
+      "en": "Validate candidate rule CAND-FASTAG-TOLL-02 targeting FASTag/NHAI blacklist + double-toll coercion.",
+      "hi": "FASTag ब्लैकलिस्ट और टोल जुर्माने वाले संदर्भ के लिए CAND-FASTAG-TOLL-02 की जाँच करें।",
+      "hinglish": "FASTag blacklist aur toll penalty ke liye CAND-FASTAG-TOLL-02 candidate rule validate karein."
+    },
+    "linkedTestCaseId": "TC-34",
+    "linkedCandidateRuleId": "CAND-FASTAG-TOLL-02"
+  },
+  {
+    "id": "EMG-CARD-AUTODEBIT",
+    "name": {
+      "en": "Card Protection Auto-Debit Cancellation Callback",
+      "hi": "कार्ड प्रोटेक्शन ऑटो-डेबिट कैंसलेशन कॉल ट्रैप",
+      "hinglish": "Auto-Debit Cancellation Callback"
+    },
+    "category": "generic_mixed",
+    "exampleWording": "Dear cardholder, annual ₹4,999 card protection shield charge will auto-debit tonight. To stop deduction, call cancellation desk 9811023456 before 8 PM.",
+    "scammerGoal": {
+      "en": "Trigger panic over an unwanted ₹4,999 deduction so victims call a scammer-operated mobile number for 'cancellation OTP' theft.",
+      "hi": "रात में बड़े ऑटो-डेबिट का डर दिखाकर पीड़ित को ठग के मोबाइल नंबर पर कॉल करने के लिए मजबूर करना।",
+      "hinglish": "Badi rakam auto-debit hone ka dar dikhakar unverified mobile number par call karwa ke OTP chori karna."
+    },
+    "signalsInvolved": ["Fake impending auto-debit", "Personal 10-digit cancellation desk", "Same-evening deadline"],
+    "whyEngineMayMiss": {
+      "en": "Uses 'cancellation desk' rather than 'customer care' and threatens an auto-debit rather than account closure.",
+      "hi": "इसमें 'कस्टमर केयर' के बजाय 'कैंसलेशन डेस्क' और खाते के बजाय 'ऑटो-डेबिट' शब्दों का उपयोग है।",
+      "hinglish": "Isme 'customer care' ke bajay 'cancellation desk' aur 'auto-debit' phrasing use hui hai."
+    },
+    "relatedActiveRuleIds": ["RULE-CUSTOMER-CARE-21", "RULE-URGENCY-29"],
+    "suggestedImprovement": {
+      "en": "Introduce CAND-AUTODEBIT-CANCEL-03 matching auto-debit panic + 10-digit cancellation callbacks.",
+      "hi": "ऑटो-डेबिट डर और 10-अंकों के कैंसलेशन नंबर के लिए CAND-AUTODEBIT-CANCEL-03 जोड़ें।",
+      "hinglish": "Auto-debit panic + cancellation mobile callback detect karne ke liye CAND-AUTODEBIT-CANCEL-03 test karein."
+    },
+    "linkedTestCaseId": "TC-35",
+    "linkedCandidateRuleId": "CAND-AUTODEBIT-CANCEL-03"
+  },
+  {
+    "id": "EMG-SCHOLARSHIP-FEE",
+    "name": {
+      "en": "Student Merit Scholarship Document Verification Charge",
+      "hi": "छात्रवृत्ति दस्तावेज़ सत्यापन शुल्क ठगी",
+      "hinglish": "Scholarship Verification Fee"
+    },
+    "category": "generic_mixed",
+    "exampleWording": "Merit Scholarship Update: Your ₹25,000 student stipend is approved. Deposit ₹450 document verification charge to release bank disbursement.",
+    "scammerGoal": {
+      "en": "Exploit students awaiting academic stipends by demanding small 'document verification' transfers.",
+      "hi": "छात्रों को छात्रवृत्ति मंजूर होने की उम्मीद दिखाकर छोटे सत्यापन शुल्क ऐंठना।",
+      "hinglish": "Students ko scholarship approve hone ki umeed dikhakar document verification charge lena."
+    },
+    "signalsInvolved": ["Approved stipend claim", "Upfront verification charge", "Disbursement release condition"],
+    "whyEngineMayMiss": {
+      "en": "Existing upfront-fee rules check job/internship terms and 'verification fee' rather than scholarship/stipend + 'verification charge'.",
+      "hi": "मौजूदा नियम नौकरी और 'फीस' पर केंद्रित हैं, जबकि यहाँ 'छात्रवृत्ति' और 'वेरिफिकेशन चार्ज' लिखा है।",
+      "hinglish": "Current rules job aur 'fee' par check karte hain, scholarship aur 'verification charge' miss ho jata hai."
+    },
+    "relatedActiveRuleIds": ["RULE-JOB-FEE-08", "RULE-UPFRONT-PAYMENT-27"],
+    "suggestedImprovement": {
+      "en": "Validate CAND-SCHOLARSHIP-FEE-04 against both scholarship scams and genuine zero-fee university notices.",
+      "hi": "असली और नकली छात्रवृत्ति संदेशों पर CAND-SCHOLARSHIP-FEE-04 का परीक्षण करें।",
+      "hinglish": "Scam aur genuine academic notices par CAND-SCHOLARSHIP-FEE-04 candidate validate karein."
+    },
+    "linkedTestCaseId": "TC-36",
+    "linkedCandidateRuleId": "CAND-SCHOLARSHIP-FEE-04"
+  },
+  {
+    "id": "EMG-UPI-INDIRECT-CODE",
+    "name": {
+      "en": "Indirect Hinglish UPI Collect Disguise ('Secret Code')",
+      "hi": "अप्रत्यक्ष Hinglish UPI झांसा ('सीक्रेट कोड')",
+      "hinglish": "Indirect Secret Code Credit Trap"
+    },
+    "category": "upi_pin_scam",
+    "exampleWording": "Bhaiya aapka ₹1,800 OLX advance bhej diya hai, app notification khol ke apna secret code daal do paise credit ho jayenge.",
+    "scammerGoal": {
+      "en": "Trick marketplace sellers into authorizing a collect request by calling the UPI PIN a 'secret code' to credit advance money.",
+      "hi": "UPI PIN को 'सीक्रेट कोड' बोलकर नोटिफिकेशन अप्रूव करवाना और पैसे काट लेना।",
+      "hinglish": "UPI PIN ko 'secret code' bolkar advance credit karne ke bahane paise debit karwana."
+    },
+    "signalsInvolved": ["Marketplace advance pretext", "Open notification prompt", "Secret code entry to receive funds"],
+    "whyEngineMayMiss": {
+      "en": "Avoids explicit phrases like 'UPI PIN', 'QR code', or 'collect request' in favor of conversational Hinglish.",
+      "hi": "संदेश में 'UPI PIN' या 'collect request' की जगह बोलचाल की Hinglish का उपयोग हुआ है।",
+      "hinglish": "Message mein 'UPI PIN' ya 'QR' ke bajay normal conversational Hinglish phrasing hai."
+    },
+    "relatedActiveRuleIds": ["RULE-UPI-PIN-RECEIVE-04", "RULE-UPI-COLLECT-05"],
+    "suggestedImprovement": {
+      "en": "Validate CAND-UPI-COLLECT-DISGUISE-05 to catch 'secret code' + credit-claim wording without flagging genuine buyer chats.",
+      "hi": "'सीक्रेट कोड' और पैसे क्रेडिट होने वाले Hinglish झांसे के लिए CAND-UPI-COLLECT-DISGUISE-05 की जाँच करें।",
+      "hinglish": "Secret code + credit claim wali Hinglish wording pakadne ke liye candidate rule test karein."
+    },
+    "linkedTestCaseId": "TC-37",
+    "linkedCandidateRuleId": "CAND-UPI-COLLECT-DISGUISE-05"
+  },
+  {
+    "id": "EMG-CRYPTO-RECOVERY",
+    "name": {
+      "en": "Frozen Crypto / Trading Recovery Clearance Fee",
+      "hi": "फंसे हुए क्रिप्टो/ट्रेडिंग पैसे निकालने का टैक्स झांसा",
+      "hinglish": "Crypto Recovery Clearance Fee"
+    },
+    "category": "investment_return",
+    "exampleWording": "Trading Recovery Desk: Your ₹1,45,000 frozen crypto payout is unlocked. Submit 5% tax clearance charge to release withdrawal.",
+    "scammerGoal": {
+      "en": "Re-target trading/investment victims by impersonating a recovery desk demanding percentage clearance fees.",
+      "hi": "निवेश में ठगी का शिकार हो चुके लोगों से 'रिकवरी' और टैक्स के नाम पर दोबारा पैसे ऐंठना।",
+      "hinglish": "Investment victims ko recovery desk bankar payout release karne ke naam par percentage tax mangna."
+    },
+    "signalsInvolved": ["Recovery desk impersonation", "Unlocked frozen payout bait", "Percentage tax clearance fee"],
+    "whyEngineMayMiss": {
+      "en": "Current upfront-fee and investment rules require explicit currency amounts or 'guaranteed profit' promises.",
+      "hi": "मौजूदा नियम सीधे रुपये या 'पक्के मुनाफे' पर आधारित हैं, न कि प्रतिशत वाले टैक्स क्लियरेंस शुल्क पर।",
+      "hinglish": "Current rules direct ₹ amount ya guaranteed return check karte hain, percentage clearance charge miss hota hai."
+    },
+    "relatedActiveRuleIds": ["RULE-INVESTMENT-GUARANTEED-18", "RULE-UPFRONT-PAYMENT-27"],
+    "suggestedImprovement": {
+      "en": "Validate CAND-RECOVERY-TAX-06 covering frozen payout unlock + percentage clearance fee.",
+      "hi": "फंसी राशि निकालने और प्रतिशत टैक्स शुल्क के लिए CAND-RECOVERY-TAX-06 की जाँच करें।",
+      "hinglish": "Frozen payout + percentage clearance charge ke liye CAND-RECOVERY-TAX-06 validate karein."
+    },
+    "linkedTestCaseId": "TC-38",
+    "linkedCandidateRuleId": "CAND-RECOVERY-TAX-06"
+  },
+  {
+    "id": "EMG-APK-CHALLAN",
+    "name": {
+      "en": "Fake e-Challan APK Sideload Delivery",
+      "hi": "नकली ई-चालान APK फाइल डाउनलोड झांसा",
+      "hinglish": "Fake e-Challan APK Sideload"
+    },
+    "category": "remote_access_app",
+    "exampleWording": "Pending traffic e-Challan notice. Download and install echallan-verify.apk from this app link immediately.",
+    "scammerGoal": {
+      "en": "Distribute malicious Android APKs disguised as government traffic challan receipts to intercept bank OTPs.",
+      "hi": "ट्रैफिक चालान की आड़ में खतरनाक Android APK इंस्टॉल करवाकर फोन के OTP और डेटा चुराना।",
+      "hinglish": "Traffic e-Challan ke naam par malicious Android APK install karwa ke SMS/OTP chori karna."
+    },
+    "signalsInvolved": ["Traffic e-Challan bait", "Sideloaded .apk file", "Urgent action"],
+    "whyEngineMayMiss": {
+      "en": "Already well-covered when explicit .apk filename appears, though disguised shorteners hiding APKs still require caution.",
+      "hi": "सीधे .apk नाम होने पर इंजन इसे पकड़ लेता है, लेकिन शॉर्ट लिंक के पीछे छुपे APK पर ध्यान देना जरूरी है।",
+      "hinglish": "Direct .apk mention hone par engine pakad leta hai, par shortener link ke peeche hidden APK mein gap rehta hai."
+    },
+    "relatedActiveRuleIds": ["RULE-MALICIOUS-APK-15", "RULE-CHALLAN-TAX-26"],
+    "suggestedImprovement": {
+      "en": "Preserve APK sideload detection and warn users never to install Android packages sent via WhatsApp.",
+      "hi": "WhatsApp पर आने वाली किसी भी .apk फाइल से बचने की चेतावनी को मजबूत बनाए रखें।",
+      "hinglish": "WhatsApp par aane wali kisi bhi .apk file ko install na karne ki warning highlight rakhein."
+    }
+  },
+  {
+    "id": "EMG-MISTAKEN-UPI",
+    "name": {
+      "en": "Fake Credit SMS + Mistaken UPI Return Request",
+      "hi": "नकली क्रेडिट SMS + गलती से पैसे आने की वापसी माँग",
+      "hinglish": "Mistaken UPI Transfer Return"
+    },
+    "category": "upi_pin_scam",
+    "exampleWording": "Sir galti se paise bhej diye ₹2,500 aapke number par, kripya ₹2,000 turant wapas bhej do.",
+    "scammerGoal": {
+      "en": "Send a fake SMS mimicking a bank credit and pressure the target into sending real money back.",
+      "hi": "बैंक जैसा दिखने वाला नकली SMS भेजकर पीड़ित से असली पैसे वापस ट्रांसफर करवाना।",
+      "hinglish": "Fake bank credit SMS bhejkar victim se real paise return transfer karwana."
+    },
+    "signalsInvolved": ["Mistaken transfer claim", "Urgent return request", "Emotional appeal"],
+    "whyEngineMayMiss": {
+      "en": "Hinglish phrasing is covered by RULE-MISTAKEN-TRANSFER-24, though very polite English variations without 'by mistake' may score lower.",
+      "hi": "Hinglish रूप कवर है, लेकिन बिना 'by mistake' वाले विनम्र अंग्रेजी संदेशों में स्कोर कम रह सकता है।",
+      "hinglish": "Hinglish pattern covered hai, par indirect English phrasing mein score moderate reh sakta hai."
+    },
+    "relatedActiveRuleIds": ["RULE-MISTAKEN-TRANSFER-24", "RULE-URGENCY-29"],
+    "suggestedImprovement": {
+      "en": "Remind users always to verify actual bank balance inside their bank app before returning any claimed transfer.",
+      "hi": "पैसे लौटाने से पहले हमेशा बैंक ऐप में असली बैलेंस जाँचने की सलाह दें।",
+      "hinglish": "Paise return karne se pehle hamesha bank app mein actual balance check karne ki salah dein."
+    },
+    "linkedTestCaseId": "TC-31"
+  },
+  {
+    "id": "EMG-LOAN-NOC",
+    "name": {
+      "en": "Pre-Approved Loan NOC / File Release Fee",
+      "hi": "प्री-अप्रूव्ड लोन NOC या फाइल चार्ज झांसा",
+      "hinglish": "Pre-Approved Loan Release Fee"
+    },
+    "category": "investment_return",
+    "exampleWording": "Pre-approved loan ₹2,00,000 approved today! Pay ₹1,999 processing fee immediately to confirm disbursal.",
+    "scammerGoal": {
+      "en": "Collect repeated 'processing', 'NOC', and 'GST' transfers from people seeking urgent personal loans.",
+      "hi": "तुरंत लोन के जरूरतमंद लोगों से प्रोसेसिंग, NOC और GST के नाम पर बार-बार पैसे वसूलना।",
+      "hinglish": "Urgent loan lene walon se processing, NOC aur GST fees ke naam par advance paise lena."
+    },
+    "signalsInvolved": ["Instant loan approval", "Upfront processing fee", "XSIG-LOAN-RELEASE-FEE"],
+    "whyEngineMayMiss": {
+      "en": "Standard 'processing fee' wording is covered; softer phrases like 'refundable stamp duty' remain worth monitoring.",
+      "hi": "'प्रोसेसिंग फीस' कवर है, लेकिन 'रिफंडेबल स्टाम्प ड्यूटी' जैसे नए शब्दों पर नजर रखना जरूरी है।",
+      "hinglish": "'Processing fee' covered hai, par 'refundable stamp duty' jaise softer words monitor karna zaroori hai."
+    },
+    "relatedActiveRuleIds": ["RULE-FAKE-LOAN-19", "RULE-UPFRONT-PAYMENT-27"],
+    "suggestedImprovement": {
+      "en": "Cross-signal XSIG-LOAN-RELEASE-FEE now correlates loan promises with upfront payment demands.",
+      "hi": "XSIG-LOAN-RELEASE-FEE अब लोन ऑफर और अग्रिम शुल्क के संयोजन को जोड़ता है।",
+      "hinglish": "XSIG-LOAN-RELEASE-FEE ab loan claim aur payment demand ko correlate karta hai."
+    },
+    "linkedTestCaseId": "TC-30"
+  },
+  {
+    "id": "EMG-TASK-TELEGRAM",
+    "name": {
+      "en": "YouTube / Hotel Rating Telegram Prepaid Task",
+      "hi": "यूट्यूब लाइक / होटल रेटिंग टेलीग्राम प्रीपेड टास्क",
+      "hinglish": "Telegram Prepaid Task Scam"
+    },
+    "category": "fake_job_internship",
+    "exampleWording": "Simple online tasks: like YouTube videos and earn ₹3,000 daily! Message on Telegram to start prepaid task.",
+    "scammerGoal": {
+      "en": "Pay small initial rewards for liking videos, then lock victims into larger 'prepaid merchant tasks' that never pay out.",
+      "hi": "शुरू में छोटे टास्क के पैसे देकर भरोसा जीतना और फिर बड़े 'प्रीपेड टास्क' में लाखों रुपये फंसाना।",
+      "hinglish": "Start mein chhota payout dekar trust jeetna aur baad mein bade prepaid tasks mein paise phansana."
+    },
+    "signalsInvolved": ["Daily income for simple tasks", "Telegram migration", "Prepaid task requirement"],
+    "whyEngineMayMiss": {
+      "en": "Covered when task/Telegram cues co-occur; vague 'remote digital brand ambassador' pitches without income numbers need care.",
+      "hi": "टेलीग्राम और टास्क वाले संदेश पकड़े जाते हैं, पर बिना रकम वाले सामान्य ब्रांड-प्रमोशन संदेश बच सकते हैं।",
+      "hinglish": "Telegram task messages covered hain, par bina income numbers wale vague brand-ambassador pitches bach sakte hain."
+    },
+    "relatedActiveRuleIds": ["RULE-TASK-SCAM-09", "RULE-JOB-FEE-08"],
+    "suggestedImprovement": {
+      "en": "Keep task-scam templates updated across regional Hinglish variants.",
+      "hi": "क्षेत्रीय Hinglish रूपों के अनुसार टास्क-स्कैम पैटर्न नियमित रूप से अपडेट करें।",
+      "hinglish": "Regional Hinglish variants ke hisaab se task-scam patterns update karte rahein."
+    },
+    "linkedTestCaseId": "TC-25"
+  },
+  {
+    "id": "EMG-SIM-DISCONNECT",
+    "name": {
+      "en": "TRAI / Telecom SIM Disconnection & eSIM Hijack",
+      "hi": "TRAI / टेलीकॉम SIM बंद होने और eSIM हाइजैक का झांसा",
+      "hinglish": "SIM Disconnection & eSIM Hijack"
+    },
+    "category": "fake_kyc_bank",
+    "exampleWording": "Your SIM card will be blocked today due to KYC mismatch. Forward SMS 20 digit eSIM code or share OTP immediately.",
+    "scammerGoal": {
+      "en": "Take over the victim's mobile number via eSIM swap to intercept every banking OTP.",
+      "hi": "eSIM या सिम स्वैप के जरिए पीड़ित का मोबाइल नंबर हथियाकर सारे बैंक OTP अपने फोन पर मंगाना।",
+      "hinglish": "eSIM swap ke zariye mobile number hijack karke saare banking OTPs capture karna."
+    },
+    "signalsInvolved": ["SIM block threat", "eSIM / 20-digit code transfer", "OTP interception"],
+    "whyEngineMayMiss": {
+      "en": "Covered by RULE-SIM-SWAP-20 for explicit SIM/eSIM keywords; automated voice-IVR 'press 9' calls are out of text scope.",
+      "hi": "टेक्स्ट में SIM/eSIM शब्द आने पर यह पकड़ा जाता है; वॉयस कॉल IVR इस टेक्स्ट टूल के दायरे से बाहर हैं।",
+      "hinglish": "Text mein SIM/eSIM words hone par rule trigger hota hai; IVR voice calls text analyzer ke scope ke bahar hain."
+    },
+    "relatedActiveRuleIds": ["RULE-SIM-SWAP-20", "RULE-OTP-01"],
+    "suggestedImprovement": {
+      "en": "Educate users that telecom operators never ask customers to forward SMS codes to activate 5G or eSIM.",
+      "hi": "लोगों को बताएं कि 5G या eSIM के लिए कोई कंपनी SMS फॉरवर्ड करने को नहीं कहती।",
+      "hinglish": "Users ko aware karein ki telecom company kabhi SMS forward karne ko nahi kehti."
+    }
+  },
+  {
+    "id": "EMG-MONEY-MULE",
+    "name": {
+      "en": "Student Bank Account Renting ('Money Mule')",
+      "hi": "कमीशन के लिए बैंक खाता किराए पर लेने का झांसा",
+      "hinglish": "Student Money Mule Account Rent"
+    },
+    "category": "investment_return",
+    "exampleWording": "Students earn passive income: rent your bank account and get 3% commission on every transfer to receive and forward funds.",
+    "scammerGoal": {
+      "en": "Recruit college students to launder scam proceeds through their accounts, exposing students to police freezes and FIRs.",
+      "hi": "छात्रों को कमीशन का लालच देकर उनके खाते से ठगी का पैसा घुमाना, जिससे छात्र कानूनी केस में फंस जाते हैं।",
+      "hinglish": "Students ko commission ka lalach dekar unke account se scam money route karna."
+    },
+    "signalsInvolved": ["Account renting", "Per-transfer commission", "Receive and forward funds"],
+    "whyEngineMayMiss": {
+      "en": "Covered for explicit renting terms; disguised 'gaming merchant settlement partner' pitches can bypass exact words.",
+      "hi": "खाता किराए के शब्दों पर पकड़ा जाता है, लेकिन 'गेमिंग मर्चेंट पार्टनर' जैसे शब्दों से ठग बच सकते हैं।",
+      "hinglish": "Direct rent words covered hain, par 'gaming settlement partner' jaise disguised words bypass kar sakte hain."
+    },
+    "relatedActiveRuleIds": ["RULE-MONEY-MULE-22", "RULE-RECRUITMENT-31"],
+    "suggestedImprovement": {
+      "en": "Add student awareness quiz scenarios and warning alerts highlighting frozen bank accounts from mule transfers.",
+      "hi": "छात्रों के लिए Money Mule से खाते फ्रीज होने के खतरे पर जागरूकता बढ़ाएं।",
+      "hinglish": "Students ke liye money mule se bank account freeze hone ka risk highlight karein."
+    }
+  }
+]

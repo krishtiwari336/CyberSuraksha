@@ -1,0 +1,232 @@
+[
+  {
+    "id": "XSIG-KYC-BLOCK-OTP",
+    "name": {
+      "en": "Fake KYC + Account Threat + Credential / Link",
+      "hi": "नकली KYC + खाता बंद होने की धमकी + OTP/लिंक",
+      "hinglish": "Fake KYC + Account Threat + OTP/Link"
+    },
+    "requiredGroups": ["kyc_account_threat", "credential_theft"],
+    "bonusWeight": 14,
+    "categoryOverride": "fake_kyc_bank",
+    "whyItMatters": {
+      "en": "Combines account-blocking fear with an active request for your OTP or PIN—the classic two-step bank takeover sequence.",
+      "hi": "खाता बंद होने के डर के साथ सीधे OTP या PIN माँगा जा रहा है—यह बैंक खाते से पैसे निकालने का सबसे आम तरीका है।",
+      "hinglish": "Account block hone ke dar ke saath OTP ya PIN maanga ja raha hai—yeh bank account takeover ka classic two-step trap hai."
+    },
+    "recommendedAction": {
+      "en": "Ignore the threat, do not share any OTP/PIN, and check your account status directly inside your official bank app.",
+      "hi": "इस धमकी को अनदेखा करें, कोई OTP/PIN न दें और सीधे बैंक की official ऐप में खाता जाँचें।",
+      "hinglish": "Is dhamki ko ignore karein, OTP/PIN bilkul na dein aur official bank app mein jakar check karein."
+    },
+    "sourceId": "rbi-kyc-2024",
+    "sourceVerificationStatus": "officially_supported"
+  },
+  {
+    "id": "XSIG-JOB-UPFRONT-FEE",
+    "name": {
+      "en": "Job / Internship Offer + Upfront Fee",
+      "hi": "नौकरी / इंटर्नशिप ऑफर + अग्रिम फीस",
+      "hinglish": "Job / Internship + Upfront Fee"
+    },
+    "requiredGroups": ["job_task_fee", "payment_demand"],
+    "bonusWeight": 10,
+    "categoryOverride": "fake_job_internship",
+    "whyItMatters": {
+      "en": "Pairs an employment or internship opportunity with an advance payment request—genuine hiring never requires paying to confirm a slot.",
+      "hi": "नौकरी या इंटर्नशिप के ऑफर के साथ पहले फीस माँगी जा रही है—असली नौकरी में स्लॉट पक्का करने के लिए पैसे नहीं लगते।",
+      "hinglish": "Job ya internship offer ke saath advance fee maangi ja rahi hai—real hiring mein slot confirm karne ki fee nahi hoti."
+    },
+    "recommendedAction": {
+      "en": "Do not pay registration or security fees; verify the role on the employer's official website.",
+      "hi": "रजिस्ट्रेशन या सिक्योरिटी फीस न दें; कंपनी की आधिकारिक वेबसाइट पर खुद जाँचें।",
+      "hinglish": "Registration ya security fee pay na karein; company ki official site par role verify karein."
+    },
+    "sourceId": "certin-2024-0050",
+    "sourceVerificationStatus": "officially_supported"
+  },
+  {
+    "id": "XSIG-LOTTERY-PAYMENT",
+    "name": {
+      "en": "Lottery / Prize Claim + Payment Demand",
+      "hi": "लॉटरी / इनाम का दावा + फीस की माँग",
+      "hinglish": "Lottery / Prize + Payment Demand"
+    },
+    "requiredGroups": ["lottery_reward", "payment_demand"],
+    "bonusWeight": 10,
+    "categoryOverride": "lottery_reward",
+    "whyItMatters": {
+      "en": "Promises an unexpected reward while requiring you to pay a fee first—scammers collect the processing fee and disappear.",
+      "hi": "अचानक इनाम मिलने की बात कहकर पहले फीस ली जा रही है—ठग प्रोसेसिंग फीस लेकर संपर्क बंद कर देते हैं।",
+      "hinglish": "Unexpected reward ka dawa karke pehle fee maangi ja rahi hai—scammers processing fee lekar gayab ho jate hain."
+    },
+    "recommendedAction": {
+      "en": "Never pay upfront fees to claim rewards, cashbacks, or lottery prizes.",
+      "hi": "इनाम, कैशबैक या लॉटरी पाने के लिए कभी भी पहले पैसे न दें।",
+      "hinglish": "Reward, cashback ya lottery claim karne ke liye kabhi advance fee na dein."
+    },
+    "sourceId": "rbi-cautions",
+    "sourceVerificationStatus": "officially_supported"
+  },
+  {
+    "id": "XSIG-UPI-PIN-RECEIVE",
+    "name": {
+      "en": "Receive-Money Claim + UPI PIN / QR Trap",
+      "hi": "पैसे मिलने का झांसा + UPI PIN / QR जाल",
+      "hinglish": "Receive Money + UPI PIN / QR"
+    },
+    "requiredGroups": ["upi_qr_fraud", "lottery_reward"],
+    "bonusWeight": 12,
+    "categoryOverride": "upi_pin_scam",
+    "whyItMatters": {
+      "en": "Uses a reward or cashback promise to trick you into entering a UPI PIN or scanning a QR code, which actually debits your account.",
+      "hi": "कैशबैक या इनाम का लालच देकर आपसे UPI PIN डलवाया या QR स्कैन करवाया जा रहा है, जिससे आपके खाते से पैसे कटेंगे।",
+      "hinglish": "Cashback ya prize ka lalach dekar UPI PIN enter ya QR scan karwaya ja raha hai, jisse aapke paise katenge."
+    },
+    "recommendedAction": {
+      "en": "Remember NPCI's rule: PIN is never needed to receive money. Stop immediately.",
+      "hi": "NPCI का नियम याद रखें: पैसे लेने के लिए कभी PIN नहीं डालना होता। तुरंत रुक जाएं।",
+      "hinglish": "NPCI ka rule yaad rakhein: paise receive karne ke liye kabhi PIN nahi lagta. Turant rukein."
+    },
+    "sourceId": "npci-upi-faqs",
+    "sourceVerificationStatus": "officially_supported"
+  },
+  {
+    "id": "XSIG-DIGITAL-ARREST-PAY",
+    "name": {
+      "en": "Police / Government Impersonation + Arrest Threat + Payment",
+      "hi": "सरकारी/पुलिस पहचान + गिरफ्तारी की धमकी + पेमेंट",
+      "hinglish": "Police Impersonation + Arrest + Payment"
+    },
+    "requiredGroups": ["digital_arrest_legal", "urgency_pressure"],
+    "bonusWeight": 14,
+    "categoryOverride": "digital_arrest_police",
+    "whyItMatters": {
+      "en": "Combines law-enforcement impersonation and arrest fear with extreme urgency to force quick transfers before you can verify.",
+      "hi": "पुलिस या सरकारी अधिकारी बनकर गिरफ्तारी के डर और जल्दबाजी के जरिए बिना सोचे पैसे ट्रांसफर कराने की कोशिश हो रही है।",
+      "hinglish": "Police ya officer bankar arrest ke dar aur urgency ke zariye verification se pehle paise transfer karwane ki koshish hai."
+    },
+    "recommendedAction": {
+      "en": "Disconnect immediately, do not transfer money, and call 1930 or visit your local police station.",
+      "hi": "तुरंत कॉल काटें, कोई पैसा न भेजें और 1930 या नजदीकी पुलिस स्टेशन से पुष्टि करें।",
+      "hinglish": "Turant call disconnect karein, paise mat bhejein aur 1930 ya local police station se verify karein."
+    },
+    "sourceId": "certin-2024-0050",
+    "sourceVerificationStatus": "officially_supported"
+  },
+  {
+    "id": "XSIG-REMOTE-APP-SUPPORT",
+    "name": {
+      "en": "Unknown App / Remote Access + Impersonation or KYC",
+      "hi": "अनजान Remote-Access ऐप + बैंक/सपोर्ट का बहाना",
+      "hinglish": "Remote Access App + Support/KYC"
+    },
+    "requiredGroups": ["remote_access_apk", "kyc_account_threat"],
+    "bonusWeight": 12,
+    "categoryOverride": "remote_access_app",
+    "whyItMatters": {
+      "en": "Combining KYC/support pressure with remote-access or APK installation exposes both your screen and incoming OTPs.",
+      "hi": "KYC या सपोर्ट के नाम पर remote-access ऐप या APK इंस्टॉल करवाने से आपके फोन की स्क्रीन और OTP दोनों खतरे में आ जाते हैं।",
+      "hinglish": "KYC ya support ke naam par remote-access app ya APK install karwane se aapki screen aur OTPs dono expose ho jate hain."
+    },
+    "recommendedAction": {
+      "en": "Uninstall any unverified remote-access or APK apps immediately and do not share screen codes.",
+      "hi": "कोई भी अनजान remote-access या APK ऐप तुरंत हटाएं और स्क्रीन कोड साझा न करें।",
+      "hinglish": "Koi bhi unknown remote-access ya APK app turant uninstall karein aur screen code share na karein."
+    },
+    "sourceId": "rbi-cyber-2022",
+    "sourceVerificationStatus": "officially_supported"
+  },
+  {
+    "id": "XSIG-COURIER-UTILITY-LINK",
+    "name": {
+      "en": "Courier / Utility Threat + Urgency + Suspicious Link",
+      "hi": "कूरियर/बिजली की धमकी + जल्दबाजी + संदिग्ध लिंक",
+      "hinglish": "Courier/Utility Threat + Urgency + Link"
+    },
+    "requiredGroups": ["courier_utility", "urgency_pressure"],
+    "requiredAnyUrlRisk": true,
+    "bonusWeight": 12,
+    "whyItMatters": {
+      "en": "Uses service disconnection or parcel detention urgency to push you onto an unverified external link for card or credential theft.",
+      "hi": "बिजली कटने या पार्सल रुकने की जल्दबाजी दिखाकर अनजान लिंक पर कार्ड या बैंक जानकारी भरवाने की कोशिश हो रही है।",
+      "hinglish": "Disconnection ya parcel hold ki urgency dikhakar unverified link par card ya bank details dalwane ki koshish hai."
+    },
+    "recommendedAction": {
+      "en": "Ignore the embedded link and check your bill or shipment directly in the official provider app.",
+      "hi": "मैसेज वाले लिंक को अनदेखा करें और सीधे आधिकारिक ऐप पर अपना बिल या पार्सल जाँचें।",
+      "hinglish": "Embedded link ko ignore karein aur directly official provider app par apna bill ya parcel check karein."
+    },
+    "sourceId": "rbi-beaware",
+    "sourceVerificationStatus": "prototype_heuristic"
+  },
+  {
+    "id": "XSIG-INVEST-RECRUIT",
+    "name": {
+      "en": "Investment + Guaranteed Returns + Recruitment / Payment",
+      "hi": "निवेश + पक्का मुनाफा + लोगों को जोड़ने की शर्त",
+      "hinglish": "Investment + Guaranteed Returns + Recruitment"
+    },
+    "requiredGroups": ["investment_loan", "urgency_pressure"],
+    "bonusWeight": 10,
+    "categoryOverride": "investment_return",
+    "whyItMatters": {
+      "en": "Combines guaranteed high returns with urgency or recruitment pressure—typical of unsustainable Ponzi and task-investment traps.",
+      "hi": "पक्के मुनाफे के वादे के साथ जल्दबाजी या नए लोगों को जोड़ने का दबाव पोंजी व निवेश ठगी का संकेत है।",
+      "hinglish": "Guaranteed high returns ke saath urgency ya recruitment pressure Ponzi aur fake investment trap ka sign hai."
+    },
+    "recommendedAction": {
+      "en": "Do not invest under urgency; verify regulatory status independently.",
+      "hi": "जल्दबाजी में निवेश न करें; पहले स्वतंत्र रूप से कंपनी की रजिस्ट्रेशन जाँचें।",
+      "hinglish": "Urgency mein invest na karein; pehle independently regulatory registration verify karein."
+    },
+    "sourceId": "certin-2024-0050",
+    "sourceVerificationStatus": "officially_supported"
+  },
+  {
+    "id": "XSIG-LOAN-RELEASE-FEE",
+    "name": {
+      "en": "Loan Approval + Release / Processing Fee Demand",
+      "hi": "लोन मंजूरी + रिलीज़/प्रोसेसिंग फीस की माँग",
+      "hinglish": "Loan Approval + Release Fee"
+    },
+    "requiredGroups": ["investment_loan", "payment_demand"],
+    "bonusWeight": 10,
+    "categoryOverride": "investment_return",
+    "whyItMatters": {
+      "en": "Pairs an attractive instant loan or credit claim with an upfront transfer to 'release' or 'verify' the funds—legitimate lenders do not collect release fees via personal transfers.",
+      "hi": "तुरंत लोन या क्रेडिट मिलने के नाम पर पहले रिलीज़ या वेरिफिकेशन फीस माँगी जा रही है—असली बैंक पहले से ऐसे पैसे नहीं माँगते।",
+      "hinglish": "Instant loan approval ke naam par pehle release ya verification fee maangi ja rahi hai—real banks aise upfront fees nahi lete."
+    },
+    "recommendedAction": {
+      "en": "Do not transfer any file, NOC, or release fee; verify loan eligibility only in your official bank app.",
+      "hi": "कोई फाइल, NOC या रिलीज़ फीस न भेजें; लोन की जाँच केवल आधिकारिक बैंक ऐप से करें।",
+      "hinglish": "Koi file, NOC ya release fee transfer na karein; official bank app se loan check karein."
+    },
+    "sourceId": "rbi-cautions",
+    "sourceVerificationStatus": "officially_supported"
+  },
+  {
+    "id": "XSIG-REFUND-PAYMENT-AUTH",
+    "name": {
+      "en": "Refund / Reversal Claim + Payment Authorization",
+      "hi": "रिफंड का झांसा + पेमेंट अप्रूव/PIN का दबाव",
+      "hinglish": "Refund Claim + Payment Authorization"
+    },
+    "requiredGroups": ["upi_qr_fraud", "payment_demand"],
+    "bonusWeight": 10,
+    "categoryOverride": "upi_pin_scam",
+    "whyItMatters": {
+      "en": "Uses a refund or mistaken-credit excuse to push you into authorizing a UPI payment or transfer.",
+      "hi": "रिफंड या गलती से आए पैसे के बहाने आपसे UPI पेमेंट अप्रूव या ट्रांसफर करवाने की कोशिश की जा रही है।",
+      "hinglish": "Refund ya galti se transfer ke bahane aapse UPI payment approve karwane ki koshish hai."
+    },
+    "recommendedAction": {
+      "en": "Never authorize a UPI PIN or send money back before checking your real bank statement.",
+      "hi": "असली बैंक स्टेटमेंट देखे बिना कभी UPI PIN न डालें और न ही पैसे वापस भेजें।",
+      "hinglish": "Real bank statement check kiye bina kabhi UPI PIN enter ya return transfer na karein."
+    },
+    "sourceId": "npci-fraud",
+    "sourceVerificationStatus": "officially_supported"
+  }
+]

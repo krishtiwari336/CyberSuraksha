@@ -1,0 +1,74 @@
+[
+  {
+    "id": "tip-otp",
+    "sourceId": "rbi-cyber-2022",
+    "text": {
+      "en": "Never share your OTP, ATM PIN, CVV, or netbanking password with anyone, even if they claim to be bank staff.",
+      "hi": "अपना OTP, ATM PIN, CVV या पासवर्ड किसी को न बताएं—चाहे सामने वाला बैंक अधिकारी ही क्यों न बने।",
+      "hinglish": "Apna OTP, ATM PIN, CVV ya password kisi ko na batayein, chahe samne wala bank staff hone ka dawa kare."
+    }
+  },
+  {
+    "id": "tip-upi-pin",
+    "sourceId": "npci-upi-faqs",
+    "text": {
+      "en": "You never need to enter your UPI PIN or scan a QR code to receive money—PIN only authorizes outgoing payments.",
+      "hi": "पैसे लेने के लिए कभी UPI PIN डालने या QR कोड स्कैन करने की जरूरत नहीं होती।",
+      "hinglish": "Paise receive karne ke liye kabhi UPI PIN daalne ya QR scan karne ki zaroorat nahi hoti."
+    }
+  },
+  {
+    "id": "tip-kyc",
+    "sourceId": "rbi-kyc-2024",
+    "text": {
+      "en": "Verify any KYC update or account-block warning only inside your bank's official app, website, or branch.",
+      "hi": "KYC अपडेट या खाता बंद होने की किसी भी चेतावनी को सिर्फ बैंक के official ऐप, वेबसाइट या ब्रांच से जाँचें।",
+      "hinglish": "KYC update ya account block ke kisi bhi message ko hamesha bank ke official app, website ya branch se check karein."
+    }
+  },
+  {
+    "id": "tip-remote-app",
+    "sourceId": "rbi-cyber-2022",
+    "text": {
+      "en": "Avoid installing unknown APK files or granting screen-sharing / remote-access apps to strangers.",
+      "hi": "अनजान व्यक्ति के कहने पर कोई APK फाइल या screen-sharing ऐप फोन में इंस्टॉल न करें।",
+      "hinglish": "Unknown person ke kehne par koi APK file ya screen-sharing / remote-access app install na karein."
+    }
+  },
+  {
+    "id": "tip-links",
+    "sourceId": "rbi-beaware",
+    "text": {
+      "en": "Do not tap suspicious links in SMS or WhatsApp; type the official organization's website address yourself.",
+      "hi": "SMS या व्हाट्सएप में आए अनजान लिंक पर क्लिक न करें—खुद सही वेबसाइट टाइप करके खोलें।",
+      "hinglish": "SMS ya WhatsApp ke unknown links par click na karein; official website khud browser mein type karke kholein."
+    }
+  },
+  {
+    "id": "tip-helpline",
+    "sourceId": "rbi-beaware",
+    "text": {
+      "en": "Independently verify customer-care numbers from the official app or back of your bank card—not search ads.",
+      "hi": "कस्टमर केयर नंबर हमेशा आधिकारिक ऐप या बैंक कार्ड के पीछे से देखें, किसी अनजान मैसेज या विज्ञापन से नहीं।",
+      "hinglish": "Customer care number hamesha official app ya bank card ke peeche se check karein, random message ya ads se nahi."
+    }
+  },
+  {
+    "id": "tip-job-fee",
+    "sourceId": "certin-2024-0050",
+    "text": {
+      "en": "Be cautious of job or internship offers demanding upfront registration, security, or training fees.",
+      "hi": "नौकरी या इंटर्नशिप के नाम पर पहले रजिस्ट्रेशन या ट्रेनिंग फीस माँगने वाले ऑफर से सावधान रहें।",
+      "hinglish": "Job ya internship offer mein pehle registration ya training fee maangi jaaye toh turant savdhan ho jayein."
+    }
+  },
+  {
+    "id": "tip-digital-arrest",
+    "sourceId": "certin-2024-0050",
+    "text": {
+      "en": "Law enforcement agencies do not conduct 'digital arrests' over video calls or demand immediate UPI transfers.",
+      "hi": "पुलिस या सरकारी एजेंसी वीडियो कॉल पर 'डिजिटल अरेस्ट' नहीं करती और न ही तुरंत पैसे ट्रांसफर करने को कहती है।",
+      "hinglish": "Police ya government agency video call par 'digital arrest' nahi karti aur na hi turant paise maangti hai."
+    }
+  }
+]

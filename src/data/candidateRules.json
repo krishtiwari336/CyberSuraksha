@@ -1,0 +1,344 @@
+[
+  {
+    "id": "CAND-REWARD-EXPIRE-01",
+    "version": "v0.1-candidate",
+    "status": "candidate_review",
+    "validationState": "candidate",
+    "targetGapId": "EMG-REWARD-REDEEM",
+    "targetGapDescription": {
+      "en": "Misses credit-card reward-point expiry baits when point balances precede ₹ amounts and no 'OTP' or 'KYC' keyword appears.",
+      "hi": "जब संदेश में पहले रिवार्ड पॉइंट की संख्या आती है और 'OTP' या 'KYC' शब्द नहीं होता, तब यह अंतराल रहता है।",
+      "hinglish": "Jab points count ₹ amount se pehle aata hai aur 'OTP'/'KYC' nahi hota, tab detection gap rehta hai."
+    },
+    "overlapsWithRuleIds": ["RULE-CASHBACK-FAKE-11", "RULE-URGENCY-29"],
+    "falsePositiveRisk": "low",
+    "falsePositiveNotes": {
+      "en": "Low risk; suppressed when message advises using the official bank app only or contains awareness negation.",
+      "hi": "कम जोखिम; केवल आधिकारिक बैंक ऐप में जाँचने या सुरक्षा सलाह वाले वाक्यों में रुक जाता है।",
+      "hinglish": "Low risk; official bank app only ya awareness negation mein suppress hota hai."
+    },
+    "exampleTrigger": "8,420 credit card reward points expire tonight. Redeem voucher worth ₹4,210 on our portal.",
+    "rationale": {
+      "en": "Covers bank reward-point expiry baits where point counts precede the currency amount or mention 'redeem voucher' without clicking a shortener.",
+      "hi": "बैंक रिवार्ड पॉइंट एक्सपायर होने के बहाने वाउचर रिडीम कराने वाले संदेशों को पकड़ता है।",
+      "hinglish": "Bank reward points expire hone ke bahane voucher redeem karwane wale messages ko detect karta hai."
+    },
+    "name": {
+      "en": "Expiring Bank Reward Points Redemption Bait",
+      "hi": "एक्सपायर होने वाले बैंक रिवार्ड पॉइंट का झांसा",
+      "hinglish": "Expiring Reward Points Bait"
+    },
+    "category": "lottery_reward",
+    "languages": ["en", "hi", "hinglish"],
+    "patterns": [
+      {
+        "regex": "(?:reward\\s+points|credit\\s+card\\s+points|loyalty\\s+points).{0,65}(?:expire\\s+(?:today|tonight|soon)|redeem\\s+(?:voucher|now|before)|worth\\s+(?:rs\\.?|inr|₹)\\s*\\d)",
+        "flags": "gi"
+      }
+    ],
+    "exclusions": [
+      { "regex": "\\b(?:official\\s+(?:bank\\s+)?app\\s+only|never\\s+click|beware\\s+of)\\b", "flags": "i" }
+    ],
+    "weight": 26,
+    "maxContribution": 26,
+    "group": "lottery_reward",
+    "explanation": {
+      "en": "Claims loyalty or credit-card reward points are expiring tonight to push urgent voucher redemption on an unverified portal.",
+      "hi": "क्रेडिट कार्ड या बैंक रिवार्ड पॉइंट आज रात समाप्त होने का दबाव बनाकर अनजान पोर्टल पर रिडीम करने को कहा जा रहा है।",
+      "hinglish": "Reward points aaj raat expire hone ka pressure banakar unknown portal par redeem karwaya ja raha hai."
+    },
+    "recommendedAction": {
+      "en": "Check and redeem bank reward points strictly inside your bank's official netbanking or mobile app.",
+      "hi": "रिवार्ड पॉइंट केवल बैंक की आधिकारिक ऐप या नेटबैंकिंग से ही जाँचें।",
+      "hinglish": "Reward points sirf official bank app ya netbanking mein check aur redeem karein."
+    },
+    "sourceId": "rbi-beaware",
+    "sourceVerificationStatus": "prototype_heuristic",
+    "suppressibleByAwarenessContext": true
+  },
+  {
+    "id": "CAND-FASTAG-TOLL-02",
+    "version": "v0.1-candidate",
+    "status": "candidate_review",
+    "validationState": "candidate",
+    "targetGapId": "EMG-FASTAG-BLACKLIST",
+    "targetGapDescription": {
+      "en": "Utility rules cover electricity, gas, and water disconnections but miss NHAI FASTag blacklisting and double-toll penalties.",
+      "hi": "यूटिलिटी नियम बिजली/गैस कवर करते हैं, लेकिन NHAI FASTag ब्लैकलिस्ट और दोगुना टोल जुर्माना छूट जाता है।",
+      "hinglish": "Utility rules electricity/gas cover karte hain, par NHAI FASTag blacklist aur double-toll penalty miss ho jati hai."
+    },
+    "overlapsWithRuleIds": ["RULE-ELECTRICITY-UTILITY-17", "RULE-URGENCY-29"],
+    "falsePositiveRisk": "low",
+    "falsePositiveNotes": {
+      "en": "Low risk; requires pairing FASTag/NHAI toll keywords with threat words like blacklisted, suspended, or double-toll penalty.",
+      "hi": "कम जोखिम; केवल FASTag के साथ ब्लैकलिस्ट या दोगुने जुर्माने की धमकी होने पर ही सक्रिय होता है।",
+      "hinglish": "Low risk; sirf FASTag ke saath blacklist ya double toll penalty threat par hi trigger hota hai."
+    },
+    "exampleTrigger": "Vehicle tag blacklisted due to pending toll ₹199. Clear within 3 hours to avoid double toll penalty.",
+    "rationale": {
+      "en": "Extends utility disconnection/penalty patterns to NHAI FASTag blacklisting and double-toll threat wording.",
+      "hi": "बिजली बिल कटौती की तरह FASTag ब्लैकलिस्ट और दोगुने टोल जुर्माने वाले संदेशों को कवर करता है।",
+      "hinglish": "Electricity scam ke pattern ko FASTag blacklist aur double toll penalty wale messages tak badhata hai."
+    },
+    "name": {
+      "en": "FASTag Blacklist / Pending Toll Penalty Threat",
+      "hi": "FASTag ब्लैकलिस्ट या बकाया टोल जुर्माने की धमकी",
+      "hinglish": "FASTag Blacklist / Toll Penalty Threat"
+    },
+    "category": "electricity_utility",
+    "languages": ["en", "hi", "hinglish"],
+    "patterns": [
+      {
+        "regex": "(?:fastag|vehicle\\s+tag|nhai\\s+toll).{0,80}(?:blacklisted|suspended|pending\\s+toll|double\\s+toll|penalty)",
+        "flags": "gi"
+      }
+    ],
+    "exclusions": [
+      { "regex": "\\b(?:official\\s+issuer\\s+app|beware\\s+of|never\\s+click)\\b", "flags": "i" }
+    ],
+    "weight": 26,
+    "maxContribution": 26,
+    "group": "courier_utility",
+    "explanation": {
+      "en": "Threatens FASTag blacklisting or double-toll penalties unless an urgent payment is made via an embedded portal.",
+      "hi": "FASTag ब्लैकलिस्ट होने या दोगुना टोल लगने की धमकी देकर तुरंत भुगतान करने का दबाव बनाया जा रहा है।",
+      "hinglish": "FASTag blacklist ya double toll penalty ki dhamki dekar urgent payment karwaya ja raha hai."
+    },
+    "recommendedAction": {
+      "en": "Verify FASTag wallet balance and status directly in your issuer bank app or official MyFASTag app.",
+      "hi": "FASTag की स्थिति सीधे अपने बैंक ऐप या आधिकारिक MyFASTag ऐप में जाँचें।",
+      "hinglish": "FASTag balance aur status sirf issuer bank app ya official MyFASTag app mein check karein."
+    },
+    "sourceId": "certin-2024-0050",
+    "sourceVerificationStatus": "prototype_heuristic",
+    "suppressibleByAwarenessContext": true
+  },
+  {
+    "id": "CAND-AUTODEBIT-CANCEL-03",
+    "version": "v0.1-candidate",
+    "status": "candidate_review",
+    "validationState": "candidate",
+    "targetGapId": "EMG-CARD-AUTODEBIT",
+    "targetGapDescription": {
+      "en": "Existing callback rules look for 'customer care' or 'helpline', missing 'cancellation desk' + urgent auto-debit panic.",
+      "hi": "मौजूदा कॉल नियम 'कस्टमर केयर' देखते हैं, इसलिए 'कैंसलेशन डेस्क' और ऑटो-डेबिट डर वाले झांसे बच निकलते हैं।",
+      "hinglish": "Existing rules 'customer care' check karte hain, 'cancellation desk' + auto-debit panic miss ho jata hai."
+    },
+    "overlapsWithRuleIds": ["RULE-CUSTOMER-CARE-21", "RULE-URGENCY-29"],
+    "falsePositiveRisk": "medium",
+    "falsePositiveNotes": {
+      "en": "Medium risk if legitimate subscription reminders mention auto-debit; mitigated by requiring 'to stop/cancel' callback or 10-digit mobile desk.",
+      "hi": "मध्यम जोखिम; असली सब्सक्रिप्शन रिमाइंडर से बचने के लिए 10-अंकों का मोबाइल या कैंसलेशन डेस्क शर्त रखी गई है।",
+      "hinglish": "Medium risk; legitimate subscription alerts se bachne ke liye cancellation desk ya 10-digit mobile callback required hai."
+    },
+    "exampleTrigger": "annual ₹4,999 card protection shield charge will auto-debit tonight. To stop deduction, call cancellation desk 9811023456.",
+    "rationale": {
+      "en": "Catches panic-inducing 'annual charge will auto-debit tonight' lures directing users to call a personal 10-digit cancellation desk number.",
+      "hi": "'आज रात पैसे अपने-आप कट जाएंगे, रोकने के लिए इस नंबर पर कॉल करें' वाले कार्ड सुरक्षा झांसे को पकड़ता है।",
+      "hinglish": "'Aaj raat auto-debit ho jayega, cancel karne ke liye mobile number par call karein' wale trap ko pakadta hai."
+    },
+    "name": {
+      "en": "Auto-Debit Panic + Unverified Cancellation Desk Callback",
+      "hi": "ऑटो-डेबिट का डर + अनजान कैंसलेशन नंबर पर कॉल",
+      "hinglish": "Auto-Debit Cancellation Callback Trap"
+    },
+    "category": "generic_mixed",
+    "languages": ["en", "hi", "hinglish"],
+    "patterns": [
+      {
+        "regex": "(?:auto[\\s-]*debit|protection\\s+shield\\s+charge|annual\\s+maintenance\\s+debit).{0,90}(?:to\\s+(?:stop|cancel)|cancellation\\s+desk|call\\s+(?:now|desk|\\+?91)?[\\s:]*[6-9]\\d{9})",
+        "flags": "gi"
+      }
+    ],
+    "exclusions": [
+      { "regex": "\\b(?:official\\s+bank\\s+application|back\\s+of\\s+your\\s+card|beware\\s+of)\\b", "flags": "i" }
+    ],
+    "weight": 24,
+    "maxContribution": 24,
+    "group": "payment_demand",
+    "explanation": {
+      "en": "Claims a large annual protection charge will auto-debit tonight to panic you into calling an unverified 10-digit cancellation desk.",
+      "hi": "आज रात बड़ी रकम कटने का डर दिखाकर एक अनजान 10-अंकों के नंबर पर कॉल करवाने की कोशिश की जा रही है।",
+      "hinglish": "Aaj raat badi rakam auto-debit hone ka dar dikhakar personal number par call karwaya ja raha hai."
+    },
+    "recommendedAction": {
+      "en": "Check card subscriptions directly inside your official card issuer app; never call mobile numbers from unsolicited alerts.",
+      "hi": "कार्ड से जुड़े किसी भी शुल्क की जाँच सीधे बैंक ऐप में करें; अनजान मोबाइल नंबर पर कॉल न करें।",
+      "hinglish": "Card charges sirf official bank app mein check karein; unsolicited SMS ke mobile number par call na karein."
+    },
+    "sourceId": "rbi-beaware",
+    "sourceVerificationStatus": "prototype_heuristic",
+    "suppressibleByAwarenessContext": true
+  },
+  {
+    "id": "CAND-SCHOLARSHIP-FEE-04",
+    "version": "v0.1-candidate",
+    "status": "candidate_review",
+    "validationState": "candidate",
+    "targetGapId": "EMG-SCHOLARSHIP-FEE",
+    "targetGapDescription": {
+      "en": "Upfront-fee rules target jobs and loans, leaving student merit scholarships/stipends requiring 'verification charge' under-scored.",
+      "hi": "फीस वाले नियम नौकरी और लोन पर केंद्रित हैं, जिससे छात्रवृत्ति सत्यापन शुल्क ठगी छूट जाती है।",
+      "hinglish": "Fee rules job/loan par focus karte hain, jisse scholarship verification charge scam miss hota hai."
+    },
+    "overlapsWithRuleIds": ["RULE-JOB-FEE-08", "RULE-UPFRONT-PAYMENT-27"],
+    "falsePositiveRisk": "low",
+    "falsePositiveNotes": {
+      "en": "Low risk; excludes zero-fee official scholarship announcements via 'no fee', 'free of cost', and 'official portal only'.",
+      "hi": "कम जोखिम; 'कोई शुल्क नहीं' और आधिकारिक पोर्टल सूचनाओं पर अपने-आप सुरक्षित रहता है।",
+      "hinglish": "Low risk; 'no fee' aur 'official portal only' notices mein suppress rehta hai."
+    },
+    "exampleTrigger": "Your ₹25,000 student stipend is approved. Deposit ₹450 document verification charge to release bank disbursement.",
+    "rationale": {
+      "en": "Extends upfront-fee detection to student scholarships, merit stipends, and government benefit verification charges.",
+      "hi": "छात्रवृत्ति, वजीफा या सरकारी लाभ मिलने से पहले दस्तावेज़ सत्यापन शुल्क मांगने वाले झांसे को पकड़ता है।",
+      "hinglish": "Scholarship, stipend ya scheme payout se pehle document verification charge maangne wale fraud ko detect karta hai."
+    },
+    "name": {
+      "en": "Scholarship / Benefit Document Verification Charge",
+      "hi": "छात्रवृत्ति / लाभ के नाम पर दस्तावेज़ सत्यापन शुल्क",
+      "hinglish": "Scholarship Verification Charge Trap"
+    },
+    "category": "generic_mixed",
+    "languages": ["en", "hi", "hinglish"],
+    "patterns": [
+      {
+        "regex": "(?:scholarship|stipend|merit\\s+grant|yojana\\s+benefit).{0,90}(?:deposit|pay|transfer)\\s+(?:rs\\.?|inr|₹)?\\s*\\d[\\d,]*.{0,55}(?:verification\\s+(?:charge|fee)|release\\s+(?:disbursement|grant|fund))",
+        "flags": "gi"
+      }
+    ],
+    "exclusions": [
+      { "regex": "\\b(?:no\\s+fee|free\\s+of\\s+cost|official\\s+portal\\s+only)\\b", "flags": "i" }
+    ],
+    "weight": 24,
+    "maxContribution": 24,
+    "group": "payment_demand",
+    "explanation": {
+      "en": "Promises an approved student stipend or grant while demanding an upfront document verification charge to release disbursement.",
+      "hi": "छात्रवृत्ति या वजीफा मंजूर होने का दावा करके पैसे जारी करने से पहले सत्यापन शुल्क माँगा जा रहा है।",
+      "hinglish": "Scholarship ya stipend approve hone ka dawa karke disbursement se pehle verification charge maanga ja raha hai."
+    },
+    "recommendedAction": {
+      "en": "Verify scholarships strictly on scholarships.gov.in or your university's official portal; genuine stipends do not require upfront fees.",
+      "hi": "छात्रवृत्ति की जाँच केवल scholarships.gov.in या कॉलेज के आधिकारिक पोर्टल पर ही करें।",
+      "hinglish": "Scholarship sirf scholarships.gov.in ya university ke official portal par check karein."
+    },
+    "sourceId": "certin-2024-0050",
+    "sourceVerificationStatus": "prototype_heuristic",
+    "suppressibleByAwarenessContext": true
+  },
+  {
+    "id": "CAND-UPI-COLLECT-DISGUISE-05",
+    "version": "v0.1-candidate",
+    "status": "candidate_review",
+    "validationState": "candidate",
+    "targetGapId": "EMG-UPI-INDIRECT-CODE",
+    "targetGapDescription": {
+      "en": "Scammers evade 'UPI PIN' and 'QR' rules by calling the PIN a 'secret code' in conversational Hinglish marketplace chats.",
+      "hi": "ठग 'UPI PIN' के बजाय 'सीक्रेट कोड' बोलकर बोलचाल की Hinglish में पैसे कटवा लेते हैं।",
+      "hinglish": "Scammers 'UPI PIN' ke bajay Hinglish mein 'secret code' bolkar rule bypass kar lete hain."
+    },
+    "overlapsWithRuleIds": ["RULE-UPI-PIN-RECEIVE-04", "RULE-UPI-COLLECT-05"],
+    "falsePositiveRisk": "low",
+    "falsePositiveNotes": {
+      "en": "Low risk; specifically pairs notification/advance cues with secret code/PIN entry promising incoming credit.",
+      "hi": "कम जोखिम; नोटिफिकेशन खोलकर कोड डालने और पैसे क्रेडिट होने के दोहरे संकेत पर ही चलता है।",
+      "hinglish": "Low risk; notification khol kar secret code daalne aur paise credit hone ke pairing par hi chalta hai."
+    },
+    "exampleTrigger": "OLX advance bhej diya hai, app notification khol ke apna secret code daal do paise credit ho jayenge.",
+    "rationale": {
+      "en": "Captures Hinglish marketplace advance scams that avoid saying 'UPI PIN' and instead say 'notification khol ke secret code daal do paise credit ho jayenge'.",
+      "hi": "'नोटिफिकेशन खोलकर सीक्रेट कोड डालो पैसे आ जाएंगे' जैसे अप्रत्यक्ष Hinglish UPI झांसे को पकड़ता है।",
+      "hinglish": "Direct 'UPI PIN' bolne ke bajay 'secret code daal do paise credit ho jayenge' bolne wale Hinglish trap ko pakadta hai."
+    },
+    "name": {
+      "en": "Indirect 'Secret Code' Entry to Credit Advance",
+      "hi": "पैसे क्रेडिट होने के लिए 'सीक्रेट कोड' डालने का अप्रत्यक्ष झांसा",
+      "hinglish": "Indirect Secret Code Credit Trap"
+    },
+    "category": "upi_pin_scam",
+    "languages": ["en", "hi", "hinglish"],
+    "patterns": [
+      {
+        "regex": "(?:notification\\s+khol|advance\\s+bhej|paise\\s+credit).{0,80}(?:secret\\s+code|code\\s+daal|pin\\s+daal).{0,55}(?:credit\\s+ho|account\\s+mein\\s+aa)",
+        "flags": "gi"
+      }
+    ],
+    "exclusions": [
+      { "regex": "\\b(?:never|kabhi\\s+mat|no\\s+pin\\s+required)\\b", "flags": "i" }
+    ],
+    "weight": 30,
+    "maxContribution": 30,
+    "group": "upi_qr_fraud",
+    "explanation": {
+      "en": "Disguises an outgoing UPI collect request as an 'advance payment' requiring you to open a notification and enter your secret code/PIN to receive funds.",
+      "hi": "पैसे भेजने के नाम पर आपसे नोटिफिकेशन खोलकर 'सीक्रेट कोड' (UPI PIN) डलवाया जा रहा है, जिससे आपके खाते से पैसे कटेंगे।",
+      "hinglish": "Advance bhejne ke naam par aapse notification khol kar secret code/PIN dalwaya ja raha hai, jisse paise debit honge."
+    },
+    "recommendedAction": {
+      "en": "Never enter any PIN or 'secret code' inside a payment notification to receive buyer advances.",
+      "hi": "खरीदार से पैसे लेने के लिए कभी भी किसी नोटिफिकेशन में PIN या 'सीक्रेट कोड' न डालें।",
+      "hinglish": "Buyer se paise receive karne ke liye kabhi kisi notification mein PIN ya secret code na daalein."
+    },
+    "sourceId": "npci-upi-faqs",
+    "sourceVerificationStatus": "officially_supported",
+    "suppressibleByAwarenessContext": true
+  },
+  {
+    "id": "CAND-RECOVERY-TAX-06",
+    "version": "v0.1-candidate",
+    "status": "candidate_review",
+    "validationState": "candidate",
+    "targetGapId": "EMG-CRYPTO-RECOVERY",
+    "targetGapDescription": {
+      "en": "Misses secondary 'recovery desk' scams demanding a percentage tax clearance charge (e.g., 5%) instead of a fixed ₹ fee.",
+      "hi": "सीधी ₹ रकम की जगह प्रतिशत (जैसे 5% टैक्स क्लियरेंस) मांगने वाली रिकवरी ठगी अभी छूट जाती है।",
+      "hinglish": "Fixed ₹ amount ke bajay percentage tax clearance charge (jaise 5%) maangne wala recovery scam miss hota hai."
+    },
+    "overlapsWithRuleIds": ["RULE-INVESTMENT-GUARANTEED-18", "RULE-UPFRONT-PAYMENT-27"],
+    "falsePositiveRisk": "low",
+    "falsePositiveNotes": {
+      "en": "Low risk; tightly scoped to recovery desk / frozen crypto / unlocked payout paired with percentage clearance or unlock fees.",
+      "hi": "कम जोखिम; केवल 'रिकवरी डेस्क' या 'फंसे क्रिप्टो अनलॉक' के साथ टैक्स/रिलीज़ शुल्क होने पर सक्रिय होता है।",
+      "hinglish": "Low risk; recovery desk ya frozen payout unlocked ke saath percentage clearance charge par hi trigger hota hai."
+    },
+    "exampleTrigger": "Your frozen crypto payout is unlocked. Submit 5% tax clearance charge to release withdrawal.",
+    "rationale": {
+      "en": "Detects secondary 'recovery desk' scams demanding a percentage tax/clearance charge to unlock frozen crypto or trading withdrawals.",
+      "hi": "फंसे हुए क्रिप्टो या ट्रेडिंग पैसे निकालने के लिए पहले प्रतिशत में टैक्स क्लियरेंस शुल्क मांगने वाले झांसे को पकड़ता है।",
+      "hinglish": "Frozen crypto ya trading payout unlock karne ke naam par 5% tax clearance charge maangne wale recovery fraud ko pakadta hai."
+    },
+    "name": {
+      "en": "Frozen Payout / Crypto Recovery Tax Clearance Demand",
+      "hi": "फंसे हुए ट्रेडिंग/क्रिप्टो पैसे निकालने पर टैक्स शुल्क की माँग",
+      "hinglish": "Recovery Desk Tax Clearance Demand"
+    },
+    "category": "investment_return",
+    "languages": ["en", "hi", "hinglish"],
+    "patterns": [
+      {
+        "regex": "(?:recovery\\s+desk|frozen\\s+(?:crypto|trading)|payout\\s+is\\s+unlocked).{0,85}(?:submit|pay)\\s+(?:\\d+%|tax\\s+clearance|release\\s+charge|unlock\\s+fee)",
+        "flags": "gi"
+      }
+    ],
+    "exclusions": [
+      { "regex": "\\b(?:beware\\s+of|scam\\s+awareness|never\\s+pay)\\b", "flags": "i" }
+    ],
+    "weight": 28,
+    "maxContribution": 28,
+    "group": "investment_loan",
+    "explanation": {
+      "en": "Claims frozen trading or crypto payouts have been 'unlocked' and demands a percentage tax clearance charge before release—a classic double-victimization recovery scam.",
+      "hi": "रुके हुए क्रिप्टो या ट्रेडिंग मुनाफे को निकालने के नाम पर पहले प्रतिशत में टैक्स या क्लियरेंस शुल्क माँगा जा रहा है।",
+      "hinglish": "Frozen crypto ya trading balance unlock hone ka dawa karke pehle tax clearance charge maanga ja raha hai."
+    },
+    "recommendedAction": {
+      "en": "Never pay tax or clearance fees upfront to 'unlock' frozen trading withdrawals; report fraud on cybercrime.gov.in.",
+      "hi": "रुकी हुई राशि निकालने के लिए कभी अग्रिम टैक्स शुल्क न दें; ठगी की रिपोर्ट cybercrime.gov.in पर करें।",
+      "hinglish": "Frozen withdrawal release karne ke liye kabhi upfront tax ya clearance charge na dein."
+    },
+    "sourceId": "certin-2024-0050",
+    "sourceVerificationStatus": "prototype_heuristic",
+    "suppressibleByAwarenessContext": true
+  }
+]

@@ -1,0 +1,1115 @@
+[
+  {
+    "id": "RULE-OTP-01",
+    "name": {
+      "en": "Active OTP Request",
+      "hi": "OTP माँगने का संकेत",
+      "hinglish": "Active OTP Request"
+    },
+    "category": "otp_scam",
+    "languages": ["en", "hi", "hinglish"],
+    "patterns": [
+      { "regex": "(?:share|send|tell|provide|enter|verify|submit|forward|reply|confirm|update|give|batao|bata|bataye|batayein|bhejo|bhej|bhejiye|dijiye|daalo|daalen|de\\s+do|शेयर|बताएं|बताओ|बताइए|भेजें|भेजो|डालें|दीजिए)\\s+(?:your|the|apna|apni|अपना|यह)?\\s*(?:[a-z0-9\\u0900-\\u097f]{0,15}\\s+){0,2}(?:otp|one\\s*time\\s*password|ओटीपी)", "flags": "gi" },
+      { "regex": "(?:otp|one\\s*time\\s*password|ओटीपी)\\s+(?:batao|bata|bataye|bhejo|bhej|share\\s*karo|share\\s*karein|daalo|verify\\s*karo|required|needed|mandatory|बताएं|बताओ|भेजें|भेजो|शेयर\\s*करें|डालें|जरूरी)", "flags": "gi" }
+    ],
+    "exclusions": [
+      { "regex": "\\b(?:never|do\\s*not|don't|dont|kabhi\\s*(?:bhi)?\\s*(?:mat|na)|mat\\s+batana|na\\s+batayein|नहीं|मत\\s+बताना|साझा\\s+न\\s+करें|बिल्कुल\\s+न\\s+बताएं)\\b", "flags": "i" }
+    ],
+    "weight": 28,
+    "maxContribution": 28,
+    "group": "credential_theft",
+    "explanation": {
+      "en": "The message actively asks you to share or enter an OTP (One-Time Password). Legitimate banks and services never ask customers to reveal OTPs to another person.",
+      "hi": "यह मैसेज आपसे OTP (वन-टाइम पासवर्ड) बताने या डालने को कह रहा है। कोई भी बैंक या सही सेवा कभी आपसे OTP शेयर करने को नहीं कहती।",
+      "hinglish": "Yeh message aapse OTP share karne ya enter karne ko keh raha hai. Real banks kabhi kisi ko OTP batane ko nahi kehte."
+    },
+    "recommendedAction": {
+      "en": "Do not reply with or enter your OTP. Verify any alert directly inside your bank's official app.",
+      "hi": "किसी को OTP न बताएं और न डालें। किसी भी अलर्ट को सीधे बैंक की official ऐप में जाँचें।",
+      "hinglish": "Kisi ko OTP mat batayein aur official bank app mein jakar khud check karein."
+    },
+    "sourceId": "rbi-cyber-2022",
+    "sourceVerificationStatus": "officially_supported",
+    "suppressibleByAwarenessContext": true
+  },
+  {
+    "id": "RULE-PIN-02",
+    "name": {
+      "en": "ATM / Banking PIN Request",
+      "hi": "ATM या बैंकिंग PIN की माँग",
+      "hinglish": "ATM / Banking PIN Request"
+    },
+    "category": "otp_scam",
+    "languages": ["en", "hi", "hinglish"],
+    "patterns": [
+      { "regex": "(?:share|send|enter|provide|tell|give|confirm|verify|batao|bhejo|daalo|बताएं|भेजें|डालें)\\s+(?:your|the|apna|अपना)?\\s*(?:[a-z0-9\\u0900-\\u097f]{0,12}\\s+){0,2}(?:atm\\s*pin|mpin|tpin|banking\\s*pin|card\\s*pin|pin\\s*number|पिन)", "flags": "gi" },
+      { "regex": "(?:atm\\s*pin|mpin|tpin|card\\s*pin|पिन)\\s+(?:batao|bhejo|daalo|share\\s*karo|verify\\s*karo|बताएं|भेजें|डालें)", "flags": "gi" }
+    ],
+    "exclusions": [
+      { "regex": "\\b(?:never|do\\s*not|don't|kabhi\\s*(?:mat|na)|mat\\s+batana|नहीं|मत\\s+बताना)\\b", "flags": "i" }
+    ],
+    "weight": 28,
+    "maxContribution": 28,
+    "group": "credential_theft",
+    "explanation": {
+      "en": "The message asks for a confidential banking PIN (ATM PIN, MPIN, or card PIN), which can allow unauthorized access to your funds.",
+      "hi": "यह मैसेज आपका गुप्त बैंकिंग PIN (ATM PIN या MPIN) माँग रहा है, जिससे आपके खाते से पैसे निकाले जा सकते हैं।",
+      "hinglish": "Yeh message aapka secret banking PIN (ATM PIN ya MPIN) maang raha hai, jisse paise nikal sakte hain."
+    },
+    "recommendedAction": {
+      "en": "Never enter or share your banking PINs in messages, calls, or unverified web links.",
+      "hi": "मैसेज, कॉल या किसी अनजान लिंक पर कभी भी अपना PIN न डालें और न बताएं।",
+      "hinglish": "Message, call ya unknown link par kabhi apna PIN enter ya share na karein."
+    },
+    "sourceId": "rbi-cyber-2022",
+    "sourceVerificationStatus": "officially_supported",
+    "suppressibleByAwarenessContext": true
+  },
+  {
+    "id": "RULE-CVV-03",
+    "name": {
+      "en": "Card CVV / Password Request",
+      "hi": "कार्ड CVV या पासवर्ड की माँग",
+      "hinglish": "CVV / Password Request"
+    },
+    "category": "otp_scam",
+    "languages": ["en", "hi", "hinglish"],
+    "patterns": [
+      { "regex": "(?:share|send|enter|provide|verify|submit|update|confirm|batao|bhejo|daalo|बताएं|डालें)\\s+(?:your|the|apna|अपना)?\\s*(?:[a-z0-9\\u0900-\\u097f]{0,12}\\s+){0,2}(?:cvv|cvc|card\\s*details|expiry\\s*date|netbanking\\s*password|login\\s*password|password|पासवर्ड)", "flags": "gi" },
+      { "regex": "(?:cvv|cvc|card\\s*number\\s*(?:and|&)\\s*cvv)\\s+(?:required|needed|bhejo|daalo|batao)", "flags": "gi" }
+    ],
+    "exclusions": [
+      { "regex": "\\b(?:never|do\\s*not|don't|kabhi\\s*(?:mat|na)|नहीं|मत)\\b", "flags": "i" }
+    ],
+    "weight": 28,
+    "maxContribution": 28,
+    "group": "credential_theft",
+    "explanation": {
+      "en": "The message requests sensitive card CVV details or login passwords, which are strictly confidential credentials.",
+      "hi": "यह मैसेज कार्ड का CVV नंबर या नेटबैंकिंग पासवर्ड माँग रहा है, जो पूरी तरह गुप्त जानकारी होती है।",
+      "hinglish": "Yeh message card ka CVV ya login password maang raha hai, jo bilkul confidential hota hai."
+    },
+    "recommendedAction": {
+      "en": "Never share CVV numbers or passwords. If already shared, block your card immediately via your bank.",
+      "hi": "CVV या पासवर्ड कभी साझा न करें। अगर पहले बता दिया है, तो तुरंत बैंक से कार्ड ब्लॉक करवाएं।",
+      "hinglish": "CVV ya password kabhi share na karein. Agar de diya hai toh turant bank se card block karwayein."
+    },
+    "sourceId": "rbi-beaware",
+    "sourceVerificationStatus": "officially_supported",
+    "suppressibleByAwarenessContext": true
+  },
+  {
+    "id": "RULE-UPI-PIN-RECEIVE-04",
+    "name": {
+      "en": "UPI PIN or QR Requested to Receive Money",
+      "hi": "पैसे लेने के नाम पर UPI PIN या QR स्कैन",
+      "hinglish": "UPI PIN / QR to Receive Money"
+    },
+    "category": "upi_pin_scam",
+    "languages": ["en", "hi", "hinglish"],
+    "patterns": [
+      { "regex": "(?:receive|claim|get|credit|accept|paane|lene|milega|milenge|पाने|लेने|मिलेंगे)[^.!?\\n]{0,65}(?:scan\\s*(?:this|the)?\\s*qr|qr\\s*code|enter\\s*(?:your)?\\s*(?:upi\\s*)?pin|upi\\s*pin|pin\\s*(?:daalo|daalen|डालें|बनाएं))", "flags": "gi" },
+      { "regex": "(?:scan\\s*(?:this|the)?\\s*qr|enter\\s*(?:your)?\\s*(?:upi\\s*)?pin|upi\\s*pin)[^.!?\\n]{0,65}(?:to\\s*(?:receive|claim|get|credit)|cashback|refund|reward|paise\\s*(?:lene|paane)|पाने\\s*के\\s*लिए)", "flags": "gi" },
+      { "regex": "(?:upi\\s*pin|pin\\s*daalo|pin\\s*daalen|qr\\s*scan)\\s+(?:karo|karein|karke|करें|करके)\\s+(?:paise|cashback|refund|amount|पैसे)", "flags": "gi" }
+    ],
+    "exclusions": [
+      { "regex": "\\b(?:never\\s+need\\s+to\\s+enter|no\\s+pin\\s+(?:is\\s+)?required\\s+to\\s+receive|never\\s+ask\\s+you\\s+to\\s+disclose|कभी\\s+PIN\\s+डालने\\s+की\\s+जरूरत\\s+नहीं)\\b", "flags": "i" }
+    ],
+    "weight": 28,
+    "maxContribution": 28,
+    "group": "upi_qr_fraud",
+    "explanation": {
+      "en": "In UPI, entering your PIN or scanning a payment QR code only authorizes money going OUT of your account—you never enter a PIN to receive money or cashback.",
+      "hi": "UPI में पैसे पाने के लिए कभी PIN डालने या QR कोड स्कैन करने की जरूरत नहीं होती—PIN सिर्फ पैसे भेजने के लिए होता है।",
+      "hinglish": "UPI mein paise receive karne ya cashback ke liye kabhi PIN daalne ya QR scan karne ki zaroorat nahi hoti."
+    },
+    "recommendedAction": {
+      "en": "Do not scan the QR code or enter your UPI PIN. Decline any unexpected UPI collect request.",
+      "hi": "ऐसा कोई QR स्कैन न करें और न ही UPI PIN डालें। अनजान collect request को तुरंत decline करें।",
+      "hinglish": "QR scan na karein aur UPI PIN bilkul mat daalein. Unknown collect request ko decline karein."
+    },
+    "sourceId": "npci-upi-faqs",
+    "sourceVerificationStatus": "officially_supported",
+    "suppressibleByAwarenessContext": true
+  },
+  {
+    "id": "RULE-UPI-COLLECT-05",
+    "name": {
+      "en": "UPI Collect / Approve Payment Trap",
+      "hi": "UPI Collect या अप्रूव करने का जाल",
+      "hinglish": "UPI Collect / Approve Trap"
+    },
+    "category": "upi_pin_scam",
+    "languages": ["en", "hi", "hinglish"],
+    "patterns": [
+      { "regex": "(?:approve|accept|confirm)\\s+(?:the\\s+)?(?:upi\\s+)?(?:collect\\s+)?request\\s+(?:to\\s+(?:receive|get|claim)|for\\s+cashback|for\\s+refund)", "flags": "gi" },
+      { "regex": "(?:cashback|refund|prize|payment)\\s+(?:receive|claim|paane)\\s+(?:ke\\s+liye|to)\\s+(?:pay|approve|request\\s+accept|pin\\s+enter)", "flags": "gi" }
+    ],
+    "exclusions": [
+      { "regex": "\\b(?:never|do\\s*not|don't|mat)\\b", "flags": "i" }
+    ],
+    "weight": 24,
+    "maxContribution": 24,
+    "group": "upi_qr_fraud",
+    "explanation": {
+      "en": "Approving a UPI collect request sends money from your account; it does not deposit funds into your account.",
+      "hi": "UPI collect request को approve करने से आपके खाते से पैसे कटते हैं, खाते में पैसे आते नहीं हैं।",
+      "hinglish": "UPI collect request approve karne se aapke account se paise katte hain, aate nahi hain."
+    },
+    "recommendedAction": {
+      "en": "Reject the collect request inside your UPI app immediately.",
+      "hi": "अपने UPI ऐप में उस collect request को तुरंत रिजेक्ट करें।",
+      "hinglish": "Apne UPI app mein us collect request ko turant reject karein."
+    },
+    "sourceId": "npci-fraud",
+    "sourceVerificationStatus": "officially_supported",
+    "suppressibleByAwarenessContext": true
+  },
+  {
+    "id": "RULE-KYC-BLOCK-06",
+    "name": {
+      "en": "Fake KYC / Account Blocking Threat",
+      "hi": "नकली KYC और खाता बंद होने की धमकी",
+      "hinglish": "Fake KYC / Account Block Threat"
+    },
+    "category": "fake_kyc_bank",
+    "languages": ["en", "hi", "hinglish"],
+    "patterns": [
+      { "regex": "(?:account|khata|a\\/c|bank\\s*account|wallet|upi\\s*id|netbanking|खाता|अकाउंट)[^.!?\\n]{0,45}(?:blocked|suspended|deactivated|frozen|closed|terminated|band|ब्लॉक|बंद|सस्पेंड)", "flags": "gi" },
+      { "regex": "(?:complete|update|verify|re-?verify|submit|karwao|karwayein|karein|अपडेट|पूरा\\s*करें|तुरंत|immediately|urgent)[^.!?\\n]{0,40}(?:e-?kyc|kyc|pan\\s*(?:card)?\\s*update|re-?kyc|केवाईसी)", "flags": "gi" },
+      { "regex": "(?:e-?kyc|kyc|केवाईसी)[^.!?\\n]{0,35}(?:immediately|urgent|today|within|now|turant|aaj|expired|pending|incomplete|suspended|update\\s+(?:required|karwao|karein)|अपडेट|अधूरा|पेंडिंग|तुरंत|आज)", "flags": "gi" }
+    ],
+    "exclusions": [
+      { "regex": "\\b(?:never\\s+ask|recognize\\s+fake\\s+kyc|beware\\s+of\\s+fake\\s+kyc|official\\s+bank\\s+application|official\\s+branch\\s+only)\\b", "flags": "i" }
+    ],
+    "weight": 22,
+    "maxContribution": 25,
+    "group": "kyc_account_threat",
+    "explanation": {
+      "en": "The message warns that your bank account or wallet will be blocked unless you complete KYC urgently—a classic social-engineering tactic cited in RBI advisories.",
+      "hi": "यह मैसेज खाता बंद होने का डर दिखाकर तुरंत KYC पूरा करने को कह रहा है—RBI ने ऐसे फर्जी KYC संदेशों से सावधान रहने की सलाह दी है।",
+      "hinglish": "Yeh message account block hone ka dar dikhakar turant KYC update karne ko keh raha hai—RBI advisories ke mutabik yeh common scam pattern hai."
+    },
+    "recommendedAction": {
+      "en": "Do not click links or share OTPs. Check your KYC status directly inside your bank's official app or branch.",
+      "hi": "किसी लिंक पर क्लिक न करें और न ही OTP दें। सीधे बैंक के official ऐप या ब्रांच से KYC स्टेटस जाँचें।",
+      "hinglish": "Kisi link par click na karein aur official bank app ya branch se apna KYC status verify karein."
+    },
+    "sourceId": "rbi-kyc-2024",
+    "sourceVerificationStatus": "officially_supported",
+    "suppressibleByAwarenessContext": true
+  },
+  {
+    "id": "RULE-BANK-IMPERSONATION-07",
+    "name": {
+      "en": "Bank / Wallet Alert Urgency Signal",
+      "hi": "बैंक या वॉलेट के नाम पर जल्दबाजी का दबाव",
+      "hinglish": "Bank / Wallet Urgent Alert"
+    },
+    "category": "fake_kyc_bank",
+    "languages": ["en", "hi", "hinglish"],
+    "patterns": [
+      { "regex": "(?:dear\\s+(?:customer|user|valued\\s+customer)|bank\\s+alert|kyc\\s+department|verification\\s+team).{0,60}(?:blocked|suspended|deactivated|expire|24\\s*hours|today|immediately|urgent)", "flags": "gi" }
+    ],
+    "exclusions": [
+      { "regex": "\\b(?:official\\s+bank\\s+application|never\\s+ask|statement\\s+is\\s+available)\\b", "flags": "i" }
+    ],
+    "weight": 10,
+    "maxContribution": 10,
+    "group": "kyc_account_threat",
+    "explanation": {
+      "en": "Generic bank-style greeting paired with immediate account-restriction pressure is frequently used in bulk phishing SMS messages.",
+      "hi": "बैंक ग्राहक जैसा संबोधन और तुरंत खाता बंद होने की चेतावनी अक्सर थोक में भेजे जाने वाले फिशिंग मैसेज में होती है।",
+      "hinglish": "Generic bank greeting ke saath turant account band hone ki warning aksar phishing SMS mein hoti hai."
+    },
+    "recommendedAction": {
+      "en": "Verify any bank notice independently via your official mobile banking app.",
+      "hi": "बैंक के किसी भी नोटिस को सीधे आधिकारिक मोबाइल बैंकिंग ऐप में जाँचें।",
+      "hinglish": "Bank ke kisi bhi notice ko official mobile banking app mein verify karein."
+    },
+    "sourceId": "rbi-kyc-2024",
+    "sourceVerificationStatus": "officially_supported",
+    "suppressibleByAwarenessContext": true
+  },
+  {
+    "id": "RULE-JOB-FEE-08",
+    "name": {
+      "en": "Job / Internship Upfront Fee Demand",
+      "hi": "नौकरी या इंटर्नशिप के नाम पर पहले फीस की माँग",
+      "hinglish": "Job / Internship Upfront Fee"
+    },
+    "category": "fake_job_internship",
+    "languages": ["en", "hi", "hinglish"],
+    "patterns": [
+      { "regex": "(?:job|internship|work\\s*from\\s*home|wfh|part[\\s-]*time|hiring|selected|offer\\s*letter|naukri|नौकरी|इंटर्नशिप).{0,100}(?:registration\\s*fee|security\\s*deposit|joining\\s*fee|training\\s*fee|id\\s*card\\s*fee|processing\\s*fee|slot\\s*fee|kit\\s*charge|रजिस्ट्रेशन\\s*फीस|सिक्योरिटी\\s*डिपॉजिट)", "flags": "gi" },
+      { "regex": "(?:pay|deposit|send|transfer|submit|दें|भेजें|जमा\\s*करें)\\s+(?:rs\\.?|inr|₹)?\\s*\\d[\\d,]*\\s*(?:[a-z\\u0900-\\u097f]{0,15}\\s+){0,4}(?:registration|security|joining|slot|training|confirm\\s+your\\s+slot|confirm\\s+job)", "flags": "gi" }
+    ],
+    "exclusions": [
+      { "regex": "\\b(?:no\\s+registration\\s+fee|zero\\s+registration\\s+fee|there\\s+is\\s+no\\s+fee|without\\s+any\\s+fee|free\\s+of\\s+cost|कोई\\s+फीस\\s+नहीं)\\b", "flags": "i" }
+    ],
+    "weight": 26,
+    "maxContribution": 26,
+    "group": "job_task_fee",
+    "explanation": {
+      "en": "The offer combines employment or internship promises with an upfront fee (registration, slot confirmation, or security deposit)—a major indicator of recruitment scams.",
+      "hi": "यह ऑफर नौकरी या इंटर्नशिप के नाम पर पहले रजिस्ट्रेशन या स्लॉट फीस माँग रहा है, जो जॉब फ्रॉड का प्रमुख संकेत है।",
+      "hinglish": "Yeh offer job ya internship ke naam par pehle registration ya slot fee maang raha hai, jo recruitment scam ka bada sign hai."
+    },
+    "recommendedAction": {
+      "en": "Do not pay fees to secure a job or internship. Verify the recruiter directly on the company's official career site.",
+      "hi": "नौकरी या इंटर्नशिप पाने के लिए कोई फीस न दें। कंपनी की आधिकारिक वेबसाइट पर खुद जाँच करें।",
+      "hinglish": "Job ya internship ke liye koi upfront fee pay na karein. Company ki official career website check karein."
+    },
+    "sourceId": "certin-2024-0050",
+    "sourceVerificationStatus": "officially_supported",
+    "suppressibleByAwarenessContext": true
+  },
+  {
+    "id": "RULE-TASK-SCAM-09",
+    "name": {
+      "en": "Fake Task / Like-and-Earn Prepaid Scheme",
+      "hi": "नकली ऑनलाइन टास्क / प्रीपेड कमाई का जाल",
+      "hinglish": "Fake Task-Earning Scam"
+    },
+    "category": "fake_job_internship",
+    "languages": ["en", "hi", "hinglish"],
+    "patterns": [
+      { "regex": "(?:like\\s+(?:youtube|instagram|videos?)|rate\\s+(?:hotels?|products?|restaurants?)|simple\\s+online\\s+tasks?|daily\\s+task).{0,90}(?:earn|daily\\s+income|rs\\.?|₹|inr|telegram|prepaid\\s+task|recharge|deposit)", "flags": "gi" },
+      { "regex": "(?:earn|कमाएं)\\s+(?:rs\\.?|inr|₹)?\\s*\\d[\\d,]*\\s*(?:daily|per\\s+day|weekly|monthly|रोज).{0,70}(?:telegram|whatsapp|like\\s+videos|prepaid\\s+task|part[\\s-]*time)", "flags": "gi" }
+    ],
+    "exclusions": [
+      { "regex": "\\b(?:beware\\s+of|avoid\\s+task\\s+scams|never\\s+pay)\\b", "flags": "i" }
+    ],
+    "weight": 22,
+    "maxContribution": 22,
+    "group": "job_task_fee",
+    "explanation": {
+      "en": "Promises easy daily income for liking videos, rating products, or joining Telegram task groups—a documented modus operandi that later demands prepaid deposits.",
+      "hi": "वीडियो लाइक करने या छोटे ऑनलाइन टास्क के बदले रोज बड़ी कमाई का वादा किया जा रहा है, जिसमें आगे चलकर पैसे जमा करने का जाल होता है।",
+      "hinglish": "Video like karne ya simple tasks par roz badi kamai ka lalach diya ja raha hai, jisme baad mein prepaid deposit maanga jata hai."
+    },
+    "recommendedAction": {
+      "en": "Avoid Telegram/WhatsApp 'task' groups and never deposit money to unlock task earnings.",
+      "hi": "टेलीग्राम या व्हाट्सएप के ऐसे 'टास्क' ग्रुप से दूर रहें और कमाई निकालने के लिए कभी पैसे जमा न करें।",
+      "hinglish": "Telegram/WhatsApp ke aise task groups se door rahein aur payout ke liye kabhi paise deposit na karein."
+    },
+    "sourceId": "certin-2024-0050",
+    "sourceVerificationStatus": "officially_supported",
+    "suppressibleByAwarenessContext": true
+  },
+  {
+    "id": "RULE-LOTTERY-PRIZE-10",
+    "name": {
+      "en": "Lottery / Prize Claim with Upfront Fee",
+      "hi": "लॉटरी या इनाम के नाम पर प्रोसेसिंग फीस",
+      "hinglish": "Lottery / Prize Processing Fee"
+    },
+    "category": "lottery_reward",
+    "languages": ["en", "hi", "hinglish"],
+    "patterns": [
+      { "regex": "(?:congratulations|won|winner|lucky\\s+draw|lottery|kbc|jackpot|inaam|inam|prize|इनाम|लॉटरी|जीता\\s+है).{0,100}(?:processing\\s*fee|tax|gst|clearance|delivery\\s*charge|registration|pay\\s*(?:rs\\.?|inr|₹)?\\s*\\d|claim\\s+your\\s+(?:prize|reward)|फीस|चार्ज)", "flags": "gi" },
+      { "regex": "(?:pay|send|transfer)\\s+(?:rs\\.?|inr|₹)?\\s*\\d[\\d,]*\\s*(?:[a-z\\u0900-\\u097f]{0,15}\\s+){0,4}(?:to\\s+)?claim\\s+(?:your\\s+)?(?:prize|reward|lottery|inaam|jackpot)", "flags": "gi" }
+    ],
+    "exclusions": [
+      { "regex": "\\b(?:never\\s+pay|scam\\s+awareness|avoid\\s+lottery)\\b", "flags": "i" }
+    ],
+    "weight": 26,
+    "maxContribution": 26,
+    "group": "lottery_reward",
+    "explanation": {
+      "en": "Claims you won a cash prize or lottery while asking for an upfront processing fee or tax—a classic advance-fee reward trap.",
+      "hi": "यह संदेश बड़ा इनाम या लॉटरी जीतने का दावा करके पहले प्रोसेसिंग फीस या चार्ज माँग रहा है।",
+      "hinglish": "Yeh message lottery ya prize jeetne ka dawa karke pehle processing fee ya charge maang raha hai."
+    },
+    "recommendedAction": {
+      "en": "Do not pay any fee to claim an unsolicited prize or lottery.",
+      "hi": "किसी भी अनजान इनाम या लॉटरी को पाने के लिए कोई फीस न भेजें।",
+      "hinglish": "Kisi bhi unsolicited prize ya lottery ke liye koi fee pay na karein."
+    },
+    "sourceId": "rbi-cautions",
+    "sourceVerificationStatus": "officially_supported",
+    "suppressibleByAwarenessContext": true
+  },
+  {
+    "id": "RULE-CASHBACK-FAKE-11",
+    "name": {
+      "en": "Fake Cashback / Refund Bait",
+      "hi": "नकली कैशबैक या रिफंड का लालच",
+      "hinglish": "Fake Cashback / Refund Bait"
+    },
+    "category": "upi_pin_scam",
+    "languages": ["en", "hi", "hinglish"],
+    "patterns": [
+      { "regex": "(?:cashback|refund|reward\\s+points|voucher)\\s+(?:of\\s+)?(?:rs\\.?|inr|₹)?\\s*\\d[\\d,]*\\s*(?:credited|available|expiring|claim|scan|click|enter\\s+pin)", "flags": "gi" },
+      { "regex": "(?:rs\\.?|inr|₹)\\s*\\d[\\d,]*\\s*(?:cashback|refund|reward|bonus)[^.!?\\n]{0,55}(?:claim|scan|click|enter\\s*(?:your\\s*)?(?:upi\\s*)?pin)", "flags": "gi" }
+    ],
+    "exclusions": [
+      { "regex": "\\b(?:official\\s+app\\s+only|never\\s+enter\\s+pin)\\b", "flags": "i" }
+    ],
+    "weight": 14,
+    "maxContribution": 14,
+    "group": "lottery_reward",
+    "explanation": {
+      "en": "Unsolicited cashback or expiring reward-point alerts are frequently used to lure users into phishing links or UPI PIN traps.",
+      "hi": "अनजान कैशबैक या एक्सपायर होने वाले रिवार्ड पॉइंट के संदेश अक्सर नकली लिंक या UPI PIN ठगी के लिए भेजे जाते हैं।",
+      "hinglish": "Unsolicited cashback ya expiring reward alerts aksar phishing link ya UPI PIN trap ke liye bheje jate hain."
+    },
+    "recommendedAction": {
+      "en": "Check cashback or refunds strictly inside the official payment or shopping app.",
+      "hi": "कैशबैक या रिफंड की जानकारी सिर्फ आधिकारिक ऐप के अंदर ही जाँचें।",
+      "hinglish": "Cashback ya refund ko sirf official payment ya shopping app ke andar check karein."
+    },
+    "sourceId": "npci-fraud",
+    "sourceVerificationStatus": "officially_supported",
+    "suppressibleByAwarenessContext": true
+  },
+  {
+    "id": "RULE-DIGITAL-ARREST-12",
+    "name": {
+      "en": "Digital Arrest / Police Impersonation Threat",
+      "hi": "डिजिटल अरेस्ट या पुलिस की धमकी",
+      "hinglish": "Digital Arrest / Police Threat"
+    },
+    "category": "digital_arrest_police",
+    "languages": ["en", "hi", "hinglish"],
+    "patterns": [
+      { "regex": "(?:digital\\s+arrest|arrest\\s+warrant|cbi|ncb|ed\\s+notice|cyber\\s+cell|cyber\\s+crime\\s+branch|police\\s+action|customs\\s+department|trai\\s+disconnection|illegal\\s+activity|money\\s+laundering|drugs\\s+parcel|गिरफ्तारी|पुलिस\\s+कार्रवाई|अवैध\\s+गतिविधि).{0,100}(?:aadhaar|pan|parcel|case|fir|arrest|pay|transfer|settle|bail|verification\\s+fund|तुरंत\\s+पैसे|गिरफ्तार)", "flags": "gi" },
+      { "regex": "(?:aadhaar|pan|mobile\\s+number|sim|parcel)\\s+(?:is\\s+)?(?:linked\\s+to|involved\\s+in|used\\s+in)\\s+(?:illegal\\s+activity|money\\s+laundering|fraud\\s+case|drugs|crime)", "flags": "gi" }
+    ],
+    "exclusions": [
+      { "regex": "\\b(?:do\\s+not\\s+conduct\\s+digital\\s+arrest|never\\s+demand\\s+money\\s+over\\s+video)\\b", "flags": "i" }
+    ],
+    "weight": 28,
+    "maxContribution": 28,
+    "group": "digital_arrest_legal",
+    "explanation": {
+      "en": "Threatens police action, legal cases, or 'digital arrest' tied to your Aadhaar/parcel—matching CERT-In's advisory on law-enforcement impersonation scams.",
+      "hi": "यह संदेश आधार या अवैध गतिविधि के नाम पर पुलिस कार्रवाई या 'डिजिटल अरेस्ट' का डर दिखा रहा है। सरकारी एजेंसियां ऐसे वीडियो कॉल पर पैसे नहीं माँगतीं।",
+      "hinglish": "Yeh message Aadhaar ya illegal activity ke naam par police action ya 'digital arrest' ki dhamki de raha hai. Real police aise paise nahi maangti."
+    },
+    "recommendedAction": {
+      "en": "Do not panic, stay on video call, or transfer money. Report immediately to 1930 or cybercrime.gov.in.",
+      "hi": "घबराएं नहीं, वीडियो कॉल पर न रुकें और पैसे न भेजें। तुरंत 1930 या cybercrime.gov.in पर रिपोर्ट करें।",
+      "hinglish": "Ghabrayein nahi, video call par mat rukein aur paise transfer na karein. Turant 1930 ya cybercrime.gov.in par report karein."
+    },
+    "sourceId": "certin-2024-0050",
+    "sourceVerificationStatus": "officially_supported",
+    "suppressibleByAwarenessContext": true
+  },
+  {
+    "id": "RULE-LEGAL-THREAT-PAY-13",
+    "name": {
+      "en": "Legal / Court Warrant Payment Demand",
+      "hi": "कानूनी केस या वारंट से बचने के लिए पैसे की माँग",
+      "hinglish": "Legal Threat Payment Demand"
+    },
+    "category": "digital_arrest_police",
+    "languages": ["en", "hi", "hinglish"],
+    "patterns": [
+      { "regex": "(?:avoid\\s+arrest|avoid\\s+legal\\s+action|settle\\s+the\\s+case|warrant\\s+issued|court\\s+summon|case\\s+closure|गिरफ्तारी\\s+से\\s+बचने)[^.!?\\n]{0,70}(?:pay|transfer|upi|deposit|fine|fee|immediately|तुरंत\\s+जमा|पैसे\\s+भेजें)", "flags": "gi" },
+      { "regex": "(?:pay|transfer|deposit|send)[^.!?\\n]{0,55}(?:avoid\\s+arrest|avoid\\s+legal\\s+action|avoid\\s+jail|settle\\s+the\\s+case|warrant|गिरफ्तारी\\s+से\\s+बचने)", "flags": "gi" }
+    ],
+    "exclusions": [
+      { "regex": "\\b(?:awareness|never\\s+transfer)\\b", "flags": "i" }
+    ],
+    "weight": 25,
+    "maxContribution": 25,
+    "group": "digital_arrest_legal",
+    "explanation": {
+      "en": "Demands immediate online payment to 'avoid arrest' or close a purported legal case—a high-pressure coercion pattern.",
+      "hi": "गिरफ्तारी से बचने या केस बंद करने के नाम पर तुरंत ऑनलाइन पैसे माँगे जा रहे हैं, जो एक दबाव बनाने वाली ठगी है।",
+      "hinglish": "Arrest se bachne ya case close karne ke naam par turant online payment maanga ja raha hai."
+    },
+    "recommendedAction": {
+      "en": "Never transfer money to settle an unsolicited legal or police threat.",
+      "hi": "किसी अनजान कानूनी या पुलिस धमकी के डर से कभी पैसे ट्रांसफर न करें।",
+      "hinglish": "Kisi unknown legal ya police threat ke dar se kabhi paise transfer na karein."
+    },
+    "sourceId": "certin-2024-0050",
+    "sourceVerificationStatus": "officially_supported",
+    "suppressibleByAwarenessContext": true
+  },
+  {
+    "id": "RULE-REMOTE-ACCESS-14",
+    "name": {
+      "en": "Remote-Access / Screen-Sharing App Request",
+      "hi": "Remote-Access या Screen-Sharing ऐप की माँग",
+      "hinglish": "Remote-Access App Request"
+    },
+    "category": "remote_access_app",
+    "languages": ["en", "hi", "hinglish"],
+    "patterns": [
+      { "regex": "(?:install|download|open|share\\s+code|give\\s+code|डाउनलोड\\s*करें|इंस्टॉल\\s*करें).{0,50}(?:anydesk|teamviewer|quicksupport|rustdesk|airdroid|screen\\s*share|remote\\s*support|remote\\s*access)", "flags": "gi" },
+      { "regex": "\\b(?:anydesk|teamviewer|quicksupport|rustdesk)\\b.{0,40}(?:code|id|install|download|support|kyc|refund)", "flags": "gi" }
+    ],
+    "exclusions": [
+      { "regex": "\\b(?:never\\s+install|avoid\\s+granting\\s+remote\\s+access|never\\s+grant\\s+remote)\\b", "flags": "i" }
+    ],
+    "weight": 26,
+    "maxContribution": 26,
+    "group": "remote_access_apk",
+    "explanation": {
+      "en": "Asks you to install or share a code for a remote-access/screen-sharing app (such as AnyDesk or QuickSupport), which lets another party view your screen and OTPs.",
+      "hi": "यह संदेश AnyDesk या QuickSupport जैसा remote-access ऐप डाउनलोड करने या उसका कोड बताने को कह रहा है, जिससे सामने वाला आपके फोन की स्क्रीन देख सकता है।",
+      "hinglish": "Yeh message AnyDesk ya QuickSupport jaisa remote-access app install karne ya code share karne ko keh raha hai, jisse woh aapki screen dekh sakte hain."
+    },
+    "recommendedAction": {
+      "en": "Never install remote-access apps for strangers or share their session codes.",
+      "hi": "किसी अनजान के कहने पर screen-sharing ऐप इंस्टॉल न करें और न ही उसका कोड बताएं।",
+      "hinglish": "Kisi stranger ke kehne par remote-access app install na karein aur code bilkul share na karein."
+    },
+    "sourceId": "rbi-cyber-2022",
+    "sourceVerificationStatus": "officially_supported",
+    "suppressibleByAwarenessContext": true
+  },
+  {
+    "id": "RULE-MALICIOUS-APK-15",
+    "name": {
+      "en": "Unknown APK / Sideload App Installation",
+      "hi": "अनजान APK फाइल इंस्टॉल करने का आग्रह",
+      "hinglish": "Unknown APK Install Request"
+    },
+    "category": "remote_access_app",
+    "languages": ["en", "hi", "hinglish"],
+    "patterns": [
+      { "regex": "(?:download|install|open|run|डाउनलोड|इंस्टॉल).{0,60}(?:\\.apk\\b|apk\\s+file|unknown\\s+sources|this\\s+app\\s+link|support\\s+app|update\\s+app\\s+here)", "flags": "gi" },
+      { "regex": "\\b[a-z0-9_-]+\\.apk\\b", "flags": "gi" }
+    ],
+    "exclusions": [
+      { "regex": "\\b(?:never\\s+install|avoid\\s+unknown\\s+apk)\\b", "flags": "i" }
+    ],
+    "weight": 24,
+    "maxContribution": 24,
+    "group": "remote_access_apk",
+    "explanation": {
+      "en": "Prompts downloading or installing an Android `.apk` file outside official app stores, which can expose SMS/OTPs and device permissions.",
+      "hi": "यह आधिकारिक ऐप स्टोर के बाहर से `.apk` फाइल डाउनलोड या इंस्टॉल करने को कह रहा है, जिससे आपके फोन के SMS और OTP खतरे में पड़ सकते हैं।",
+      "hinglish": "Yeh official app store ke bahar se `.apk` file install karne ko keh raha hai, jisse device aur OTPs compromise ho sakte hain."
+    },
+    "recommendedAction": {
+      "en": "Only install apps from official stores (Google Play / App Store). Delete unverified APK files immediately.",
+      "hi": "ऐप हमेशा केवल Google Play Store या App Store से ही डाउनलोड करें। अनजान APK फाइल तुरंत डिलीट करें।",
+      "hinglish": "Apps hamesha official Google Play ya App Store se hi install karein. Unknown APK files delete kar dein."
+    },
+    "sourceId": "rbi-beaware",
+    "sourceVerificationStatus": "officially_supported",
+    "suppressibleByAwarenessContext": true
+  },
+  {
+    "id": "RULE-COURIER-PARCEL-16",
+    "name": {
+      "en": "Fake Courier / Customs / Address Fee",
+      "hi": "नकली पार्सल या कस्टम शुल्क का संदेश",
+      "hinglish": "Fake Courier / Customs Trap"
+    },
+    "category": "courier_parcel",
+    "languages": ["en", "hi", "hinglish"],
+    "patterns": [
+      { "regex": "(?:parcel|package|courier|shipment|india\\s*post|customs|पार्सल|कूरियर).{0,90}(?:held|detained|incomplete\\s+address|address\\s+update|customs\\s+duty|redelivery\\s+fee|pay\\s*(?:rs\\.?|inr|₹)?\\s*\\d|click\\s+link|update\\s+within)", "flags": "gi" }
+    ],
+    "exclusions": [
+      { "regex": "\\b(?:scheduled\\s+for\\s+delivery\\s+tomorrow|official\\s+courier\\s+application|no\\s+extra\\s+fee)\\b", "flags": "i" }
+    ],
+    "weight": 20,
+    "maxContribution": 20,
+    "group": "courier_utility",
+    "explanation": {
+      "en": "Claims a parcel is held due to an address issue or customs fee and pushes an urgent link or small payment—often used to steal card details.",
+      "hi": "पता अधूरा होने या कस्टम चार्ज के नाम पर पार्सल रुकने का दावा करके लिंक या छोटे भुगतान के लिए कहा जा रहा है।",
+      "hinglish": "Parcel address incomplete hone ya customs fee ke naam par urgent link ya payment maanga ja raha hai."
+    },
+    "recommendedAction": {
+      "en": "Track deliveries directly in the official courier app or shopping website, not via SMS links.",
+      "hi": "पार्सल की स्थिति हमेशा कूरियर कंपनी के आधिकारिक ऐप या वेबसाइट पर ही जाँचें।",
+      "hinglish": "Parcel status hamesha official courier app ya shopping site par khud track karein."
+    },
+    "sourceId": "rbi-beaware",
+    "sourceVerificationStatus": "prototype_heuristic",
+    "suppressibleByAwarenessContext": true
+  },
+  {
+    "id": "RULE-ELECTRICITY-UTILITY-17",
+    "name": {
+      "en": "Electricity / Utility Disconnection Threat",
+      "hi": "बिजली या यूटिलिटी कनेक्शन कटने की धमकी",
+      "hinglish": "Electricity Disconnection Threat"
+    },
+    "category": "electricity_utility",
+    "languages": ["en", "hi", "hinglish"],
+    "patterns": [
+      { "regex": "(?:electricity|power|gas|water|meter|बिजली|कनेक्शन).{0,80}(?:disconnect|disconnected|cut\\s+off|suspended|tonight|9:30\\s*pm|previous\\s+month\\s+bill\\s+not\\s+updated|कट\\s+जाएगा|काट\\s+दिया\\s+जाएगा).{0,70}(?:call|contact|pay|update|number|link|तुरंत)", "flags": "gi" },
+      { "regex": "(?:electricity\\s+bill|power\\s+supply)\\s+(?:will\\s+be\\s+)?disconnected\\s+(?:tonight|today|within)", "flags": "gi" }
+    ],
+    "exclusions": [
+      { "regex": "\\b(?:official\\s+portal\\s+only|awareness)\\b", "flags": "i" }
+    ],
+    "weight": 22,
+    "maxContribution": 22,
+    "group": "courier_utility",
+    "explanation": {
+      "en": "Threatens immediate disconnection of electricity or utility services tonight unless you call an unverified mobile number or pay via a link.",
+      "hi": "आज रात बिजली कटने की धमकी देकर तुरंत अनजान नंबर पर कॉल करने या लिंक से पेमेंट करने का दबाव डाला जा रहा है।",
+      "hinglish": "Aaj raat bijli katne ki dhamki dekar unknown number par call ya link se urgent payment maanga ja raha hai."
+    },
+    "recommendedAction": {
+      "en": "Verify your bill strictly on your electricity board's official app or authorized payment portal.",
+      "hi": "अपना बिल सिर्फ बिजली विभाग के आधिकारिक ऐप या पोर्टल पर जाँचें।",
+      "hinglish": "Apna bijli bill sirf official electricity provider app ya portal par check karein."
+    },
+    "sourceId": "rbi-beaware",
+    "sourceVerificationStatus": "prototype_heuristic",
+    "suppressibleByAwarenessContext": true
+  },
+  {
+    "id": "RULE-INVESTMENT-GUARANTEED-18",
+    "name": {
+      "en": "Unrealistic Guaranteed Returns / Ponzi Scheme",
+      "hi": "अवास्तविक पक्का मुनाफा / पोंजी स्कीम संकेत",
+      "hinglish": "Guaranteed Returns / Ponzi Signal"
+    },
+    "category": "investment_return",
+    "languages": ["en", "hi", "hinglish"],
+    "patterns": [
+      { "regex": "(?:guaranteed\\s+(?:profit|return|returns|income)|risk[\\s-]*free\\s+(?:profit|return|trading)|double\\s+your\\s+money|100%\\s+profit|daily\\s+profit\\s+of\\s+\\d+%|पैसा\\s+डबल|पक्का\\s+मुनाफा)", "flags": "gi" },
+      { "regex": "(?:invest|deposit|join\\s+vip\\s+group).{0,60}(?:2x|3x|double|100%\\s+guaranteed|daily\\s+return|weekly\\s+return)", "flags": "gi" }
+    ],
+    "exclusions": [
+      { "regex": "\\b(?:subject\\s+to\\s+market\\s+risks|no\\s+guaranteed\\s+returns)\\b", "flags": "i" }
+    ],
+    "weight": 18,
+    "maxContribution": 18,
+    "group": "investment_loan",
+    "explanation": {
+      "en": "Promises guaranteed, risk-free, or abnormally high returns (such as doubling money)—a classic hallmark of fraudulent investment and Ponzi schemes.",
+      "hi": "बिना जोखिम के पक्का मुनाफा या कम समय में पैसा डबल करने का दावा किया जा रहा है, जो फर्जी निवेश स्कीम का संकेत है।",
+      "hinglish": "Risk-free guaranteed returns ya paisa double karne ka wada kiya ja raha hai, jo fake investment scheme ka sign hai."
+    },
+    "recommendedAction": {
+      "en": "Verify any investment platform's regulatory registration (e.g., SEBI) independently before transferring funds.",
+      "hi": "किसी भी निवेश से पहले प्लेटफॉर्म की आधिकारिक रजिस्ट्रेशन (जैसे SEBI) की जाँच करें।",
+      "hinglish": "Invest karne se pehle platform ki official registration (jaise SEBI) khud verify karein."
+    },
+    "sourceId": "certin-2024-0050",
+    "sourceVerificationStatus": "officially_supported",
+    "suppressibleByAwarenessContext": true
+  },
+  {
+    "id": "RULE-FAKE-LOAN-19",
+    "name": {
+      "en": "Instant Loan Approval with Upfront Fee",
+      "hi": "तुरंत लोन मंजूरी के नाम पर अग्रिम फीस",
+      "hinglish": "Fake Loan Upfront Fee"
+    },
+    "category": "investment_return",
+    "languages": ["en", "hi", "hinglish"],
+    "patterns": [
+      { "regex": "(?:instant\\s+loan|loan\\s+approved|pre[\\s-]*approved\\s+loan|personal\\s+loan|लोन\\s+मंजूर).{0,80}(?:processing\\s+fee|file\\s+charge|insurance\\s+fee|noc\\s+charge|gst\\s+first|pay\\s+(?:rs\\.?|inr|₹)?\\s*\\d)", "flags": "gi" }
+    ],
+    "exclusions": [
+      { "regex": "\\b(?:deducted\\s+from\\s+disbursal|no\\s+upfront\\s+fee)\\b", "flags": "i" }
+    ],
+    "weight": 22,
+    "maxContribution": 22,
+    "group": "investment_loan",
+    "explanation": {
+      "en": "Offers instant loan approval while demanding upfront processing, file, or insurance fees before disbursal.",
+      "hi": "तुरंत लोन पास होने का दावा करके पैसे मिलने से पहले प्रोसेसिंग या फाइल चार्ज माँगा जा रहा है।",
+      "hinglish": "Instant loan approval bolkar loan milne se pehle processing ya file charge maanga ja raha hai."
+    },
+    "recommendedAction": {
+      "en": "Legitimate RBI-regulated lenders do not demand personal UPI transfers for loan processing fees before approval.",
+      "hi": "सही बैंक या RBI-पंजीकृत संस्थान लोन देने से पहले किसी निजी UPI पर फीस नहीं माँगते।",
+      "hinglish": "RBI-regulated lenders loan se pehle personal UPI par processing fee transfer karne ko nahi kehte."
+    },
+    "sourceId": "rbi-cautions",
+    "sourceVerificationStatus": "officially_supported",
+    "suppressibleByAwarenessContext": true
+  },
+  {
+    "id": "RULE-SIM-SWAP-20",
+    "name": {
+      "en": "SIM / eSIM Upgrade or Block Threat",
+      "hi": "SIM बंद होने या eSIM अपग्रेड का दबाव",
+      "hinglish": "SIM / eSIM Block Threat"
+    },
+    "category": "fake_kyc_bank",
+    "languages": ["en", "hi", "hinglish"],
+    "patterns": [
+      { "regex": "(?:sim\\s+card|mobile\\s+number|esim|5g\\s+upgrade).{0,70}(?:will\\s+be\\s+blocked|deactivated|suspended|forward\\s+sms|send\\s+20\\s*digit|share\\s+otp)", "flags": "gi" }
+    ],
+    "exclusions": [
+      { "regex": "\\b(?:official\\s+telecom\\s+store)\\b", "flags": "i" }
+    ],
+    "weight": 20,
+    "maxContribution": 20,
+    "group": "kyc_account_threat",
+    "explanation": {
+      "en": "Threatens SIM deactivation or urges sending SIM/eSIM digits or SMS codes, which scammers use to hijack your phone number and bank OTPs.",
+      "hi": "SIM बंद होने की धमकी देकर कोड या SMS फॉरवर्ड करवाया जा रहा है, जिससे आपका मोबाइल नंबर और बैंक OTP हाइजैक हो सकता है।",
+      "hinglish": "SIM block ki dhamki dekar code ya SMS forward karwaya ja raha hai, jisse SIM swap fraud ho sakta hai."
+    },
+    "recommendedAction": {
+      "en": "Verify SIM status only through your telecom operator's official app or store.",
+      "hi": "अपनी सिम की स्थिति सिर्फ टेलीकॉम कंपनी के आधिकारिक ऐप या स्टोर से जाँचें।",
+      "hinglish": "Apni SIM status sirf telecom operator ke official app ya store se check karein."
+    },
+    "sourceId": "rbi-beaware",
+    "sourceVerificationStatus": "officially_supported",
+    "suppressibleByAwarenessContext": true
+  },
+  {
+    "id": "RULE-CUSTOMER-CARE-21",
+    "name": {
+      "en": "Unverified Customer-Care Callback Trap",
+      "hi": "अनजान कस्टमर केयर नंबर पर कॉल का दबाव",
+      "hinglish": "Fake Customer-Care Number Trap"
+    },
+    "category": "generic_mixed",
+    "languages": ["en", "hi", "hinglish"],
+    "patterns": [
+      { "regex": "(?:customer\\s*care|helpline|support\\s+desk|bank\\s+executive).{0,60}(?:call\\s+(?:immediately|now|this\\s+number)|whatsapp\\s+on)\\s*(?:\\+?91[\\s-]?)?[6-9]\\d{9}", "flags": "gi" }
+    ],
+    "exclusions": [
+      { "regex": "\\b(?:1930|official\\s+website|back\\s+of\\s+your\\s+card)\\b", "flags": "i" }
+    ],
+    "weight": 12,
+    "maxContribution": 12,
+    "group": "impersonation_social",
+    "explanation": {
+      "en": "Urges calling a personal 10-digit mobile number presented as customer care—legitimate banks use official toll-free numbers and in-app support.",
+      "hi": "कस्टमर केयर के नाम पर एक निजी 10 अंकों के मोबाइल नंबर पर तुरंत कॉल करने को कहा जा रहा है।",
+      "hinglish": "Customer care ke naam par ek personal 10-digit mobile number par urgent call karne ko kaha ja raha hai."
+    },
+    "recommendedAction": {
+      "en": "Never call unverified 10-digit mobile numbers claiming to be bank support; use the number printed on your card or official app.",
+      "hi": "कस्टमर केयर के नाम पर किसी अनजान 10-अंकों के मोबाइल नंबर पर कॉल न करें; बैंक कार्ड या ऐप में दिए नंबर का इस्तेमाल करें।",
+      "hinglish": "Customer care ke naam par random 10-digit number par call na karein; card ke peeche ya official app wala number use karein."
+    },
+    "sourceId": "rbi-beaware",
+    "sourceVerificationStatus": "officially_supported",
+    "suppressibleByAwarenessContext": true
+  },
+  {
+    "id": "RULE-MONEY-MULE-22",
+    "name": {
+      "en": "Money Mule / Rent Bank Account Recruitment",
+      "hi": "बैंक खाता किराए पर लेने / Money Mule की पेशकश",
+      "hinglish": "Money Mule / Account Renting"
+    },
+    "category": "investment_return",
+    "languages": ["en", "hi", "hinglish"],
+    "patterns": [
+      { "regex": "(?:rent\\s+your\\s+bank\\s+account|sell\\s+bank\\s+account|commission\\s+on\\s+every\\s+transfer|receive\\s+and\\s+forward\\s+funds|khata\\s+kiraye|अकाउंट\\s+किराए)", "flags": "gi" }
+    ],
+    "weight": 24,
+    "maxContribution": 24,
+    "group": "investment_loan",
+    "explanation": {
+      "en": "Offers commissions for letting strangers route money through your bank account ('money mule' recruitment), which exposes you to serious legal liability.",
+      "hi": "कमीशन के बदले आपके बैंक खाते से दूसरों के पैसे ट्रांसफर करने (Money Mule) की पेशकश की जा रही है, जो कानूनी रूप से बेहद खतरनाक है।",
+      "hinglish": "Commission ke badle aapke bank account se paise route karne (money mule) ka offer diya ja raha hai, jo illegal aur risky hai."
+    },
+    "recommendedAction": {
+      "en": "Never share your bank account, UPI ID, or ATM card for others to receive and forward money.",
+      "hi": "किसी और के पैसे लेने या आगे भेजने के लिए अपना बैंक खाता या UPI कभी इस्तेमाल न होने दें।",
+      "hinglish": "Kisi aur ke paise receive aur forward karne ke liye apna bank account ya UPI kabhi use na karne dein."
+    },
+    "sourceId": "certin-2024-0050",
+    "sourceVerificationStatus": "prototype_heuristic",
+    "suppressibleByAwarenessContext": true
+  },
+  {
+    "id": "RULE-SOCIAL-EMERGENCY-23",
+    "name": {
+      "en": "Urgent Friend / Relative Emergency Money Request",
+      "hi": "परिचित बनकर आपातकालीन पैसे की माँग",
+      "hinglish": "Social Emergency Money Request"
+    },
+    "category": "generic_mixed",
+    "languages": ["en", "hi", "hinglish"],
+    "patterns": [
+      { "regex": "(?:stuck\\s+in\\s+hospital|accident\\s+emergency|new\\s+number\\s+save|phone\\s+lost|upi\\s+not\\s+working).{0,80}(?:send|transfer|upi|gpay|phonepe|paytm|urgent\\s+money|paise\\s+bhej|पैसे\\s+भेज\\s+दो)", "flags": "gi" }
+    ],
+    "weight": 15,
+    "maxContribution": 15,
+    "group": "impersonation_social",
+    "explanation": {
+      "en": "Claims an urgent personal emergency from a new or hacked account while requesting an immediate UPI transfer.",
+      "hi": "नए नंबर या किसी परिचित के नाम पर मेडिकल/आपातकालीन स्थिति बताकर तुरंत पैसे भेजने को कहा जा रहा है।",
+      "hinglish": "Naye number ya friend ke naam par emergency batakar turant UPI transfer maanga ja raha hai."
+    },
+    "recommendedAction": {
+      "en": "Call the person directly on their known saved phone number before transferring any money.",
+      "hi": "पैसे भेजने से पहले उस व्यक्ति को उनके पुराने सेव किए गए नंबर पर खुद कॉल करके पुष्टि करें।",
+      "hinglish": "Paise bhejne se pehle us person ko unke purane saved number par voice call karke verify karein."
+    },
+    "sourceId": "rbi-beaware",
+    "sourceVerificationStatus": "prototype_heuristic",
+    "suppressibleByAwarenessContext": true
+  },
+  {
+    "id": "RULE-MISTAKEN-TRANSFER-24",
+    "name": {
+      "en": "Mistaken UPI Transfer Return Manipulation",
+      "hi": "गलती से पैसे आने के नाम पर वापसी की माँग",
+      "hinglish": "Mistaken Transfer Manipulation"
+    },
+    "category": "upi_pin_scam",
+    "languages": ["en", "hi", "hinglish"],
+    "patterns": [
+      { "regex": "(?:sent\\s+by\\s+mistake|transferred\\s+by\\s+mistake|wrongly\\s+sent|galti\\s+se\\s+paise\\s+bhej|गलती\\s+से\\s+पैसे).{0,80}(?:send\\s+back|return\\s+(?:the\\s+)?money|refund\\s+immediately|wapas\\s+bhej|वापस\\s+कर\\s+दें)", "flags": "gi" }
+    ],
+    "weight": 18,
+    "maxContribution": 18,
+    "group": "upi_qr_fraud",
+    "explanation": {
+      "en": "Claims money was sent to you by mistake (often paired with a fake SMS credit alert) and pressures you to transfer money back immediately.",
+      "hi": "गलती से पैसे भेजने की बात कहकर तुरंत पैसे वापस भेजने का दबाव बनाया जा रहा है—अक्सर इसमें नकली क्रेडिट SMS भेजा जाता है।",
+      "hinglish": "Galti se paise bhejne ka bahana banakar turant return transfer maanga ja raha hai—aksar fake credit SMS ke saath."
+    },
+    "recommendedAction": {
+      "en": "Check your actual bank balance inside your official bank app—do not trust SMS screenshots or notifications alone.",
+      "hi": "केवल SMS पर भरोसा न करें—अपनी आधिकारिक बैंक ऐप में जाकर असली बैलेंस और स्टेटमेंट जाँचें।",
+      "hinglish": "Sirf SMS par bharosa na karein—apne official bank app mein jakar real balance check karein."
+    },
+    "sourceId": "npci-fraud",
+    "sourceVerificationStatus": "prototype_heuristic",
+    "suppressibleByAwarenessContext": true
+  },
+  {
+    "id": "RULE-FAKE-CHARITY-25",
+    "name": {
+      "en": "Urgent Unverified Charity / Relief Transfer Demand",
+      "hi": "अनजान चैरिटी या मदद के नाम पर तुरंत पेमेंट",
+      "hinglish": "Unverified Charity Urgent Demand"
+    },
+    "category": "generic_mixed",
+    "languages": ["en", "hi", "hinglish"],
+    "patterns": [
+      { "regex": "(?:donate\\s+urgently|relief\\s+fund|critical\\s+surgery|child\\s+icu).{0,60}(?:send\\s+to\\s+upi|paytm\\s+number|scan\\s+qr\\s+now)", "flags": "gi" }
+    ],
+    "weight": 12,
+    "maxContribution": 12,
+    "group": "payment_demand",
+    "explanation": {
+      "en": "Appeals to emotion with an urgent donation demand directed to a personal UPI or mobile number.",
+      "hi": "भावनात्मक और आपातकालीन मदद के नाम पर सीधे किसी निजी UPI या नंबर पर पैसे माँगे जा रहे हैं।",
+      "hinglish": "Emotional emergency ke naam par direct kisi personal UPI ya number par donation maanga ja raha hai."
+    },
+    "recommendedAction": {
+      "en": "Donate only through verified, registered charitable platforms rather than unsolicited forwards.",
+      "hi": "दान हमेशा सत्यापित और पंजीकृत संस्थाओं के आधिकारिक माध्यम से ही करें।",
+      "hinglish": "Donation sirf verified aur registered charity platforms ke through hi karein."
+    },
+    "sourceId": "rbi-cautions",
+    "sourceVerificationStatus": "prototype_heuristic",
+    "suppressibleByAwarenessContext": true
+  },
+  {
+    "id": "RULE-CHALLAN-TAX-26",
+    "name": {
+      "en": "Fake e-Challan / Income Tax Refund Bait",
+      "hi": "नकली ई-चालान या इनकम टैक्स रिफंड का लालच",
+      "hinglish": "Fake e-Challan / Tax Refund Bait"
+    },
+    "category": "phishing_link",
+    "languages": ["en", "hi", "hinglish"],
+    "patterns": [
+      { "regex": "(?:e-?challan|traffic\\s+challan|tax\\s+refund|income\\s+tax\\s+refund|itr\\s+refund).{0,80}(?:pay\\s+now|claim\\s+refund|click\\s+here|verify\\s+bank|apk|pending\\s+court)", "flags": "gi" }
+    ],
+    "weight": 18,
+    "maxContribution": 18,
+    "group": "phishing_link",
+    "explanation": {
+      "en": "Uses traffic e-Challan or tax refund notifications to push unverified links or APK downloads.",
+      "hi": "ट्रैफिक ई-चालान या टैक्स रिफंड के नाम पर अनजान लिंक खोलने या भुगतान करने के लिए कहा जा रहा है।",
+      "hinglish": "Traffic e-Challan ya tax refund ke naam par unverified link open karne ya pay karne ko kaha ja raha hai."
+    },
+    "recommendedAction": {
+      "en": "Check e-Challans only on parivahan.gov.in and tax refunds on incometax.gov.in.",
+      "hi": "ई-चालान केवल parivahan.gov.in और टैक्स रिफंड incometax.gov.in पर ही जाँचें।",
+      "hinglish": "e-Challan sirf parivahan.gov.in aur tax refund incometax.gov.in par hi check karein."
+    },
+    "sourceId": "certin-2024-0050",
+    "sourceVerificationStatus": "prototype_heuristic",
+    "suppressibleByAwarenessContext": true
+  },
+  {
+    "id": "RULE-UPFRONT-PAYMENT-27",
+    "name": {
+      "en": "Suspicious Upfront Fee / Payment Demand",
+      "hi": "संदिग्ध अग्रिम भुगतान की माँग",
+      "hinglish": "Suspicious Upfront Payment Demand"
+    },
+    "category": "generic_mixed",
+    "languages": ["en", "hi", "hinglish"],
+    "patterns": [
+      { "regex": "(?:pay|send|transfer|deposit|de\\s*do|bhejo|जमा\\s*करें|भेजें)\\s+(?:rs\\.?|inr|₹)?\\s*\\d[\\d,]*\\s*(?:[a-z\\u0900-\\u097f]{0,12}\\s+){0,3}(?:to\\s+claim|to\\s+unlock|to\\s+confirm|processing\\s+fee|registration\\s+fee|verification\\s+fee|security\\s+fee|paane\\s+ke\\s+liye)", "flags": "gi" }
+    ],
+    "exclusions": [
+      { "regex": "\\b(?:no\\s+fee|no\\s+registration\\s+fee|never\\s+pay)\\b", "flags": "i" }
+    ],
+    "weight": 20,
+    "maxContribution": 20,
+    "group": "payment_demand",
+    "explanation": {
+      "en": "Requests an upfront payment to unlock, confirm, or claim a benefit—legitimate payouts and opportunities do not work this way.",
+      "hi": "किसी लाभ, ऑफर या सेवा को पाने के लिए पहले पैसे या शुल्क देने को कहा जा रहा है।",
+      "hinglish": "Kisi benefit ya offer ko unlock/confirm karne ke liye pehle payment maanga ja raha hai."
+    },
+    "recommendedAction": {
+      "en": "Pause and independently verify why an upfront payment is being requested before sending money.",
+      "hi": "पैसे भेजने से पहले रुकें और सही जगह से जाँच करें कि अग्रिम शुल्क क्यों माँगा जा रहा है।",
+      "hinglish": "Paise bhejne se pehle rukein aur verify karein ki upfront payment kyun maangi ja rahi hai."
+    },
+    "sourceId": "rbi-cautions",
+    "sourceVerificationStatus": "officially_supported",
+    "suppressibleByAwarenessContext": true
+  },
+  {
+    "id": "RULE-PHISHING-LINK-CRED-28",
+    "name": {
+      "en": "Click-to-Verify Link Pressure",
+      "hi": "लिंक पर क्लिक करके जानकारी सत्यापित करने का दबाव",
+      "hinglish": "Click-to-Verify Link Pressure"
+    },
+    "category": "phishing_link",
+    "languages": ["en", "hi", "hinglish"],
+    "patterns": [
+      { "regex": "(?:click\\s+(?:on\\s+)?(?:the\\s+)?(?:below\\s+)?link|tap\\s+(?:the\\s+)?link|open\\s+this\\s+link|लिंक\\s+पर\\s+क्लिक)\\s*(?:[a-z\\u0900-\\u097f]{0,12}\\s+){0,4}(?:to\\s+(?:verify|update|claim|unblock|complete|reactivate|avoid)|kyc|otp|account)", "flags": "gi" }
+    ],
+    "exclusions": [
+      { "regex": "\\b(?:do\\s+not\\s+click|never\\s+click|avoid\\s+clicking)\\b", "flags": "i" }
+    ],
+    "weight": 15,
+    "maxContribution": 15,
+    "group": "phishing_link",
+    "explanation": {
+      "en": "Pushes you to click an embedded link to verify an account, update KYC, or claim an offer—a standard phishing delivery pattern.",
+      "hi": "खाता सत्यापित करने, KYC अपडेट करने या ऑफर पाने के लिए मैसेज में दिए लिंक पर क्लिक करने को कहा जा रहा है।",
+      "hinglish": "Account verify karne, KYC update karne ya offer claim karne ke liye message wale link par click karne ko kaha ja raha hai."
+    },
+    "recommendedAction": {
+      "en": "Open the official website or app yourself instead of tapping links inside messages.",
+      "hi": "मैसेज में आए लिंक पर क्लिक करने के बजाय खुद आधिकारिक वेबसाइट या ऐप खोलें।",
+      "hinglish": "Message ke link par click karne ki jagah khud official app ya website open karein."
+    },
+    "sourceId": "rbi-kyc-2024",
+    "sourceVerificationStatus": "officially_supported",
+    "suppressibleByAwarenessContext": true
+  },
+  {
+    "id": "RULE-URGENCY-29",
+    "name": {
+      "en": "Urgency / Countdown Pressure Language",
+      "hi": "जल्दबाजी या तुरंत कार्रवाई का दबाव",
+      "hinglish": "Urgency / Pressure Language"
+    },
+    "category": "generic_mixed",
+    "languages": ["en", "hi", "hinglish"],
+    "patterns": [
+      { "regex": "\\b(?:immediately|urgent|urgently|within\\s+\\d+\\s*(?:minutes?|hours?|hrs?)|last\\s+chance|final\\s+warning|today\\s+only|turant|jaldi\\s+karo|abhi\\s+karein|तुरंत|अंतिम\\s+चेतावनी|जल्दी\\s+करें)\\b", "flags": "gi" }
+    ],
+    "exclusions": [
+      { "regex": "\\b(?:never\\s+share|do\\s+not\\s+click|avoid\\s+(?:clicking|sharing|installing|scams)|beware\\s+of)\\b", "flags": "i" }
+    ],
+    "weight": 5,
+    "maxContribution": 5,
+    "group": "urgency_pressure",
+    "explanation": {
+      "en": "Uses time pressure ('immediately', 'final warning', 'today only') to discourage careful verification. Urgency alone does not prove fraud.",
+      "hi": "यह मैसेज 'तुरंत' या 'अंतिम चेतावनी' जैसे शब्दों से जल्दबाजी का दबाव बना रहा है। केवल जल्दबाजी होना ठगी का पक्का सबूत नहीं है।",
+      "hinglish": "Yeh message 'turant' ya 'final warning' jaise shabdon se jaldi decision lene ka pressure bana raha hai. Akeli urgency scam prove nahi karti."
+    },
+    "recommendedAction": {
+      "en": "Slow down and verify through an independent channel before acting under pressure.",
+      "hi": "जल्दबाजी में कोई कदम न उठाएं—रुककर अलग से पुष्टि करें।",
+      "hinglish": "Jaldbaazi mein action na lein—ruk kar official channel se check karein."
+    },
+    "sourceId": "rbi-beaware",
+    "sourceVerificationStatus": "officially_supported",
+    "suppressibleByAwarenessContext": true
+  },
+  {
+    "id": "RULE-IMPERSONATION-30",
+    "name": {
+      "en": "Unverified Authority / Brand Impersonation Claim",
+      "hi": "अनसत्यापित बैंक या सरकारी पहचान का दावा",
+      "hinglish": "Unverified Authority Impersonation"
+    },
+    "category": "generic_mixed",
+    "languages": ["en", "hi", "hinglish"],
+    "patterns": [
+      { "regex": "(?:calling\\s+from|official\\s+notice\\s+from|head\\s+office|cyber\\s+department|kyc\\s+officer|rbi\\s+officer|bank\\s+manager\\s+calling|अधिकारी\\s+बोल\\s+रहा)", "flags": "gi" }
+    ],
+    "exclusions": [
+      { "regex": "\\b(?:official\\s+bank\\s+application|never\\s+ask)\\b", "flags": "i" }
+    ],
+    "weight": 8,
+    "maxContribution": 8,
+    "group": "impersonation_social",
+    "explanation": {
+      "en": "Claims official authority or institutional identity in plain text, which cannot be verified from a message alone.",
+      "hi": "मैसेज में किसी बैंक या सरकारी अधिकारी होने का दावा किया जा रहा है, जिसकी सच्चाई केवल टेक्स्ट से सिद्ध नहीं होती।",
+      "hinglish": "Message mein bank ya government authority hone ka dawa hai, jise sirf text dekh kar verify nahi kiya ja sakta."
+    },
+    "recommendedAction": {
+      "en": "Always verify claimed identity through official published contact channels.",
+      "hi": "हमेशा संबंधित संस्था के आधिकारिक संपर्क माध्यम से पहचान की पुष्टि करें।",
+      "hinglish": "Hamesha organization ke official contact details se identity verify karein."
+    },
+    "sourceId": "rbi-cautions",
+    "sourceVerificationStatus": "prototype_heuristic",
+    "suppressibleByAwarenessContext": true
+  },
+  {
+    "id": "RULE-RECRUITMENT-31",
+    "name": {
+      "en": "Referral / Recruitment Bonus Pressure",
+      "hi": "लोगों को जोड़ने पर कमाई का दबाव",
+      "hinglish": "Recruitment / Referral Pressure"
+    },
+    "category": "investment_return",
+    "languages": ["en", "hi", "hinglish"],
+    "patterns": [
+      { "regex": "(?:refer\\s+friends\\s+and\\s+earn|add\\s+\\d+\\s+members|team\\s+commission|downline|join\\s+and\\s+invite|naye\\s+members\\s+jodo)", "flags": "gi" }
+    ],
+    "weight": 10,
+    "maxContribution": 10,
+    "group": "investment_loan",
+    "explanation": {
+      "en": "Pushes recruiting new members or referrals as a condition for payouts or higher earnings.",
+      "hi": "कमाई या पैसा निकालने के लिए नए लोगों को जोड़ने (recruitment) की शर्त रखी जा रही है।",
+      "hinglish": "Payout ya bonus ke liye naye logon ko refer ya recruit karne par zor diya ja raha hai."
+    },
+    "recommendedAction": {
+      "en": "Be cautious of schemes whose payouts depend on recruiting others or depositing fresh money.",
+      "hi": "ऐसी योजनाओं से सावधान रहें जहाँ कमाई नए लोगों को जोड़ने पर निर्भर हो।",
+      "hinglish": "Aisi schemes se savdhan rahein jahan kamai naye logon ko jodne par depend karti ho."
+    },
+    "sourceId": "rbi-cautions",
+    "sourceVerificationStatus": "prototype_heuristic",
+    "suppressibleByAwarenessContext": true
+  },
+  {
+    "id": "RULE-OBFUSCATED-CRED-32",
+    "name": {
+      "en": "Obfuscated Credential / Offer Evasion",
+      "hi": "छुपाकर लिखे गए संवेदनशील शब्द",
+      "hinglish": "Obfuscated Word Evasion"
+    },
+    "category": "otp_scam",
+    "languages": ["en", "hi", "hinglish"],
+    "patterns": [
+      { "regex": "(?:o\\s*[\\.\\-_]\\s*t\\s*[\\.\\-_]\\s*p|p\\s*[\\.\\-_]\\s*i\\s*[\\.\\-_]\\s*n|k\\s*[\\.\\-_]\\s*y\\s*[\\.\\-_]\\s*c|c\\s*[\\.\\-_]\\s*v\\s*[\\.\\-_]\\s*v)", "flags": "gi" }
+    ],
+    "exclusions": [
+      { "regex": "\\b(?:never|do\\s*not|don't|mat|नहीं)\\b", "flags": "i" }
+    ],
+    "weight": 8,
+    "maxContribution": 8,
+    "group": "credential_theft",
+    "explanation": {
+      "en": "Uses dotted or spaced formatting (such as O.T.P. or K.Y.C.) that can evade basic keyword filters.",
+      "hi": "सामान्य फिल्टर से बचने के लिए शब्दों के बीच डॉट या स्पेस (जैसे O.T.P. या K.Y.C.) का उपयोग किया गया है।",
+      "hinglish": "Basic filters se bachne ke liye dots ya spaces (jaise O.T.P. ya K.Y.C.) ka use kiya gaya hai."
+    },
+    "recommendedAction": {
+      "en": "Treat oddly formatted credential or KYC prompts with extra caution.",
+      "hi": "अजीब तरह से लिखे गए OTP या KYC संदेशों को अतिरिक्त सावधानी से देखें।",
+      "hinglish": "Odd formatting wale OTP ya KYC messages ko extra caution ke saath dekhein."
+    },
+    "sourceId": "rbi-beaware",
+    "sourceVerificationStatus": "prototype_heuristic",
+    "suppressibleByAwarenessContext": true
+  },
+  {
+    "id": "RULE-WHATSAPP-CODE-33",
+    "ruleOrigin": "newly_added",
+    "addedReason": {
+      "en": "Added to cover social-engineering WhatsApp account takeover tricks where scammers pretend a 6-digit registration code was sent to you by mistake and do not use the word 'OTP'.",
+      "hi": "जब ठग 'OTP' शब्द के बिना गलती से आया 6-अंकों का WhatsApp वेरिफिकेशन कोड फॉरवर्ड करने को कहते हैं, उसे पकड़ने के लिए जोड़ा गया।",
+      "hinglish": "Jab scammers 'OTP' bole bina galti se aaya 6-digit WhatsApp verification code forward karwate hain, use pakadne ke liye add kiya gaya."
+    },
+    "exampleTrigger": "Hey, I accidentally sent my 6-digit WhatsApp verification code to your number, please forward it back urgently.",
+    "safeguardsSummary": {
+      "en": "Requires pairing WhatsApp/6-digit verification code with forwarding or accidental-send requests; suppressed inside protective warnings ('never forward', 'do not share').",
+      "hi": "केवल तभी सक्रिय होता है जब कोड के साथ फॉरवर्ड/गलती से भेजने का आग्रह हो; 'कभी साझा न करें' जैसी चेतावनियों में रुक जाता है।",
+      "hinglish": "Sirf tab trigger hota hai jab code ke saath forward/accidentally send phrasing ho; safety warnings mein suppress hota hai."
+    },
+    "name": {
+      "en": "WhatsApp 6-Digit Verification Code Hijack",
+      "hi": "WhatsApp 6-अंकों के वेरिफिकेशन कोड की चोरी",
+      "hinglish": "WhatsApp 6-Digit Code Hijack"
+    },
+    "category": "otp_scam",
+    "languages": ["en", "hi", "hinglish"],
+    "patterns": [
+      { "regex": "(?:whatsapp|wa)\\s+(?:6[\\s-]*digit\\s+)?(?:verification|security|registration|login)\\s+code.{0,80}(?:forward|send|share|bhej|bhejo|de\\s*do|accidentally|galti\\s+se|wrongly)", "flags": "gi" },
+      { "regex": "(?:accidentally|mistakenly|galti\\s+se)\\s+(?:sent|received).{0,60}(?:6[\\s-]*digit|whatsapp)\\s+(?:verification\\s+)?code", "flags": "gi" }
+    ],
+    "exclusions": [
+      { "regex": "\\b(?:never\\s+(?:share|forward|send)|do\\s*not\\s+(?:share|forward|send)|beware\\s+of|kabhi\\s+(?:mat|na))\\b", "flags": "i" }
+    ],
+    "weight": 26,
+    "maxContribution": 26,
+    "group": "credential_theft",
+    "explanation": {
+      "en": "Asks you to forward a 6-digit WhatsApp verification/registration code—giving this code to anyone allows immediate hijacking of your WhatsApp account.",
+      "hi": "यह संदेश आपसे 6-अंकों का WhatsApp वेरिफिकेशन कोड फॉरवर्ड करने को कह रहा है—इसे किसी को भी देने से आपका WhatsApp खाता हैक हो सकता है।",
+      "hinglish": "Yeh message 6-digit WhatsApp verification code forward karne ko keh raha hai—ise share karne se WhatsApp account hijack ho sakta hai."
+    },
+    "recommendedAction": {
+      "en": "Never forward WhatsApp registration codes even if requested by a known contact; enable Two-Step Verification inside WhatsApp Settings.",
+      "hi": "किसी परिचित के माँगने पर भी WhatsApp वेरिफिकेशन कोड कभी न भेजें; WhatsApp सेटिंग्स में Two-Step Verification चालू करें।",
+      "hinglish": "Kisi friend ke maangne par bhi WhatsApp code forward na karein; Two-Step Verification on rakhein."
+    },
+    "sourceId": "certin-2024-0050",
+    "sourceVerificationStatus": "officially_supported",
+    "suppressibleByAwarenessContext": true
+  },
+  {
+    "id": "RULE-CARD-LIMIT-34",
+    "ruleOrigin": "newly_added",
+    "addedReason": {
+      "en": "Added to detect phishing lures promising a pre-approved credit card limit upgrade or annual fee waiver that harvest card numbers, expiry dates, and CVV.",
+      "hi": "क्रेडिट कार्ड लिमिट बढ़ाने या सालाना फीस माफी के नाम पर कार्ड नंबर व CVV मांगने वाले फिशिंग संदेशों को पकड़ने के लिए जोड़ा गया।",
+      "hinglish": "Credit card limit upgrade ya annual fee waiver ke bahane card details/expiry lene wale phishing scams ke liye add kiya gaya."
+    },
+    "exampleTrigger": "Credit card limit upgrade approved up to ₹5,00,000! Submit card number and expiry now to activate annual fee waiver.",
+    "safeguardsSummary": {
+      "en": "Requires pairing limit-upgrade or annual-fee-waiver offers with credential submission, calling, or clicking links; suppressed on official-app notices.",
+      "hi": "केवल तभी सक्रिय होता है जब कार्ड अपग्रेड ऑफर के साथ विवरण/लिंक/कॉल की माँग हो; आधिकारिक बैंक ऐप सलाह पर सुरक्षित रहता है।",
+      "hinglish": "Upgrade/waiver offer ke saath detail submission ya click/call request hone par hi chalta hai; official app messages par suppress hota hai."
+    },
+    "name": {
+      "en": "Fake Card Limit Increase / Fee Waiver Phish",
+      "hi": "क्रेडिट कार्ड लिमिट बढ़ाने या फीस माफी का नकली ऑफर",
+      "hinglish": "Card Limit Upgrade / Fee Waiver Phish"
+    },
+    "category": "fake_kyc_bank",
+    "languages": ["en", "hi", "hinglish"],
+    "patterns": [
+      { "regex": "(?:credit\\s+card|debit\\s+card)\\s+(?:limit\\s+(?:increase|upgrade|enhanced)|annual\\s+fee\\s+(?:waiver|reversal)|lifetime\\s+free\\s+upgrade).{0,90}(?:submit|enter|confirm|verify|update|call|click|card\\s+number|expiry|cvv|activate)", "flags": "gi" }
+    ],
+    "exclusions": [
+      { "regex": "\\b(?:official\\s+(?:bank\\s+)?app\\s+only|never\\s+share|beware\\s+of|do\\s+not\\s+click)\\b", "flags": "i" }
+    ],
+    "weight": 24,
+    "maxContribution": 24,
+    "group": "kyc_account_threat",
+    "explanation": {
+      "en": "Promises an instant credit card limit upgrade or annual fee waiver while asking you to submit card details, click a portal link, or call an unverified desk.",
+      "hi": "क्रेडिट कार्ड की लिमिट बढ़ाने या सालाना शुल्क माफ करने का झांसा देकर कार्ड की जानकारी, क्लिक या कॉल करने को कहा जा रहा है।",
+      "hinglish": "Credit card limit upgrade ya fee waiver ke naam par card details submit karne ya link click karne ko kaha ja raha hai."
+    },
+    "recommendedAction": {
+      "en": "Manage credit card limits and fee waivers strictly inside your bank's official mobile banking app.",
+      "hi": "क्रेडिट कार्ड लिमिट या शुल्क छूट की जाँच केवल अपने बैंक के आधिकारिक मोबाइल ऐप के अंदर ही करें।",
+      "hinglish": "Card limit increase ya fee waiver sirf apne bank ki official mobile app mein hi manage karein."
+    },
+    "sourceId": "rbi-beaware",
+    "sourceVerificationStatus": "officially_supported",
+    "suppressibleByAwarenessContext": true
+  }
+]

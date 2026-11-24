@@ -1,0 +1,1133 @@
+# CYBERSURAKSHA — COMPLETE VISUAL REDESIGN, RED-TEAM LAB ENHANCEMENT & FUTURE COMMUNITY INTELLIGENCE MASTER PROMPT
+
+## ROLE
+
+Act as a senior UI/UX designer, frontend engineer, cybersecurity product designer, software tester, and autonomous QA engineer.
+
+Your task is to upgrade my existing CyberSuraksha project into a visually engaging, modern, premium-quality cybersecurity product suitable for a hackathon demonstration.
+
+The current website feels boring and visually uninteresting. I want it to look substantially more polished, attractive, interactive, and memorable.
+
+However, this is NOT a request to rebuild the project from scratch.
+
+You must inspect my existing codebase first, understand its architecture and features, and improve the existing application without breaking anything.
+
+---
+
+# 1. MAIN OBJECTIVE
+
+Transform CyberSuraksha into a website that feels like a real cybersecurity startup product instead of a generic AI-generated dashboard or college project.
+
+The final website should be:
+
+- Visually attractive
+- Modern and premium
+- Interactive
+- Easy for non-technical users
+- Technically explainable
+- Lightweight
+- Privacy-first
+- Responsive
+- Hackathon-demo ready
+
+The redesign must preserve all existing working features, functionality, detection logic, test cases, scoring, rulebook, and architecture.
+
+**Design improvement must never come at the cost of functionality.**
+
+---
+
+# 2. VISUAL DESIGN DIRECTION
+
+Create a unique, premium visual identity for CyberSuraksha.
+
+## Design inspiration
+
+Take inspiration from modern cybersecurity SaaS products, consumer fraud protection platforms, explainable security tools, and premium software interfaces.
+
+Do not copy any website exactly.
+
+## Color palette
+
+Use a balanced combination of:
+
+- Deep navy / midnight blue
+- White
+- Soft grey
+- Muted teal / cyan
+- Charcoal
+- Subtle green for low-risk states
+- Amber for caution
+- Red for high-risk warnings
+
+Use tasteful gradients only where they enhance the design.
+
+## Typography
+
+Prefer modern fonts such as Inter or Poppins.
+
+Use:
+
+- Large, readable hero typography
+- Clear section headings
+- Strong text hierarchy
+- Readable body text
+- Consistent typography scales
+
+## UI elements
+
+Improve:
+
+- Spacing
+- Alignment
+- Visual hierarchy
+- Borders
+- Rounded corners
+- Shadows
+- Icons
+- Button design
+- Card layouts
+- Hover states
+- Loading states
+- Empty states
+- Micro-interactions
+
+Avoid excessive shadows, clutter, unnecessary animations, or oversized blank sections.
+
+### Strictly avoid
+
+- Boring template-like UI
+- Generic dashboard layouts
+- Hacker-style neon green themes
+- Excessively dark interfaces
+- Dense blocks of information
+- Excessive gradients
+- Unnecessary charts
+- Too many cards
+- Random decorative elements
+- Heavy animations
+- Unnecessary dependencies
+
+The design should feel professional and clean while still being interesting.
+
+---
+
+# 3. HOMEPAGE — CREATE A STRONG FIRST IMPRESSION
+
+The homepage must immediately communicate what CyberSuraksha does.
+
+## Hero section
+
+Create a visually impressive but lightweight hero section.
+
+Include:
+
+- CyberSuraksha logo or brand symbol
+- Headline: "See the trap before you tap."
+- A concise explanation of the product
+- A subtle cybersecurity-themed illustration or animated shield/scan visualization
+- A clear CTA leading to the message analyzer
+
+Include small privacy/trust indicators, such as:
+
+- Privacy-first analysis
+- No message uploads
+- Instant analysis
+- Explainable results
+
+Make the hero visually memorable without overwhelming the user.
+
+Use subtle motion or animated visual elements such as:
+
+- Shield scanning
+- Security rings
+- Soft glowing indicators
+- Scan-line movement
+- Animated security status
+
+All animations must be lightweight, respect reduced-motion accessibility settings, and perform smoothly on a laptop with 16GB RAM and an Intel i5 processor.
+
+---
+
+# 4. UNIVERSAL MESSAGE ANALYZER — KEEP IT THE MAIN FEATURE
+
+The analyzer must remain the primary focus of the website.
+
+It should analyze user-pasted messages from:
+
+- SMS
+- WhatsApp
+- Email
+- Bank notifications
+- Courier messages
+- Job offers
+- Investment messages
+- Social media
+- Government impersonation messages
+- Any suspicious text
+- English
+- Hindi
+- Hinglish
+
+Preserve all existing functionality.
+
+## Input area redesign
+
+Make the analyzer input section visually prominent, polished, and intuitive.
+
+Include:
+
+- Large message input field
+- Attractive placeholder
+- Analyze button
+- Clear button
+- Character counter
+- Example message buttons
+- Privacy note
+- Language selector
+
+Use a visually engaging input panel with clean spacing, a subtle border, and a clear visual focus state.
+
+The user should immediately understand where to paste a message and what to do next.
+
+## Analyze interaction
+
+When the user clicks Analyze:
+
+- Run the actual existing detection engine.
+- Show a lightweight scanning animation or scanning state.
+- Do not artificially delay the actual analysis.
+- Do not simulate fake AI scanning.
+- Show results as soon as actual processing completes.
+
+---
+
+# 5. RISK SCORE & RESULT PRESENTATION
+
+Keep the existing scoring engine and thresholds unchanged.
+
+Redesign the results into a visually engaging, understandable security report.
+
+## Risk score
+
+Use a visually appealing:
+
+- Circular gauge
+- Semi-circular gauge
+- Animated meter
+- Or another premium visualization
+
+The visualization must display the real score from the engine.
+
+It must respect existing score ranges and verdicts.
+
+Do not fabricate, manipulate, or inflate scores.
+
+## Result hierarchy
+
+Present results in the following order:
+
+1. Risk verdict and score
+2. Simple explanation
+3. Detected categories
+4. Suspicious phrases highlighted from the original message
+5. Evidence cards
+6. Cross-signal analysis
+7. URL analysis
+8. Extracted entities
+9. Trust boundaries
+10. Recommended actions
+11. Official safety resources
+12. Awareness Message Generator
+
+Use distinct, visually attractive sections instead of one long boring results page.
+
+## Evidence cards
+
+Improve evidence cards with:
+
+- Category icon
+- Severity indicator
+- Short explanation
+- Evidence phrase
+- Score contribution where available
+- Expandable technical details
+- Relevant recommended action
+
+Use progressive disclosure for rule IDs and technical explanations.
+
+Make the result understandable to a normal person while keeping technical information available to judges.
+
+---
+
+# 6. CROSS-SIGNAL INTELLIGENCE VISUALIZATION
+
+Preserve the existing Cross-Signal Intelligence engine.
+
+Improve the visual presentation of combinations such as:
+
+- Fake KYC + account blocking + OTP request
+- Job offer + upfront registration fee
+- Lottery + processing fee
+- UPI + PIN required to receive money
+- Government/police impersonation + arrest threat + payment
+- Unknown app + remote-access request
+- Courier/utility message + urgency + suspicious link
+- Investment + guaranteed returns + recruitment
+
+Show:
+
+- Individual detected signals
+- Combined pattern
+- Why the combination is suspicious
+- Combined score contribution
+- Recommended response
+
+Use a visually intuitive combined-signal component such as connected indicators, a compact signal flow, or a layered evidence panel.
+
+Do not invent signals or change the underlying cross-signal logic.
+
+---
+
+# 7. URL DECEPTION VISUALIZER
+
+Preserve the current URL analyzer.
+
+Improve its visual experience with a clear domain breakdown and visual explanation of deceptive URLs.
+
+Display:
+
+- Protocol
+- Hostname
+- Subdomain
+- Registrable domain
+- Path
+- Query
+- Domain boundary
+- Suspicious structure
+- Brand impersonation indicators where detected
+
+Make it easy for a normal user to understand which part of a URL is important.
+
+For example:
+
+https://paypal.com.security-check.example/login
+
+Visually explain that:
+
+- HTTPS is only the connection protocol.
+- paypal.com appears as a misleading subdomain.
+- The actual registrable domain is example.com.
+- A familiar brand appearing in a subdomain does not prove that the website belongs to that brand.
+
+Use color-coded domain segments, explanatory labels, and a clean URL anatomy visualization.
+
+The example must be analyzed by the actual URL analyzer.
+
+Do not visit URLs, fetch their content, follow redirects, or introduce network-based reputation checks.
+
+---
+
+# 8. ENTITY EXTRACTION & TRUST BOUNDARIES
+
+Preserve entity extraction for:
+
+- Phone numbers
+- URLs
+- UPI IDs
+- Amounts
+- Credential-related terms
+- Payment terms
+- Apps
+- Remote access applications
+- Banks
+- Brands
+
+Improve its visual presentation with compact entity chips, categorized icons, and readable summaries.
+
+Entities alone must never be treated as proof of fraud.
+
+## Trust boundary section
+
+Create a clean visual component explaining:
+
+### What CyberSuraksha detected
+Actual suspicious indicators and evidence.
+
+### What CyberSuraksha cannot verify
+- Sender identity
+- Live domain reputation
+- Real-time website content
+- Redirect destination
+- Whether a company or offer is legitimate
+- Actual bank account ownership
+- Real-world fraud status
+
+Do not claim verification that the system does not perform.
+
+---
+
+# 9. RED-TEAM VALIDATION LAB — COMPLETE REDESIGN
+
+The Red-Team Lab must become one of the most interesting sections of the website.
+
+Do not leave it looking like a boring test table or ordinary collection of static cards.
+
+Transform it into a polished, interactive security testing laboratory where judges can actually explore and challenge the detection engine.
+
+## A. Lab header
+
+Create a visually engaging header:
+
+**Red-Team Validation Lab**
+
+Subtitle:
+
+"Challenge the detection engine. Test what it catches, what it misses, and how accurately it distinguishes scams from genuine messages."
+
+Include a suitable visual identity such as:
+
+- Security shield
+- Testing laboratory
+- Target
+- Shield verification
+- Test pipeline illustration
+
+Keep the design professional and clean.
+
+Do not create an unreadable hacker-terminal aesthetic.
+
+## B. Lab overview dashboard
+
+At the top of the page, display real calculated test-suite information:
+
+- Total test cases
+- Tests executed
+- Passed
+- Failed
+- Not run
+- Scam cases
+- Genuine cases
+
+Use attractive summary components such as:
+
+- Progress rings
+- Compact status indicators
+- Visual progress bars
+- Small metrics
+- Clear labels
+
+All values must come from actual test cases and execution results.
+
+Never hardcode fake successful statistics.
+
+## C. Test execution controls
+
+Create visually attractive, functional controls for:
+
+- Run All Tests
+- Run Scam Tests
+- Run Genuine Tests
+- Run Individual Test
+- Reset Tests
+
+These must connect to the actual testing functionality.
+
+## D. Test suite categories
+
+Organize tests using clear categories and filters such as:
+
+- All
+- Scam
+- Genuine
+- Passed
+- Failed
+- Not Run
+- Fake KYC
+- OTP
+- UPI
+- Job Scams
+- Lottery
+- Phishing
+- Digital Arrest
+- Courier
+- Remote Access
+- Utility Scams
+- Awareness Messages
+
+Filters must work on actual data.
+
+Provide a search function if appropriate to locate test cases quickly.
+
+## E. Individual test cards
+
+Design attractive test cards containing:
+
+- Test name
+- Scenario category
+- Expected verdict
+- Actual verdict
+- Score
+- Execution status
+- Expandable details
+
+Use appropriate icons and visual distinction between scam and genuine test cases.
+
+## F. Test execution visualization
+
+When tests run:
+
+- Show a real progress indicator.
+- Display the currently executing test where technically feasible.
+- Update the actual results.
+- Show passed and failed cases clearly.
+- Do not fabricate test progress.
+- Do not introduce artificial delays just for animation.
+
+Statuses:
+
+- PASS — subtle green
+- FAIL — clear red
+- NOT RUN — neutral
+- RUNNING — animated indicator
+
+## G. Failed test diagnostics
+
+For a failed test, create an expandable diagnostic panel containing:
+
+- Expected verdict
+- Actual verdict
+- Expected category
+- Detected category
+- Expected score or range where applicable
+- Actual score
+- Relevant triggered rules
+- Suppressed rules
+- Cross-signal results
+
+Explain the failure in understandable language.
+
+Do not dump raw JSON unless the user specifically opens a technical view.
+
+## H. Performance metrics
+
+Calculate from the actual bundled test suite:
+
+- Accuracy
+- Precision
+- Recall
+- F1
+- False positives
+- False negatives
+- True positives
+- True negatives
+
+Handle undefined metric cases appropriately.
+
+Display these metrics in a clean and visually engaging way.
+
+Show this disclaimer prominently but unobtrusively:
+
+"Performance on bundled prototype test cases — not real-world detection accuracy."
+
+Never invent performance percentages or imply the prototype has been validated against real-world scam data.
+
+## I. Rule trace
+
+Create an expandable rule-trace view for every test case.
+
+Display:
+
+- Rule ID
+- Rule name
+- Triggered phrases
+- Why the rule triggered
+- Score contribution
+- Context suppression
+- Cross-signal contribution
+- Rule/source attribution if available
+
+Make the rule trace readable, professional, and judge-friendly.
+
+## J. Red-Team Lab design quality
+
+Use:
+
+- Premium card styling
+- Responsive grids
+- Clear color-coded states
+- Smooth expandable panels
+- Functional filters
+- Search
+- Attractive metrics
+- Progress visualization
+- Clear diagnostics
+- Appropriate icons
+- Empty states
+- Responsive layouts
+
+The lab must remain a real test execution tool.
+
+Do not replace it with static mock data.
+
+---
+
+# 10. COMMUNITY THREAT INTELLIGENCE LOOP — FUTURE FEATURE
+
+Preserve and prepare the architecture for a planned future feature called:
+
+**Community Threat Intelligence Loop**
+
+This feature is intended to help CyberSuraksha identify emerging scam patterns through optional user feedback and controlled rulebook updates.
+
+Do not forget this feature while redesigning the existing website.
+
+## A. Unknown pattern detection
+
+When a message contains unfamiliar wording or patterns that cannot be confidently assessed by the current rulebook:
+
+- Show "Unknown Pattern" or "Insufficient Evidence."
+- Do not incorrectly label the message as safe.
+- Clearly explain that the detection engine does not have enough evidence to make a confident assessment.
+- Show practical safety advice.
+- Recommend independently verifying the sender or offer through official channels.
+
+Do not automatically label an unknown message as a scam.
+
+## B. Optional user outcome feedback
+
+The planned workflow may optionally ask users:
+
+"Did this message turn out to be legitimate or a scam?"
+
+Offer feedback choices:
+
+- Legit
+- Scam
+- Not sure
+
+Feedback must remain optional.
+
+Do not pressure users into submitting feedback.
+
+## C. Privacy and consent
+
+In the future, if feedback collection is implemented:
+
+- Obtain explicit consent.
+- Clearly explain what data will be collected and why.
+- Minimize data collection.
+- Sanitize sensitive information.
+- Remove OTPs, passwords, phone numbers, UPI IDs, account numbers, personal identifiers, and unnecessary message content.
+- Do not silently upload original messages.
+- Provide abuse protections and secure handling.
+
+## D. Pattern discovery
+
+The future system should be designed to identify recurring:
+
+- Scam wording
+- Manipulation techniques
+- Message structures
+- Payment demands
+- Impersonation methods
+- Social engineering tactics
+- URLs or domain patterns where safe and appropriate
+- Emerging fraud categories
+
+Group similar reports instead of treating every individual message as a separate rule.
+
+## E. Candidate rule generation
+
+Recurring patterns may be used to create candidate detection rules.
+
+Each candidate rule should include:
+
+- Candidate rule ID
+- Scam pattern/category
+- Pattern description
+- Common signals
+- Proposed matching logic
+- Supporting reports or evidence
+- Confidence or review status
+- Potential false-positive risk
+
+User reports alone must not be considered proof.
+
+## F. Validation before rulebook update
+
+Never allow a single user report or unverified feedback to automatically change the live detection engine.
+
+Candidate rules must be:
+
+1. Reviewed
+2. Validated against scam cases
+3. Validated against genuine cases
+4. Checked for false positives
+5. Checked for false negatives
+6. Tested in the Red-Team Lab
+7. Approved through a controlled rule update
+
+Only validated rules should be promoted into a versioned rulebook.
+
+The rulebook should be version-controlled with a record of changes.
+
+## G. Future learning loop
+
+The intended workflow is:
+
+Unknown Message → User Safety Warning → Optional Feedback → Privacy Sanitization → Pattern Grouping → Candidate Rule → Red-Team Validation → Review → Versioned Rule Update → Improved Future Detection
+
+Keep the architecture modular so a secure backend and centralized intelligence system can be added in the future.
+
+## H. CURRENT PROTOTYPE LIMITATION — IMPORTANT
+
+The current CyberSuraksha prototype is browser-only and privacy-first.
+
+It has no backend, no centralized feedback database, and no live learning infrastructure.
+
+Therefore:
+
+- Do not pretend feedback is being stored centrally.
+- Do not claim the system learns automatically.
+- Do not claim new rules are being automatically added.
+- Do not claim the system has community intelligence unless it is actually implemented.
+- Do not introduce a backend, API, cloud service, or network request as part of this redesign.
+- Do not create fake feedback submissions.
+- Do not create fake community statistics.
+
+If an existing feedback UI is present, preserve it and clearly label prototype-only or temporary functionality.
+
+If the workflow is not implemented yet, keep the future workflow documented and the architecture ready, but do not pretend it works.
+
+---
+
+# 11. FALSE POSITIVE PROTECTION
+
+Preserve the existing contextual detection engine and all its false-positive protections.
+
+Genuine awareness messages such as:
+
+- "Never share your OTP."
+- "Your bank will never ask for your UPI PIN."
+- "Do not click phishing links."
+- "Beware of fake job registration fees."
+
+Must not be incorrectly classified as scams merely because they contain suspicious keywords.
+
+Preserve:
+
+- Negation handling
+- Awareness context
+- Warning/advice context
+- Payment receiving versus payment authorization
+- Genuine notification suppression
+- Context-sensitive matching
+
+Do not weaken detection logic to make the redesigned UI look better or make the test metrics higher.
+
+---
+
+# 12. QUIZ — VISUAL UPGRADE
+
+Preserve all existing quiz questions, answers, scoring, and functionality.
+
+Make the quiz more engaging through:
+
+- Attractive intro screen
+- Modern question layout
+- Clear answer choices
+- Interactive selection states
+- Progress indicator
+- Smooth feedback
+- Correct/incorrect visual treatment
+- Explanation panel
+- Final score visualization
+- Review mistakes
+- Restart functionality
+
+Make it feel like an engaging cybersecurity awareness challenge rather than a boring form.
+
+---
+
+# 13. SOURCES & SAFETY PAGE — VISUAL UPGRADE
+
+Transform the Sources & Safety page into a clean, polished cybersecurity resource center.
+
+Organize resources into appropriate categories:
+
+- RBI
+- NPCI
+- CERT-In
+- I4C
+- Ministry of Home Affairs
+- Sanchar Saathi
+- Reporting resources
+- Emergency financial fraud response
+
+Include:
+
+- Institution name
+- Source title
+- Short explanation
+- Clear source links
+- Appropriate icons
+- Readable cards
+- Safety instructions
+- Reporting resources
+
+Preserve existing official URLs.
+
+Do not fabricate endorsements, affiliations, or government partnerships.
+
+---
+
+# 14. AWARENESS MESSAGE GENERATOR — VISUAL UPGRADE
+
+Preserve the complete existing Scam-Specific Awareness Message Generator.
+
+It must continue to support:
+
+- Scam-specific message generation
+- Family mode
+- Friends mode
+- Detailed mode
+- Hindi
+- English
+- Both languages
+- Editable message preview
+- Copy Hindi
+- Copy English
+- Copy both
+- Share functionality
+- Reset
+- Success feedback
+
+Improve its design to feel like an interactive message-sharing tool.
+
+Create a polished message preview inspired by familiar messaging layouts, without copying WhatsApp branding or pretending it is the actual application.
+
+Make the generated message visually readable and easy to copy or share.
+
+Preserve all existing category-specific templates and language logic.
+
+---
+
+# 15. LANGUAGE EXPERIENCE
+
+Preserve English, Hindi, and Hinglish functionality.
+
+Ensure the language selector genuinely changes the relevant interface text, explanations, buttons, safety actions, quiz content, awareness messages, and other supported language-dependent elements.
+
+Hindi must be natural, conversational Indian Hindi.
+
+Avoid overly formal or Sanskrit-heavy Hindi.
+
+Keep commonly used technical terms natural:
+
+- OTP
+- UPI PIN
+- Link
+- Bank
+- Account
+- Payment
+- Registration Fee
+- Cashback
+
+Do not change scores, verdicts, or detection logic when switching languages.
+
+---
+
+# 16. SAFETY TICKER / CYBER AWARENESS BULLETIN
+
+Preserve the existing safety ticker or cyber-awareness bulletin.
+
+Improve its visual design using:
+
+- Subtle movement
+- Clear icons
+- Readable tip text
+- Source attribution where available
+- Pause/resume functionality
+- Reduced-motion support
+
+Use paraphrased safety tips based on existing sources.
+
+Keep it unobtrusive and do not distract from the analyzer.
+
+---
+
+# 17. NAVIGATION & GLOBAL EXPERIENCE
+
+Improve the overall navigation system.
+
+Keep navigation simple and intuitive.
+
+Include the existing major sections:
+
+- Analyze
+- Red-Team Lab
+- Scam Awareness Quiz
+- Sources & Safety
+
+Make the active section clear.
+
+Ensure navigation works properly and does not lose essential application state unnecessarily.
+
+## Footer
+
+Create a polished footer with:
+
+- CyberSuraksha identity
+- Short privacy statement
+- Prototype limitations
+- Official cybercrime reporting information
+
+Do not add unnecessary pages or menus.
+
+---
+
+# 18. RESPONSIVE DESIGN
+
+Ensure the redesign works properly on:
+
+- Laptop
+- Desktop
+- Tablet
+- Mobile
+
+Requirements:
+
+- No horizontal overflow
+- Proper responsive grids
+- Appropriate font sizes
+- Touch-friendly buttons
+- Responsive navigation
+- Readable result cards
+- Mobile-friendly Red-Team Lab
+- Proper spacing
+- No broken layouts
+
+Do not simply shrink the desktop UI. Reorganize the layout intelligently.
+
+---
+
+# 19. PERFORMANCE & TECHNICAL CONSTRAINTS
+
+My laptop is an ASUS Vivobook 15 with an Intel i5 processor and 16GB RAM.
+
+Keep the application lightweight.
+
+Avoid:
+
+- Heavy animation libraries
+- Unnecessary packages
+- Large dependencies
+- Excessive DOM elements
+- Memory leaks
+- Complex background processes
+
+Prefer existing packages and lightweight CSS animations.
+
+The website must remain responsive and stable.
+
+---
+
+# 20. STRICT FUNCTIONALITY PRESERVATION
+
+Before making any changes, inspect the existing codebase.
+
+Identify all existing features, components, logic, and tests.
+
+Preserve the working implementation of:
+
+- Universal message analyzer
+- Rule-based scoring engine
+- All detection rules
+- Score caps
+- Context analyzer
+- Negation detection
+- Normalizer
+- English/Hindi/Hinglish handling
+- Evidence phrase highlighting
+- Cross-signal intelligence
+- URL analyzer
+- Domain parser
+- URL deception visualizer
+- Entity extraction
+- Trust boundaries
+- Safety actions
+- Awareness message generator
+- Family warning
+- Community Threat Intelligence Loop architecture and requirements
+- Red-Team test suite
+- Test metrics
+- Test filters
+- Individual test execution
+- Run All
+- Rule traces
+- Quiz
+- Quiz score
+- Quiz explanations
+- Sources & Safety
+- Official resource links
+- Safety ticker
+- Copy functions
+- Share functions
+- Privacy protections
+
+Do not remove features.
+
+Do not replace functional components with mock screens.
+
+Do not change the detection thresholds.
+
+Do not silently remove unfinished features.
+
+Do not add a backend, AI API, runtime internet scanning, message uploads, analytics, or persistent message storage.
+
+The current architecture must remain privacy-first.
+
+---
+
+# 21. AUTONOMOUS QA & SELF-REPAIR
+
+This project is not complete just because the frontend looks attractive.
+
+You must perform a complete QA cycle.
+
+## Step 1 — Audit
+
+Inspect the existing code and create an internal checklist of every existing feature and requirement.
+
+## Step 2 — Redesign
+
+Implement the visual upgrade across all major sections.
+
+## Step 3 — Feature verification
+
+Verify that:
+
+- Analyzer works
+- Analyze button works
+- Clear button works
+- Example buttons work
+- Language switching works
+- Scoring remains correct
+- Evidence is displayed correctly
+- Cross-signal analysis works
+- URL analysis works
+- URL visualizer works
+- Entities work
+- Trust boundaries work
+- Safety actions work
+- Awareness message generation works
+- All audience modes work
+- All language modes work
+- Copy actions work
+- Share works where supported
+- Red-Team Lab works
+- Run All Tests works
+- Individual tests work
+- Filters work
+- Search works if added
+- Metrics are correctly calculated
+- Rule traces work
+- Quiz works
+- Quiz results work
+- Review mistakes works
+- Restart works
+- Sources links work
+- Ticker works
+- Navigation works
+- Community Threat Intelligence Loop limitations are accurately represented
+- No feature has been replaced with fake functionality
+
+## Step 4 — Run tests
+
+Run the existing automated test suite.
+
+Run the production build.
+
+## Step 5 — Browser verification
+
+If browser testing is available:
+
+- Open the actual application
+- Navigate through all sections
+- Analyze different scam examples
+- Analyze genuine messages
+- Test URL deception
+- Run Red-Team tests
+- Use filters
+- Test quiz
+- Test language switching
+- Test copy/share
+- Test awareness generator
+- Test mobile responsiveness
+
+If browser testing is unavailable, perform the strongest available alternative and explicitly report what could not be verified.
+
+## Step 6 — Autonomous repair
+
+If any issue is found:
+
+- Fix it autonomously
+- Do not ask me to fix code that you can fix
+- Do not remove a feature to hide a bug
+- Do not weaken detection to make tests pass
+- Rerun the failed test
+- Rerun related regression tests
+- Rerun the production build
+
+Repeat this process until all discovered issues are resolved or a genuine limitation blocks further work.
+
+## Step 7 — Final report
+
+At completion, provide a concise but honest report containing:
+
+- What visual improvements were made
+- What existing features were preserved
+- Red-Team Lab improvements
+- Community Threat Intelligence Loop status
+- Tests actually executed
+- Tests passed and failed
+- Bugs discovered and fixed
+- Remaining issues
+- Production build status
+- Browser testing status
+- Any feature that is incomplete or unverified
+
+Use these statuses:
+
+- PASS — implemented and actually verified
+- PARTIAL — implemented but incomplete
+- FAIL — broken
+- NOT TESTED — not verified
+
+Do not claim testing was successful if it was not actually performed.
+
+---
+
+# FINAL PRODUCT EXPERIENCE
+
+CyberSuraksha should feel like a real, polished, interactive cybersecurity product.
+
+The user journey should be:
+
+**Paste → Analyze → Understand → Verify → Act → Spread Awareness**
+
+The judge should immediately feel:
+
+- This looks like a real product.
+- It is visually engaging.
+- It is easy to use.
+- I understand the risk.
+- I can see why the system flagged the message.
+- The detection engine is testable.
+- The Red-Team Lab demonstrates actual technical functionality.
+- The privacy approach is clear.
+- The future Community Threat Intelligence Loop has a credible and responsible architecture.
+
+Make the redesign substantially more interesting than the current version, but keep it simple, lightweight, accessible, and trustworthy.
+
+**Your priority is to upgrade the complete visual experience without breaking even a single existing working feature.**
